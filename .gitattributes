@@ -1,0 +1,4 @@
+# Arquivos oficiais: nunca converter quebras de linha (o SHA256 precisa bater byte a byte).
+dados/** -text
+# ZIPs oficiais via Git LFS (acima do limite de 100 MB do Git normal).
+dados/**/*.zip filter=lfs diff=lfs merge=lfs -text

@@ -1,0 +1,16 @@
+
+{ "ele" : "6260", "t" : "2", "f" : "o", "sup" : "n", "tpabr" : "mu", "cdabr" : "18031", "dg" : "25/10/2026", "hg" : "21:25:02", "idg" : "4186719", "dt" : "25/10/2026", "ht" : "21:24:24", "dv" : "s", "tf" : "s", "and" : "f", "esae" : "n", "mnae" : [  ], "carg" : [ 
+{ "cd" : "3", "nmn" : "Governador", "nmm" : "Governador", "nmf" : "Governadora", "nv" : "1", "fed" : [ 
+{ "n" : "101", "sg" : "13-PT/65-PC do B/43-PV", "nm" : "FEDERAÇÃO BRASIL DA ESPERANÇA - FE BRASIL", "com" : "13-PT/65-PC do B/43-PV", "npar" : [ "13", "43", "65" ] }, 
+{ "n" : "104", "sg" : "44-UNIÃO/11-PP", "nm" : "FEDERAÇÃO UNIÃO PROGRESSISTA", "com" : "44-UNIÃO/11-PP", "npar" : [ "11", "44" ] } ], "agr" : [ 
+{ "n" : "200001800178", "nm" : "TIME QUE CUIDA", "tp" : "c", "com" : "PDT / PSB / PCDOB / PT / PV", "tvtn" : "2816", "tvan" : "2816", "par" : [ 
+{ "n" : "13", "sg" : "PT", "nm" : "PARTIDO DOS TRABALHADORES", "nfed" : "101", "tvtn" : "2816", "tvan" : "2816", "cand" : [ 
+{ "n" : "13", "sqcand" : "200002534001", "nm" : "CARLOS EDUARDO XAVIER", "nmu" : "CADU DE LULA", "dt" : "14/06/1978", "dvt" : "Válido", "seq" : "1", "e" : "s", "st" : "Eleito", "vap" : "2816", "pvap" : "51,34", "pvapn" : "51,340018232", "vs" : [ 
+{ "tp" : "v", "sqcand" : "200002534002", "nm" : "LARISSA DANIELA ESCOSSIA ROSADO", "nmu" : "LARISSA", "sgp" : "PSB" } ] } ] } ] }, 
+{ "n" : "200001800267", "nm" : "ESPERANÇA E TRABALHO'", "tp" : "c", "com" : "REPUBLICANOS / MDB / PSD / AVANTE / PRD / SOLIDARIEDADE / PP / UNIÃO", "tvtn" : "2669", "tvan" : "2669", "par" : [ 
+{ "n" : "44", "sg" : "UNIÃO", "nm" : "UNIÃO BRASIL", "nfed" : "104", "tvtn" : "2669", "tvan" : "2669", "cand" : [ 
+{ "n" : "44", "sqcand" : "200002535255", "nm" : "ALLYSON LEANDRO BEZERRA SILVA", "nmu" : "ALLYSON", "dt" : "12/05/1992", "dvt" : "Válido", "seq" : "2", "e" : "n", "st" : "Não eleito", "vap" : "2669", "pvap" : "48,66", "pvapn" : "48,659981768", "vs" : [ 
+{ "tp" : "v", "sqcand" : "200002535256", "nm" : "HERMANO DA COSTA MORAES", "nmu" : "HERMANO", "sgp" : "MDB" } ] } ] } ] } ] } ], "s" : 
+{ "ts" : "20", "st" : "20", "pst" : "100,00", "pstn" : "100", "snt" : "0", "psnt" : "0,00", "psntn" : "0", "si" : "20", "psi" : "100,00", "psin" : "100", "sni" : "0", "psni" : "0,00", "psnin" : "0", "sa" : "20", "psa" : "100,00", "psan" : "100", "sna" : "0", "psna" : "0,00", "psnan" : "0" }, "e" : 
+{ "te" : "6892", "est" : "6892", "pest" : "100,00", "pestn" : "100", "esnt" : "0", "pesnt" : "0,00", "pesntn" : "0", "esi" : "6892", "pesi" : "100,00", "pesin" : "100", "esni" : "0", "pesni" : "0,00", "pesnin" : "0", "esa" : "6892", "pesa" : "100,00", "pesan" : "100", "esna" : "0", "pesna" : "0,00", "pesnan" : "0", "c" : "5806", "pc" : "84,24", "pcn" : "84,242600116", "a" : "1086", "pa" : "15,76", "pan" : "15,757399884" }, "v" : 
+{ "tv" : "5806", "vvc" : "5485", "pvvc" : "94,47", "pvvcn" : "94,471236652", "vv" : "5485", "pvv" : "100,00", "pvvn" : "100", "vnom" : "5485", "pvnom" : "100,00", "pvnomn" : "100", "van" : "0", "pvan" : "0,00", "pvann" : "0", "vansj" : "0", "pvansj" : "0,00", "pvansjn" : "0", "vb" : "73", "pvb" : "1,26", "pvbn" : "1,257320014", "tvn" : "248", "ptvn" : "4,27", "ptvnn" : "4,271443334", "vn" : "248", "pvn" : "100,00", "pvnn" : "100", "vnt" : "0", "pvnt" : "0,00", "pvntn" : "0", "vsan" : "0", "vscv" : "0" } }

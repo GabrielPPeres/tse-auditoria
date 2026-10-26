@@ -1,0 +1,12 @@
+# Banco SQLite: 17+ GB, acima do limite do GitHub (2 GB por arquivo, mesmo com LFS).
+# Reconstrua com: importar, indices, resultados-web, agregar (veja o README).
+dados/*.sqlite3
+dados/*.sqlite3-*
+dados/tmp/
+
+# Python
+__pycache__/
+*.pyc
+
+# Downloads incompletos
+*.part

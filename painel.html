@@ -1,0 +1,1186 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eleições 2026 · Análise</title>
+<style>
+:root {
+  color-scheme: light;
+  --page: #f9f9f7; --surface: #fcfcfb; --ink: #0b0b0b; --ink2: #52514e; --muted: #898781;
+  --grid: #e1e0d9; --axis: #c3c2b7; --border: rgba(11,11,11,0.10); --hover: rgba(11,11,11,0.04);
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100; --s5: #e87ba4; --s6: #008300; --s7: #6250d6;
+  --other: #b9b7b0; --branco: #dcdad3; --nulo: #8f8d86;
+  --pole-a: #2a78d6; --pole-b: #e34948; --mid: #f0efec;
+  --q1: #cde2fb; --q2: #9ec5f4; --q3: #6da7ec; --q4: #3987e5; --q5: #256abf; --q6: #184f95; --q7: #0d366b;
+  --accent: #2a78d6;
+}
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) {
+    color-scheme: dark;
+    --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink2: #c3c2b7; --muted: #898781;
+    --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --hover: rgba(255,255,255,0.05);
+    --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300; --s7: #9085e9;
+    --other: #5c5b57; --branco: #464541; --nulo: #7d7b75;
+    --pole-a: #3987e5; --pole-b: #e66767; --mid: #383835;
+    --q1: #104281; --q2: #184f95; --q3: #1c5cab; --q4: #256abf; --q5: #3987e5; --q6: #6da7ec; --q7: #b7d3f6;
+    --accent: #3987e5;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --page: #0d0d0d; --surface: #1a1a19; --ink: #f0efec; --ink2: #c3c2b7; --muted: #898781;
+  --grid: #2c2c2a; --axis: #383835; --border: rgba(255,255,255,0.10); --hover: rgba(255,255,255,0.05);
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --s4: #c98500; --s5: #d55181; --s6: #008300; --s7: #9085e9;
+  --other: #5c5b57; --branco: #464541; --nulo: #7d7b75;
+  --pole-a: #3987e5; --pole-b: #e66767; --mid: #383835;
+  --q1: #104281; --q2: #184f95; --q3: #1c5cab; --q4: #256abf; --q5: #3987e5; --q6: #6da7ec; --q7: #b7d3f6;
+  --accent: #3987e5;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--page); color: var(--ink); font: 14px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; }
+header { padding: 20px 24px 8px; display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap; }
+header h1 { font-size: 20px; font-weight: 600; margin: 0; }
+header .sub { color: var(--ink2); font-size: 13px; flex: 1; min-width: 200px; }
+button, select, input, textarea { font: inherit; color: var(--ink); }
+.btn { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+.btn:hover { background: var(--hover); }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+nav.tabs { display: flex; gap: 2px; padding: 0 24px; border-bottom: 1px solid var(--grid); overflow-x: auto; }
+nav.tabs button { background: none; border: 0; border-bottom: 2px solid transparent; padding: 10px 14px; cursor: pointer; color: var(--ink2); white-space: nowrap; }
+nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); font-weight: 600; }
+.filters { display: flex; flex-wrap: wrap; gap: 12px; padding: 14px 24px; align-items: end; }
+.filters label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--ink2); }
+.filters select { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; min-width: 120px; max-width: 280px; }
+.filters .hint { font-size: 12px; color: var(--muted); align-self: center; }
+main { padding: 0 24px 40px; }
+section.tab { display: none; transition: opacity .15s; }
+section.tab.active { display: block; }
+section.tab.loading { opacity: .5; pointer-events: none; }
+.grid { display: grid; grid-template-columns: repeat(12, 1fr); gap: 16px; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 16px; grid-column: span 6; min-width: 0; }
+.card.w12 { grid-column: span 12; } .card.w8 { grid-column: span 8; } .card.w4 { grid-column: span 4; }
+.card h2 { font-size: 15px; font-weight: 600; margin: 0 0 2px; }
+.card .q { color: var(--ink2); font-size: 13px; margin: 0 0 10px; }
+.card .note { color: var(--muted); font-size: 12px; margin: 8px 0 0; }
+.chart { width: 100%; height: 360px; }
+.chart.tall { height: 560px; } .chart.short { height: 260px; } .chart.xtall { height: 760px; }
+details.tbl { margin-top: 8px; }
+details.tbl summary { cursor: pointer; color: var(--ink2); font-size: 12px; }
+.tablewrap { max-height: 320px; overflow: auto; margin-top: 6px; border: 1px solid var(--grid); border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; font-size: 12px; }
+th, td { padding: 5px 8px; border-bottom: 1px solid var(--grid); text-align: left; white-space: nowrap; }
+th { position: sticky; top: 0; background: var(--surface); color: var(--ink2); font-weight: 600; }
+td.n, th.n { text-align: right; font-variant-numeric: tabular-nums; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; grid-column: span 12; }
+.kpi { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; }
+.kpi .l { color: var(--ink2); font-size: 12px; }
+.kpi .v { font-size: 26px; font-weight: 600; margin-top: 2px; }
+.kpi.hero .v { font-size: 48px; line-height: 1.1; }
+.kpi .d { color: var(--muted); font-size: 12px; }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: 12px; color: var(--ink2); margin-top: 10px; }
+.legend span.sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+.waffle { display: grid; grid-template-columns: repeat(10, 1fr); gap: 3px; max-width: 320px; }
+.waffle div { aspect-ratio: 1; border-radius: 3px; }
+.tilemap { display: grid; grid-template-columns: repeat(8, 1fr); gap: 4px; max-width: 520px; margin: 0 auto; }
+.tile { aspect-ratio: 1; border-radius: 6px; display: flex; flex-direction: column; align-items: center; justify-content: center; font-size: 12px; font-weight: 600; cursor: default; outline-offset: 2px; }
+.tile small { font-weight: 400; font-size: 10px; }
+.tile:hover, .tile:focus { outline: 2px solid var(--ink); }
+.scale { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--ink2); margin-top: 12px; justify-content: center; }
+.scale .bar { width: 220px; height: 10px; border-radius: 3px; }
+.banner { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 14px 16px; margin: 0 0 16px; color: var(--ink2); }
+textarea { width: 100%; min-height: 110px; background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 8px; font-family: ui-monospace, Consolas, monospace; font-size: 13px; }
+.err { color: #d03b3b; }
+#tip { position: fixed; pointer-events: none; z-index: 10; background: var(--surface); color: var(--ink); border: 1px solid var(--border); border-radius: 6px; padding: 6px 10px; font-size: 12px; box-shadow: 0 2px 8px rgba(0,0,0,.15); display: none; }
+@media (max-width: 1000px) { .card, .card.w8, .card.w4 { grid-column: span 12; } }
+@media (max-width: 600px) { header, .filters, main, nav.tabs { padding-left: 16px; padding-right: 16px; } .kpi.hero .v { font-size: 36px; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Eleições 2026 · Análise</h1>
+  <div class="sub" id="fonte">Dados oficiais do TSE, votação por seção eleitoral.</div>
+  <button class="btn" id="tema" type="button" aria-label="Alternar tema">Tema: automático</button>
+</header>
+<nav class="tabs" role="tablist" id="tabs"></nav>
+<div class="filters" id="filtros">
+  <label>Turno <select id="f-turno"></select></label>
+  <label>Cargo <select id="f-cargo"></select></label>
+  <label>UF <select id="f-uf"></select></label>
+  <label><span id="lbl-a">Candidato A</span> <select id="f-a"></select></label>
+  <label><span id="lbl-b">Candidato B</span> <select id="f-b"></select></label>
+  <span class="hint" id="hint"></span>
+</div>
+<main id="main"></main>
+<div id="tip" role="tooltip"></div>
+
+<script src="/static/echarts.min.js"></script>
+<script>
+'use strict';
+// ---------------------------------------------------------------- utilidades
+const $ = (s, el = document) => el.querySelector(s);
+const nf = new Intl.NumberFormat('pt-BR');
+const nf1 = new Intl.NumberFormat('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+const nfc = new Intl.NumberFormat('pt-BR', { notation: 'compact', maximumFractionDigits: 1 });
+const nf2 = new Intl.NumberFormat('pt-BR', { maximumSignificantDigits: 2 });
+const pct = v => v == null || isNaN(v) ? '–' : (v > 0 && v < 0.1 ? nf2.format(v) : nf1.format(v)) + '%';
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const css = n => getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const el = (tag, attrs = {}, ...kids) => {
+  const e = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === 'class') e.className = v; else if (k === 'text') e.textContent = v; else e.setAttribute(k, v);
+  }
+  for (const k of kids) if (k != null) e.append(k);
+  return e;
+};
+function titulo(nome) {
+  const minus = new Set(['DA', 'DE', 'DO', 'DAS', 'DOS', 'E']);
+  return String(nome || '').toLowerCase().split(/\s+/).map((w, i) =>
+    i > 0 && minus.has(w.toUpperCase()) ? w : w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+}
+function curto(nome) {
+  const p = titulo(nome).split(' ').filter(w => w.length > 2 || /^[A-Z]/.test(w));
+  return p.length <= 2 ? p.join(' ') : p[0] + ' ' + p[p.length - 1];
+}
+function quantis(arr) {
+  const a = arr.slice().sort((x, y) => x - y), q = p => {
+    const i = (a.length - 1) * p, lo = Math.floor(i), hi = Math.ceil(i);
+    return a[lo] + (a[hi] - a[lo]) * (i - lo);
+  };
+  return [a[0], q(.25), q(.5), q(.75), a[a.length - 1]];
+}
+
+const cache = new Map();
+async function api(path, params = {}) {
+  const qs = new URLSearchParams(Object.entries(params).filter(([, v]) => v !== '' && v != null)).toString();
+  const url = path + (qs ? '?' + qs : '');
+  if (cache.has(url)) return cache.get(url);
+  const p = fetch(url).then(async r => {
+    const j = await r.json();
+    if (!r.ok || j.erro) throw new Error(j.erro || r.statusText);
+    return j;
+  });
+  cache.set(url, p);
+  p.catch(() => cache.delete(url));
+  return p;
+}
+
+// ---------------------------------------------------------------- tema e cores
+function tokens() {
+  return {
+    surface: css('--surface'), ink: css('--ink'), ink2: css('--ink2'), muted: css('--muted'),
+    grid: css('--grid'), axis: css('--axis'), border: css('--border'),
+    series: [1, 2, 3, 4, 5, 6, 7].map(i => css('--s' + i)),
+    other: css('--other'), branco: css('--branco'), nulo: css('--nulo'),
+    A: css('--pole-a'), B: css('--pole-b'), mid: css('--mid'),
+    seq: [1, 2, 3, 4, 5, 6, 7].map(i => css('--q' + i)),
+  };
+}
+const TEMAS = ['auto', 'light', 'dark'];
+let tema = 'auto';
+try { tema = localStorage.getItem('tema') || 'auto'; } catch (e) { }
+function aplicarTema() {
+  if (tema === 'auto') document.documentElement.removeAttribute('data-theme');
+  else document.documentElement.setAttribute('data-theme', tema);
+  $('#tema').textContent = 'Tema: ' + { auto: 'automático', light: 'claro', dark: 'escuro' }[tema];
+}
+$('#tema').addEventListener('click', () => {
+  tema = TEMAS[(TEMAS.indexOf(tema) + 1) % 3];
+  try { localStorage.setItem('tema', tema); } catch (e) { }
+  aplicarTema(); render();
+});
+matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => tema === 'auto' && render());
+aplicarTema();
+
+// A cor segue a entidade (partido), definida pelo ranking nacional do cargo — nunca pelo ranking do filtro.
+// ENT_ORD guarda a ordem por votos (um objeto JS reordenaria chaves numéricas como '13', '22').
+let ENT = {}, ENT_ORD = [];
+function definirEntidades(itens) {
+  ENT = {}; ENT_ORD = [];
+  for (const it of itens) {
+    if (ENT_ORD.length >= 7) break;
+    if (!(it.partido in ENT)) { ENT[it.partido] = ENT_ORD.length; ENT_ORD.push(it.partido); }
+  }
+}
+function cor(p, t) {
+  if (p === '95') return t.branco;
+  if (p === '96') return t.nulo;
+  return p in ENT ? t.series[ENT[p]] : t.other;
+}
+function mix(c1, c2, f) {
+  const h = c => [1, 3, 5].map(i => parseInt(c.slice(i, i + 2), 16));
+  const a = h(c1), b = h(c2);
+  return '#' + a.map((v, i) => Math.round(v + (b[i] - v) * f).toString(16).padStart(2, '0')).join('');
+}
+function tinta(bg) {
+  const [r, g, b] = [1, 3, 5].map(i => parseInt(bg.slice(i, i + 2), 16) / 255)
+    .map(c => c <= .03928 ? c / 12.92 : ((c + .055) / 1.055) ** 2.4);
+  return .2126 * r + .7152 * g + .0722 * b > .4 ? '#0b0b0b' : '#ffffff';
+}
+function divergente(v, max, t) {   // v > 0 favorece A; v < 0 favorece B
+  const f = Math.min(Math.abs(v) / (max || 1), 1);
+  return mix(t.mid, v >= 0 ? t.A : t.B, f);
+}
+
+// ---------------------------------------------------------------- ECharts base
+const charts = new Map();
+function chart(id) {
+  const dom = document.getElementById(id);
+  let c = charts.get(id);
+  if (c && c.getDom() !== dom) { c.dispose(); c = null; }
+  if (!c) { c = echarts.init(dom, null, { renderer: 'canvas' }); charts.set(id, c); }
+  return c;
+}
+addEventListener('resize', () => charts.forEach(c => c.resize()));
+function base(t, extra = {}) {
+  return Object.assign({
+    backgroundColor: 'transparent', animationDuration: 300,
+    textStyle: { fontFamily: 'system-ui, -apple-system, "Segoe UI", sans-serif', color: t.ink2 },
+    tooltip: {
+      backgroundColor: t.surface, borderColor: t.border, borderWidth: 1, padding: [6, 10],
+      textStyle: { color: t.ink, fontSize: 12 }, extraCssText: 'box-shadow:0 2px 8px rgba(0,0,0,.15);border-radius:6px;',
+    },
+  }, extra);
+}
+function eixo(t, o = {}) {
+  return Object.assign({
+    axisLine: { lineStyle: { color: t.axis } }, axisTick: { show: false },
+    axisLabel: { color: t.muted, fontSize: 11 }, splitLine: { lineStyle: { color: t.grid, type: 'solid' } },
+    nameTextStyle: { color: t.muted, fontSize: 11 },
+  }, o);
+}
+const linhaTip = (c, valor, rotulo) =>
+  `<div style="display:flex;gap:8px;align-items:center"><span style="display:inline-block;width:12px;height:2px;background:${c}"></span><b>${valor}</b><span style="opacity:.75">${esc(rotulo)}</span></div>`;
+
+// ---------------------------------------------------------------- estrutura das abas
+const ABAS = [
+  { id: 'geral', nome: 'Visão geral' },
+  { id: 'turnos', nome: '1º × 2º turno' },
+  { id: 'estados', nome: 'Estados' },
+  { id: 'municipios', nome: 'Municípios' },
+  { id: 'secoes', nome: 'Seções' },
+  { id: 'partidos', nome: 'Partidos e deputados' },
+  { id: 'cargos', nome: 'Entre cargos' },
+  { id: 'sql', nome: 'SQL livre' },
+];
+function card(id, h, q, { w = 6, cls = '', tabela = true, nota = '' } = {}) {
+  const c = el('div', { class: 'card w' + w, id: 'card-' + id },
+    el('h2', { text: h }), el('p', { class: 'q', text: q }),
+    el('div', { class: 'chart ' + cls, id: 'ch-' + id, role: 'img', 'aria-label': h }));
+  if (nota) c.append(el('p', { class: 'note', text: nota }));
+  if (tabela) c.append(el('details', { class: 'tbl' }, el('summary', { text: 'Ver tabela' }), el('div', { class: 'tablewrap', id: 'tb-' + id })));
+  return c;
+}
+function tabela(id, cols, linhas) {
+  const box = document.getElementById('tb-' + id);
+  if (!box) return;
+  const tb = el('table');
+  const tr = el('tr');
+  cols.forEach(c => tr.append(el('th', { class: c.n ? 'n' : '', text: c.h })));
+  tb.append(el('thead', {}, tr));
+  const body = el('tbody');
+  linhas.forEach(l => {
+    const r = el('tr');
+    cols.forEach(c => r.append(el('td', { class: c.n ? 'n' : '', text: c.f ? c.f(l) : l[c.k] })));
+    body.append(r);
+  });
+  tb.append(body);
+  box.replaceChildren(tb);
+}
+function kpi(l, v, d, hero) {
+  return el('div', { class: 'kpi' + (hero ? ' hero' : '') }, el('div', { class: 'l', text: l }), el('div', { class: 'v', text: v }), d ? el('div', { class: 'd', text: d }) : null);
+}
+
+// ---------------------------------------------------------------- estado e filtros
+const S = { meta: null, nat: null, turno: '1', cargo: '1', uf: '', a: '', b: '', aba: 'geral' };
+try { S.aba = localStorage.getItem('aba') || 'geral'; } catch (e) { }
+if (location.hash.length > 1) S.aba = location.hash.slice(1);
+const MAJ = c => ['1', '3', '5'].includes(c);
+const NOME_UF = uf => uf === 'ZZ' ? 'Exterior' : uf;
+function sigla(p) { return (S.meta.partidos[p] || {}).sigla || p; }
+function nomePartido(p) { return (S.meta.partidos[p] || {}).nome || p; }
+function rotulo(p) {
+  // Presidente: nome do candidato. Demais cargos (nível nacional): sigla do partido.
+  if (S.cargo === '1' && S.nat) {
+    const it = S.nat.itens.find(i => i.partido === p);
+    if (it && it.nome) return curto(it.nome) + ' (' + sigla(p) + ')';
+  }
+  return sigla(p);
+}
+
+async function iniciar() {
+  cache.delete('/api/meta');
+  const m = await api('/api/meta');
+  if (!m.pronto) {
+    // Dados ainda em preparo: esconde os filtros, mostra o progresso e tenta de novo sozinho.
+    $('#filtros').style.display = 'none';
+    const etapa = m.prontas ? ` (${m.prontas} de ${m.etapas} etapas concluídas)` : '';
+    $('#main').replaceChildren(el('div', { class: 'banner' },
+      el('b', { text: m.aviso + etapa + '.' }), el('br'),
+      document.createTextNode('Esta página se atualiza sozinha a cada 20 segundos e mostra os gráficos assim que os dados estiverem prontos.')));
+    setTimeout(() => iniciar().catch(() => { }), 20000);
+    return;
+  }
+  $('#filtros').style.display = '';
+  $('#main').replaceChildren();
+  S.meta = m;
+  if (!ABAS.some(a => a.id === S.aba)) S.aba = 'geral';
+  const tabs = $('#tabs');
+  ABAS.forEach(a => {
+    const b = el('button', { role: 'tab', id: 'tab-' + a.id, 'aria-selected': String(a.id === S.aba), text: a.nome });
+    b.addEventListener('click', () => { S.aba = a.id; try { localStorage.setItem('aba', a.id); } catch (e) { } history.replaceState(null, '', '#' + a.id); atualizarAbas(); render(); });
+    tabs.append(b);
+    $('#main').append(el('section', { class: 'tab', id: 'aba-' + a.id, role: 'tabpanel' }));
+  });
+  const ft = $('#f-turno');
+  m.turnos.forEach(t => ft.append(el('option', { value: t, text: t + 'º turno' })));
+  ft.disabled = m.turnos.length < 2;
+  S.turno = String(m.turnos[m.turnos.length - 1]);   // abre no turno mais recente
+  ft.value = S.turno;
+  preencherCargos();
+  const fc = $('#f-cargo');
+  const fu = $('#f-uf');
+  fu.append(el('option', { value: '', text: 'Brasil' }));
+  m.ufs.forEach(u => fu.append(el('option', { value: u, text: NOME_UF(u) })));
+  ft.addEventListener('change', async () => { S.turno = ft.value; preencherCargos(); await trocarCargo(); render(); });
+  fc.addEventListener('change', async () => { S.cargo = fc.value; avisoFonte(); await trocarCargo(); render(); });
+  fu.addEventListener('change', () => { S.uf = fu.value; render(); });
+  $('#f-a').addEventListener('change', e => { S.a = e.target.value; render(); });
+  $('#f-b').addEventListener('change', e => { S.b = e.target.value; render(); });
+  atualizarAbas();
+  await trocarCargo();
+  render();
+}
+function preencherCargos() {
+  const fc = $('#f-cargo'), lista = (S.meta.cargos_por_turno || {})[S.turno] || S.meta.cargos.map(c => c.codigo);
+  fc.replaceChildren(...lista.map(c => el('option', { value: c, text: (S.meta.cargos.find(x => x.codigo === c) || {}).nome || c })));
+  if (!lista.includes(S.cargo)) S.cargo = lista[0];
+  fc.value = S.cargo;
+  avisoFonte();
+}
+const viaWeb = (turno = S.turno, cargo = S.cargo) => (S.meta.fonte_web || []).includes(turno + '-' + cargo);
+function avisoFonte() {
+  const h = $('#hint');
+  if (viaWeb()) h.textContent = `Fonte deste turno: totalização oficial por município (resultados.tse.jus.br${S.meta.web_gerado ? ', gerada em ' + S.meta.web_gerado : ''}). O TSE ainda não publicou o CSV por seção.`;
+  else if (S.meta.turnos.length < 2) h.textContent = 'Só o 1º turno foi importado até agora.';
+  else h.textContent = 'Fonte: votação por seção eleitoral (CSV oficial).';
+}
+function atualizarAbas() {
+  ABAS.forEach(a => {
+    $('#tab-' + a.id).setAttribute('aria-selected', String(a.id === S.aba));
+    $('#aba-' + a.id).classList.toggle('active', a.id === S.aba);
+  });
+  $('#filtros').style.display = S.aba === 'sql' ? 'none' : '';
+}
+async function trocarCargo() {
+  S.nat = await api('/api/resumo', { turno: S.turno, cargo: S.cargo });
+  // Para A/B usamos o partido (a cor e as comparações seguem o partido).
+  const vistos = new Set(), lista = [];
+  for (const it of S.nat.itens) if (!vistos.has(it.partido)) { vistos.add(it.partido); lista.push(it); }
+  definirEntidades(lista);
+  const porPartido = MAJ(S.cargo) && S.cargo !== '1';
+  $('#lbl-a').textContent = S.cargo === '1' ? 'Candidato A' : 'Partido A';
+  $('#lbl-b').textContent = S.cargo === '1' ? 'Candidato B' : 'Partido B';
+  for (const [id, chave, idx] of [['#f-a', 'a', 0], ['#f-b', 'b', 1]]) {
+    const s = $(id);
+    s.replaceChildren(...lista.map(it => el('option', { value: it.partido, text: rotulo(it.partido) + ' · ' + nfc.format(it.votos) })));
+    if (!lista.some(it => it.partido === S[chave])) S[chave] = (lista[idx] || lista[0]).partido;
+    s.value = S[chave];
+  }
+}
+
+let geracao = 0;
+async function render() {
+  if (!S.meta) return;
+  const g = ++geracao, aba = S.aba, sec = $('#aba-' + aba);
+  sec.classList.add('loading');
+  try {
+    await ({ geral: rGeral, turnos: rTurnos, estados: rEstados, municipios: rMunicipios, secoes: rSecoes, partidos: rPartidos, cargos: rCargos, sql: rSql }[aba])(sec, () => g === geracao);
+  } catch (e) {
+    sec.replaceChildren(el('div', { class: 'banner err', text: 'Erro ao carregar: ' + e.message }));
+  } finally { sec.classList.remove('loading'); }
+}
+function montar(sec, chave, construir) {
+  // Reconstrói a estrutura só quando muda o "formato" da aba; senão mantém o quadro (sem piscar).
+  if (sec.dataset.chave !== chave) { sec.replaceChildren(...construir()); sec.dataset.chave = chave; }
+}
+const nomeCargo = c => (S.meta.cargos.find(x => x.codigo === c) || {}).nome || c;
+const escopo = () => S.uf ? NOME_UF(S.uf) : 'Brasil';
+
+// ================================================================= Visão geral
+async function rGeral(sec, vivo) {
+  const r = await api('/api/resumo', { turno: S.turno, cargo: S.cargo, uf: S.uf });
+  if (!vivo()) return;
+  const t = tokens(), prop = !MAJ(S.cargo), tot = r.totais;
+  montar(sec, 'geral' + prop, () => [el('div', { class: 'grid' },
+    el('div', { class: 'kpis', id: 'kpis' }),
+    card('barras', 'Votos por ' + (prop ? 'partido' : 'candidato'), '', { w: 8, cls: 'tall' }),
+    (() => { const c = el('div', { class: 'card w4' }, el('h2', { text: 'Como 100 votos se dividem' }),
+      el('p', { class: 'q', text: 'Cada quadrado é 1% de todos os votos, incluindo brancos e nulos.' }),
+      el('div', { class: 'waffle', id: 'waffle', role: 'img', 'aria-label': 'Gráfico de waffle' }), el('div', { class: 'legend', id: 'waffle-leg' }));
+      return c; })(),
+    card('meia', 'Válidos, brancos e nulos', 'Que parte do total foi para candidatos?', { w: 4, cls: 'short' }),
+    card('lolli', prop ? 'Candidatos mais votados' : 'Distância para o primeiro colocado',
+      prop ? 'Os 25 nomes com mais votos nominais.' : 'Quantos pontos percentuais dos válidos cada candidato ficou atrás do primeiro?', { w: 8 }),
+  )]);
+  $('#card-barras h2').textContent = 'Votos por ' + (r.itens[0] && r.itens[0].nome ? 'candidato' : 'partido') + ' · ' + nomeCargo(S.cargo) + ' · ' + escopo();
+  $('#card-barras .q').textContent = prop ? 'Quantos votos cada partido teve, separando votos nominais e de legenda?' : 'Qual a fatia dos votos válidos de cada um?';
+
+  const k = $('#kpis');
+  k.replaceChildren(
+    kpi('Votos no total', nfc.format(tot.total), nf.format(tot.total) + ' · ' + nomeCargo(S.cargo) + ' · ' + escopo(), true),
+    kpi('Votos válidos', pct(100 * tot.validos / tot.total), nf.format(tot.validos) + ' votos'),
+    kpi('Brancos', pct(100 * tot.brancos / tot.total), nf.format(tot.brancos) + ' votos'),
+    kpi('Nulos', pct(100 * tot.nulos / tot.total), nf.format(tot.nulos) + ' votos'),
+    kpi('Municípios', nf.format(tot.municipios), S.uf === 'ZZ' ? 'cidades no exterior' : 'com votos'),
+    r.secoes != null ? kpi('Seções', nf.format(r.secoes), 'urnas com votos') : null,
+  );
+
+  // Barras: % dos válidos (majoritário) ou nominal + legenda (proporcional)
+  const itens = r.itens.slice(0, prop ? 20 : 15).reverse();
+  const nome = it => it.nome ? curto(it.nome) + ' (' + sigla(it.partido) + ')' : sigla(it.partido);
+  const c1 = chart('ch-barras');
+  if (prop) {
+    c1.setOption(base(t, {
+      grid: { left: 110, right: 70, top: 30, bottom: 30 },
+      legend: { top: 0, left: 0, textStyle: { color: t.ink2 }, itemWidth: 10, itemHeight: 10, data: ['Nominal', 'Legenda'] },
+      tooltip: { ...base(t).tooltip, trigger: 'axis', axisPointer: { type: 'shadow' },
+        formatter: ps => `<div>${esc(nomePartido(itens[ps[0].dataIndex].partido))}</div>` + ps.map(p => linhaTip(p.color, nf.format(p.value), p.seriesName)).join('') },
+      xAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: v => nfc.format(v) } }),
+      yAxis: eixo(t, { type: 'category', data: itens.map(nome), splitLine: { show: false }, axisLabel: { color: t.ink2 } }),
+      series: [
+        { name: 'Nominal', type: 'bar', stack: 'v', barMaxWidth: 24, data: itens.map(i => i.votos - (i.legenda || 0)), itemStyle: { color: t.series[0], borderColor: t.surface, borderWidth: 1 } },
+        { name: 'Legenda', type: 'bar', stack: 'v', barMaxWidth: 24, data: itens.map(i => i.legenda || 0), itemStyle: { color: t.series[1], borderRadius: [0, 4, 4, 0], borderColor: t.surface, borderWidth: 1 },
+          label: { show: true, position: 'right', color: t.ink2, fontSize: 11, formatter: p => nfc.format(itens[p.dataIndex].votos) } },
+      ],
+    }), true);
+  } else {
+    c1.setOption(base(t, {
+      grid: { left: 190, right: 70, top: 10, bottom: 30 },
+      tooltip: { ...base(t).tooltip, trigger: 'item',
+        formatter: p => { const it = itens[p.dataIndex]; return `<div>${esc(titulo(it.nome || nomePartido(it.partido)))}</div>` + linhaTip(p.color, pct(p.value), nf.format(it.votos) + ' votos'); } },
+      xAxis: eixo(t, { type: 'value', max: 100, axisLabel: { color: t.muted, formatter: '{value}%' } }),
+      yAxis: eixo(t, { type: 'category', data: itens.map(nome), splitLine: { show: false }, axisLabel: { color: t.ink2 } }),
+      series: [{ type: 'bar', barMaxWidth: 24, data: itens.map(i => ({ value: +(100 * i.votos / tot.validos).toFixed(2), itemStyle: { color: cor(i.partido, t), borderRadius: [0, 4, 4, 0] } })),
+        label: { show: true, position: 'right', color: t.ink2, fontSize: 11, formatter: p => pct(p.value) } }],
+    }), true);
+  }
+  tabela('barras', [{ h: prop ? 'Partido' : 'Candidato', f: l => l.nome ? titulo(l.nome) : nomePartido(l.partido) }, { h: 'Nº', k: 'chave' },
+    { h: 'Votos', n: 1, f: l => nf.format(l.votos) }, { h: '% válidos', n: 1, f: l => pct(100 * l.votos / tot.validos) },
+    ...(prop ? [{ h: 'Legenda', n: 1, f: l => nf.format(l.legenda || 0) }] : [])], r.itens);
+
+  // Waffle: top 3 + outros + brancos + nulos
+  const top = r.itens.slice(0, 3), outros = tot.validos - top.reduce((s, i) => s + i.votos, 0);
+  const partes = [...top.map(i => ({ p: i.partido, rot: nome(i), v: i.votos })),
+    { p: '_o', rot: 'Outros', v: outros }, { p: '95', rot: 'Brancos', v: tot.brancos }, { p: '96', rot: 'Nulos', v: tot.nulos }];
+  const brutos = partes.map(x => 100 * x.v / tot.total), base100 = brutos.map(Math.floor);
+  let resto = 100 - base100.reduce((a, b) => a + b, 0);
+  brutos.map((v, i) => [v - base100[i], i]).sort((a, b) => b[0] - a[0]).slice(0, resto).forEach(([, i]) => base100[i]++);
+  const w = $('#waffle'); w.replaceChildren();
+  partes.forEach((x, i) => { const c = x.p === '_o' ? t.other : cor(x.p, t); for (let j = 0; j < base100[i]; j++) w.append(el('div', { style: 'background:' + c, title: x.rot + ': ' + pct(brutos[i]) })); });
+  $('#waffle-leg').replaceChildren(...partes.map((x, i) => el('span', {}, el('span', { class: 'sw', style: 'background:' + (x.p === '_o' ? t.other : cor(x.p, t)) }), x.rot + ' ' + pct(brutos[i]))));
+
+  // Meia rosca: válidos/brancos/nulos (3 partes bem diferentes, leitura de parte-todo)
+  const c2 = chart('ch-meia');
+  const dm = [{ name: 'Válidos', value: tot.validos, itemStyle: { color: t.series[0] } }, { name: 'Brancos', value: tot.brancos, itemStyle: { color: t.branco } }, { name: 'Nulos', value: tot.nulos, itemStyle: { color: t.nulo } }];
+  c2.setOption(base(t, {
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => linhaTip(p.color, pct(p.percent), p.name + ' · ' + nf.format(p.value)) },
+    legend: { bottom: 0, textStyle: { color: t.ink2 }, itemWidth: 10, itemHeight: 10 },
+    series: [{ type: 'pie', startAngle: 180, endAngle: 360, center: ['50%', '82%'], radius: ['85%', '125%'], data: dm,
+      itemStyle: { borderColor: t.surface, borderWidth: 2 }, label: { show: false } }],
+    graphic: [{ type: 'text', left: 'center', top: '58%', style: { text: pct(100 * tot.validos / tot.total), fill: t.ink, fontSize: 22, fontWeight: 600 } },
+      { type: 'text', left: 'center', top: '71%', style: { text: 'votos válidos', fill: t.muted, fontSize: 12 } }],
+  }), true);
+  tabela('meia', [{ h: 'Tipo', k: 'name' }, { h: 'Votos', n: 1, f: l => nf.format(l.value) }, { h: '% do total', n: 1, f: l => pct(100 * l.value / tot.total) }], dm);
+
+  // Pirulito
+  const c3 = chart('ch-lolli');
+  if (prop) {
+    const cs = (await api('/api/candidatos', { turno: S.turno, cargo: S.cargo, uf: S.uf, limite: 25 })).slice().reverse();
+    if (!vivo()) return;
+    c3.setOption(base(t, {
+      grid: { left: 200, right: 60, top: 10, bottom: 30 },
+      tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => { const c = cs[p.dataIndex]; return `<div>${esc(titulo(c.nome))} · ${esc(sigla(c.partido))} · ${esc(c.uf)}</div>` + linhaTip(cor(c.partido, t), nf.format(c.votos), 'votos'); } },
+      xAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: v => nfc.format(v) } }),
+      yAxis: eixo(t, { type: 'category', data: cs.map(c => curto(c.nome) + ' (' + sigla(c.partido) + (S.uf ? '' : '-' + c.uf) + ')'), splitLine: { show: false }, axisLabel: { color: t.ink2 } }),
+      series: [{ type: 'bar', barWidth: 2, data: cs.map(c => ({ value: c.votos, itemStyle: { color: cor(c.partido, t) } })), silent: true },
+        { type: 'scatter', symbolSize: 10, data: cs.map(c => ({ value: c.votos, itemStyle: { color: cor(c.partido, t), borderColor: t.surface, borderWidth: 2 } })),
+          label: { show: true, position: 'right', color: t.ink2, fontSize: 11, formatter: p => nfc.format(p.value) } }],
+    }), true);
+    tabela('lolli', [{ h: 'Candidato', f: l => titulo(l.nome) }, { h: 'Partido', f: l => sigla(l.partido) }, { h: 'UF', k: 'uf' }, { h: 'Votos', n: 1, f: l => nf.format(l.votos) }], cs.slice().reverse());
+  } else {
+    const it = r.itens.slice(0, 10), lider = 100 * it[0].votos / tot.validos;
+    const d = it.slice(1).map(i => ({ ...i, gap: lider - 100 * i.votos / tot.validos })).reverse();
+    c3.setOption(base(t, {
+      grid: { left: 190, right: 70, top: 10, bottom: 30 },
+      tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => { const x = d[p.dataIndex]; return `<div>${esc(titulo(x.nome || nomePartido(x.partido)))}</div>` + linhaTip(cor(x.partido, t), nf1.format(x.gap) + ' p.p.', 'atrás do primeiro'); } },
+      xAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: '{value} p.p.' } }),
+      yAxis: eixo(t, { type: 'category', data: d.map(nome), splitLine: { show: false }, axisLabel: { color: t.ink2 } }),
+      series: [{ type: 'bar', barWidth: 2, data: d.map(x => ({ value: +x.gap.toFixed(2), itemStyle: { color: cor(x.partido, t) } })), silent: true },
+        { type: 'scatter', symbolSize: 10, data: d.map(x => ({ value: +x.gap.toFixed(2), itemStyle: { color: cor(x.partido, t), borderColor: t.surface, borderWidth: 2 } })),
+          label: { show: true, position: 'right', color: t.ink2, fontSize: 11, formatter: p => nf1.format(p.value) + ' p.p.' } }],
+    }), true);
+    tabela('lolli', [{ h: 'Candidato', f: l => titulo(l.nome || nomePartido(l.partido)) }, { h: 'Atrás do 1º (p.p.)', n: 1, f: l => nf1.format(l.gap) }], d.slice().reverse());
+  }
+}
+
+// ================================================================= Estados
+const TILES = {
+  RR: [2, 0], AP: [4, 0], AM: [1, 1], PA: [3, 1], MA: [4, 1], CE: [5, 1], RN: [6, 1],
+  AC: [0, 2], RO: [1, 2], MT: [2, 2], TO: [3, 2], PI: [4, 2], PE: [5, 2], PB: [6, 2],
+  MS: [1, 3], GO: [2, 3], DF: [3, 3], BA: [4, 3], SE: [5, 3], AL: [6, 3],
+  SP: [2, 4], MG: [3, 4], ES: [4, 4], PR: [2, 5], RJ: [3, 5], SC: [2, 6], RS: [2, 7], ZZ: [6, 7],
+};
+async function rEstados(sec, vivo) {
+  const d = await api('/api/uf', { turno: S.turno, cargo: S.cargo });
+  if (!vivo()) return;
+  const t = tokens();
+  const val = Object.fromEntries(d.totais.map(x => [x.uf, x]));
+  const vot = {};
+  d.votos.forEach(x => { (vot[x.uf] = vot[x.uf] || {})[x.partido] = x.votos; });
+  const ufs = d.totais.map(x => x.uf);
+  const P = uf => p => 100 * ((vot[uf] || {})[p] || 0) / (val[uf].validos || 1);
+  const linhas = ufs.map(uf => ({ uf, pa: P(uf)(S.a), pb: P(uf)(S.b), validos: val[uf].validos })).map(l => ({ ...l, m: l.pa - l.pb }));
+  const ra = rotulo(S.a), rb = rotulo(S.b);
+
+  montar(sec, 'estados', () => [el('div', { class: 'grid' },
+    (() => { const c = el('div', { class: 'card w6', id: 'card-tile' }, el('h2', { id: 'tile-h' }), el('p', { class: 'q', id: 'tile-q' }),
+      el('div', { class: 'tilemap', id: 'tilemap' }), el('div', { class: 'scale', id: 'tile-scale' }),
+      el('details', { class: 'tbl' }, el('summary', { text: 'Ver tabela' }), el('div', { class: 'tablewrap', id: 'tb-tile' })));
+      return c; })(),
+    card('diverg', 'Margem por UF', '', { w: 6, cls: 'tall' }),
+    card('dumbbell', 'A e B lado a lado em cada UF', '', { w: 6, cls: 'xtall' }),
+    card('stack', 'Composição dos votos válidos por UF', 'Como os votos válidos de cada UF se dividem entre os principais nomes?', { w: 6, cls: 'xtall' }),
+    card('heat', 'Mapa de calor: UF × candidato', '% dos votos válidos de cada UF. Quanto mais forte o azul, maior a fatia (veja a escala à direita).', { w: 12, cls: 'xtall' }),
+  )]);
+
+  $('#tile-h').textContent = 'Quem vence em cada UF · ' + nomeCargo(S.cargo);
+  $('#tile-q').textContent = `Margem de ${ra} sobre ${rb}, em pontos percentuais dos votos válidos.`;
+  const max = Math.max(10, Math.ceil(Math.max(...linhas.map(l => Math.abs(l.m))) / 10) * 10);
+  const tm = $('#tilemap'); tm.replaceChildren();
+  const tip = $('#tip');
+  for (const l of linhas) {
+    const pos = TILES[l.uf]; if (!pos) continue;
+    const bg = divergente(l.m, max, t);
+    const tile = el('div', { class: 'tile', tabindex: '0', style: `grid-column:${pos[0] + 1};grid-row:${pos[1] + 1};background:${bg};color:${tinta(bg)}`, 'aria-label': `${NOME_UF(l.uf)}: margem ${nf1.format(l.m)} pontos` },
+      document.createTextNode(l.uf === 'ZZ' ? 'EXT' : l.uf), el('small', { text: (l.m > 0 ? '+' : '') + nf1.format(l.m) }));
+    const show = e => { tip.replaceChildren(el('b', { text: NOME_UF(l.uf) }), el('br'), document.createTextNode(`${ra}: ${pct(l.pa)}`), el('br'), document.createTextNode(`${rb}: ${pct(l.pb)}`)); tip.style.display = 'block';
+      const r = e.target.getBoundingClientRect ? e.target.getBoundingClientRect() : { left: e.clientX, top: e.clientY }; tip.style.left = (e.clientX || r.left) + 12 + 'px'; tip.style.top = (e.clientY || r.top) + 12 + 'px'; };
+    tile.addEventListener('pointermove', show); tile.addEventListener('focus', show);
+    tile.addEventListener('pointerleave', () => tip.style.display = 'none'); tile.addEventListener('blur', () => tip.style.display = 'none');
+    tm.append(tile);
+  }
+  $('#tile-scale').replaceChildren(el('span', { text: rb + ' +' + max }), el('span', { class: 'bar', style: `background:linear-gradient(90deg,${t.B},${t.mid},${t.A})` }), el('span', { text: ra + ' +' + max }));
+  tabela('tile', [{ h: 'UF', f: l => NOME_UF(l.uf) }, { h: ra, n: 1, f: l => pct(l.pa) }, { h: rb, n: 1, f: l => pct(l.pb) }, { h: 'Margem (p.p.)', n: 1, f: l => nf1.format(l.m) }], linhas);
+
+  // Barras divergentes
+  const ord = linhas.slice().sort((x, y) => x.m - y.m);
+  $('#card-diverg .q').textContent = `Barras para a direita: ${ra} à frente. Para a esquerda: ${rb} à frente.`;
+  chart('ch-diverg').setOption(base(t, {
+    grid: { left: 60, right: 50, top: 10, bottom: 30 },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => { const l = ord[p.dataIndex]; return `<div>${esc(NOME_UF(l.uf))}</div>` + linhaTip(t.A, pct(l.pa), ra) + linhaTip(t.B, pct(l.pb), rb); } },
+    xAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: v => (v > 0 ? '+' : '') + v } }),
+    yAxis: eixo(t, { type: 'category', data: ord.map(l => NOME_UF(l.uf)), splitLine: { show: false }, axisLine: { show: false }, axisLabel: { color: t.ink2 } }),
+    series: [{ type: 'bar', barMaxWidth: 18, data: ord.map(l => ({ value: +l.m.toFixed(2), itemStyle: { color: l.m >= 0 ? t.A : t.B, borderRadius: l.m >= 0 ? [0, 4, 4, 0] : [4, 0, 0, 4] } })),
+      markLine: { silent: true, symbol: 'none', lineStyle: { color: t.axis, type: 'solid' }, data: [{ xAxis: 0 }], label: { show: false } } }],
+  }), true);
+  tabela('diverg', [{ h: 'UF', f: l => NOME_UF(l.uf) }, { h: 'Margem (p.p.)', n: 1, f: l => nf1.format(l.m) }], ord.slice().reverse());
+
+  // Haltere (dumbbell)
+  const ordd = linhas.slice().sort((x, y) => x.pa - y.pa);
+  $('#card-dumbbell .q').textContent = `% dos válidos de ${ra} e de ${rb} em cada UF. A linha mostra a distância entre os dois.`;
+  chart('ch-dumbbell').setOption(base(t, {
+    grid: { left: 60, right: 30, top: 34, bottom: 30 },
+    legend: { top: 0, left: 0, textStyle: { color: t.ink2 }, data: [ra, rb] },
+    tooltip: { ...base(t).tooltip, trigger: 'axis', axisPointer: { type: 'line', lineStyle: { color: t.axis } },
+      formatter: ps => { const l = ordd[ps[0].dataIndex]; return `<div>${esc(NOME_UF(l.uf))}</div>` + linhaTip(t.A, pct(l.pa), ra) + linhaTip(t.B, pct(l.pb), rb); } },
+    xAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    yAxis: eixo(t, { type: 'category', data: ordd.map(l => NOME_UF(l.uf)), splitLine: { show: false }, axisLabel: { color: t.ink2 } }),
+    series: [
+      { type: 'custom', silent: true, data: ordd.map((l, i) => [i, l.pa, l.pb]), encode: { x: [1, 2], y: 0 },
+        renderItem: (p, a) => { const p1 = a.coord([a.value(1), a.value(0)]), p2 = a.coord([a.value(2), a.value(0)]);
+          return { type: 'line', shape: { x1: p1[0], y1: p1[1], x2: p2[0], y2: p2[1] }, style: { stroke: t.axis, lineWidth: 2 } }; } },
+      { name: ra, type: 'scatter', symbolSize: 10, data: ordd.map((l, i) => [+l.pa.toFixed(2), i]), itemStyle: { color: t.A, borderColor: t.surface, borderWidth: 2 } },
+      { name: rb, type: 'scatter', symbolSize: 10, data: ordd.map((l, i) => [+l.pb.toFixed(2), i]), itemStyle: { color: t.B, borderColor: t.surface, borderWidth: 2 } },
+    ],
+  }), true);
+  tabela('dumbbell', [{ h: 'UF', f: l => NOME_UF(l.uf) }, { h: ra, n: 1, f: l => pct(l.pa) }, { h: rb, n: 1, f: l => pct(l.pb) }], ordd.slice().reverse());
+
+  // 100% empilhado: top 5 nacionais + outros
+  const top = ENT_ORD.slice(0, 5);
+  const ords = linhas.slice().sort((x, y) => P(x.uf)(top[0]) - P(y.uf)(top[0]));
+  const serie = (nome, f, c, last) => ({ name: nome, type: 'bar', stack: 's', barMaxWidth: 18, data: ords.map(l => +f(l.uf).toFixed(2)),
+    itemStyle: { color: c, borderColor: t.surface, borderWidth: 1, borderRadius: last ? [0, 4, 4, 0] : 0 } });
+  chart('ch-stack').setOption(base(t, {
+    grid: { left: 60, right: 20, top: 50, bottom: 30 },
+    legend: { top: 0, left: 0, textStyle: { color: t.ink2 }, itemWidth: 10, itemHeight: 10 },
+    tooltip: { ...base(t).tooltip, trigger: 'axis', axisPointer: { type: 'shadow' },
+      formatter: ps => `<div>${esc(NOME_UF(ords[ps[0].dataIndex].uf))}</div>` + ps.map(p => linhaTip(p.color, pct(p.value), p.seriesName)).join('') },
+    xAxis: eixo(t, { type: 'value', max: 100, axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    yAxis: eixo(t, { type: 'category', data: ords.map(l => NOME_UF(l.uf)), splitLine: { show: false }, axisLabel: { color: t.ink2 } }),
+    series: [...top.map(p => serie(rotulo(p), uf => P(uf)(p), cor(p, t), false)),
+      serie('Outros', uf => 100 - top.reduce((s, p) => s + P(uf)(p), 0), t.other, true)],
+  }), true);
+  tabela('stack', [{ h: 'UF', f: l => NOME_UF(l.uf) }, ...top.map(p => ({ h: rotulo(p), n: 1, f: l => pct(P(l.uf)(p)) }))], ords.slice().reverse());
+
+  // Heatmap
+  const cols = ENT_ORD.slice(), ordh = linhas.slice().sort((x, y) => x.uf.localeCompare(y.uf));
+  const dados = []; let mx = 0;
+  ordh.forEach((l, yi) => cols.forEach((p, xi) => { const v = P(l.uf)(p); mx = Math.max(mx, v); dados.push([xi, yi, +v.toFixed(2)]); }));
+  chart('ch-heat').setOption(base(t, {
+    grid: { left: 70, right: 90, top: 10, bottom: 70 },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${esc(NOME_UF(ordh[p.value[1]].uf))} · ${esc(rotulo(cols[p.value[0]]))}</div><b>${pct(p.value[2])}</b> dos válidos` },
+    xAxis: eixo(t, { type: 'category', data: cols.map(rotulo), splitLine: { show: false }, axisLabel: { color: t.ink2, interval: 0, rotate: 20, fontSize: 11 } }),
+    yAxis: eixo(t, { type: 'category', data: ordh.map(l => NOME_UF(l.uf)), inverse: true, splitLine: { show: false }, axisLabel: { color: t.ink2 } }),
+    visualMap: { min: 0, max: Math.ceil(mx / 10) * 10, calculable: false, orient: 'vertical', right: 0, top: 'middle', itemHeight: 200,
+      inRange: { color: t.seq }, textStyle: { color: t.muted }, formatter: v => Math.round(v) + '%' },
+    series: [{ type: 'heatmap', data: dados, itemStyle: { borderColor: t.surface, borderWidth: 2 }, emphasis: { itemStyle: { borderColor: t.ink, borderWidth: 1 } } }],
+  }), true);
+  tabela('heat', [{ h: 'UF', f: l => NOME_UF(l.uf) }, ...cols.map(p => ({ h: rotulo(p), n: 1, f: l => pct(P(l.uf)(p)) }))], ordh);
+}
+
+// ================================================================= Municípios
+async function rMunicipios(sec, vivo) {
+  const rows = await api('/api/municipios', { turno: S.turno, cargo: S.cargo, a: S.a, b: S.b });
+  if (!vivo()) return;
+  const t = tokens(), ra = rotulo(S.a), rb = rotulo(S.b);
+  const L = rows.map(r => ({ ...r, pa: 100 * r.a / r.validos, pb: 100 * r.b / r.validos }));
+  const foco = S.uf ? L.filter(r => r.uf === S.uf) : L;
+  montar(sec, 'municipios', () => [el('div', { class: 'grid' },
+    card('bolhas', 'Cada município em um ponto', '', { w: 6, cls: 'tall' }),
+    card('multi', 'Distribuição por região', '', { w: 6, cls: 'tall' }),
+    card('box', 'Variação dentro de cada UF', '', { w: 12, cls: 'tall' }),
+    card('jitter', 'Todos os municípios, por região', '', { w: 6, cls: 'tall' }),
+    (() => { const c = el('div', { class: 'card w6' }, el('h2', { id: 'rank-h' }), el('p', { class: 'q', id: 'rank-q' }), el('div', { class: 'tablewrap', id: 'tb-rank', style: 'max-height:560px' })); return c; })(),
+  )]);
+  const regiao = r => r.regiao;
+  // Bolhas: x=%A, y=%B, tamanho=votos. Ênfase na UF filtrada.
+  $('#card-bolhas .q').textContent = `% dos válidos de ${ra} (horizontal) e de ${rb} (vertical). O tamanho é o total de votos. ${S.uf ? 'Em destaque: ' + NOME_UF(S.uf) + '.' : ''}`;
+  const maxT = Math.max(...L.map(r => r.total));
+  const tam = v => 4 + 20 * Math.sqrt(v / maxT);
+  const pts = (arr, c) => arr.map(r => ({ value: [+r.pa.toFixed(2), +r.pb.toFixed(2), r.total], name: r.municipio + ' (' + r.uf + ')', itemStyle: { color: c } }));
+  chart('ch-bolhas').setOption(base(t, {
+    grid: { left: 50, right: 20, top: 20, bottom: 40 },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${esc(p.name)}</div>` + linhaTip(t.A, pct(p.value[0]), ra) + linhaTip(t.B, pct(p.value[1]), rb) + `<div style="opacity:.75">${nf.format(p.value[2])} votos</div>` },
+    xAxis: eixo(t, { type: 'value', min: 0, max: 100, name: ra, nameLocation: 'middle', nameGap: 26, axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    yAxis: eixo(t, { type: 'value', min: 0, max: 100, name: rb, nameLocation: 'middle', nameGap: 36, axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    series: [
+      { type: 'scatter', data: pts(S.uf ? L.filter(r => r.uf !== S.uf) : L, S.uf ? t.other : t.series[0]), symbolSize: v => tam(v[2]), itemStyle: { opacity: S.uf ? .35 : .55, borderColor: t.surface, borderWidth: 1 }, progressive: 0 },
+      ...(S.uf ? [{ type: 'scatter', progressive: 0, data: pts(foco, t.series[0]), symbolSize: v => tam(v[2]), itemStyle: { opacity: .85, borderColor: t.surface, borderWidth: 1.5 } }] : []),
+    ],
+  }), true);
+  tabela('bolhas', [{ h: 'Município', k: 'municipio' }, { h: 'UF', k: 'uf' }, { h: ra, n: 1, f: l => pct(l.pa) }, { h: rb, n: 1, f: l => pct(l.pb) }, { h: 'Votos', n: 1, f: l => nf.format(l.total) }], foco.slice().sort((x, y) => y.total - x.total).slice(0, 500));
+
+  // Pequenos múltiplos: histograma de %A por região (em % dos municípios da região)
+  $('#card-multi .q').textContent = `Quantos municípios de cada região deram a ${ra} cada faixa de % dos válidos? Mesma escala nos cinco painéis.`;
+  const REG = ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul'], NB = 20;
+  const hist = REG.map(rg => { const a = L.filter(r => r.regiao === rg), h = Array(NB).fill(0); a.forEach(r => h[Math.min(NB - 1, Math.floor(r.pa / (100 / NB)))]++); return h.map(v => a.length ? 100 * v / a.length : 0); });
+  const ymax = Math.ceil(Math.max(...hist.flat()) / 5) * 5;
+  const grids = REG.map((_, i) => ({ left: 130, right: 20, top: 6 + i * 19 + '%', height: '14%' }));
+  chart('ch-multi').setOption(base(t, {
+    grid: grids,
+    title: REG.map((rg, i) => ({ text: rg, left: 0, top: 6 + i * 19 + 5 + '%', textStyle: { color: t.ink2, fontSize: 12, fontWeight: 'normal' } })),
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${esc(REG[p.seriesIndex])} · ${p.dataIndex * 5}–${p.dataIndex * 5 + 5}% para ${esc(ra)}</div><b>${nf1.format(p.value)}%</b> dos municípios da região` },
+    xAxis: REG.map((_, i) => eixo(t, { type: 'category', gridIndex: i, data: Array.from({ length: NB }, (_, k) => k * 5 + '%'), axisLabel: { show: i === 4, color: t.muted, interval: 3 }, splitLine: { show: false } })),
+    yAxis: REG.map((rg, i) => eixo(t, { type: 'value', gridIndex: i, max: ymax, splitNumber: 1, axisLabel: { color: t.muted, formatter: '{value}%' } })),
+    series: REG.map((_, i) => ({ type: 'bar', xAxisIndex: i, yAxisIndex: i, barCategoryGap: '8%', data: hist[i], itemStyle: { color: t.series[0], borderRadius: [3, 3, 0, 0] } })),
+  }), true);
+  tabela('multi', [{ h: 'Faixa', f: l => l.f }, ...REG.map((rg, i) => ({ h: rg, n: 1, f: l => nf1.format(hist[i][l.i]) + '%' }))], Array.from({ length: NB }, (_, i) => ({ i, f: i * 5 + '–' + (i * 5 + 5) + '%' })));
+
+  // Box plot por UF
+  const porUF = {};
+  L.forEach(r => (porUF[r.uf] = porUF[r.uf] || []).push(r.pa));
+  const bx = Object.entries(porUF).map(([uf, v]) => ({ uf, q: quantis(v), n: v.length })).sort((x, y) => x.q[2] - y.q[2]);
+  $('#card-box .q').textContent = `% dos válidos de ${ra} nos municípios de cada UF. A caixa vai do 1º ao 3º quartil, e o traço do meio é a mediana.`;
+  chart('ch-box').setOption(base(t, {
+    grid: { left: 50, right: 20, top: 20, bottom: 40 },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => { const b = bx[p.dataIndex]; return `<div>${esc(b.uf)} · ${b.n} municípios</div>` + ['Mínimo', '1º quartil', 'Mediana', '3º quartil', 'Máximo'].map((n, i) => `<div>${n}: <b>${pct(b.q[i])}</b></div>`).join(''); } },
+    xAxis: eixo(t, { type: 'category', data: bx.map(b => b.uf), splitLine: { show: false }, axisLabel: { color: t.ink2, interval: 0 } }),
+    yAxis: eixo(t, { type: 'value', min: 0, max: 100, axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    series: [{ type: 'boxplot', boxWidth: [6, 18], data: bx.map(b => ({ value: b.q.map(v => +v.toFixed(2)), itemStyle: { color: b.uf === S.uf ? t.series[0] : mix(t.surface, t.series[0], .25), borderColor: b.uf === S.uf ? t.ink : t.series[0], borderWidth: 1.5 } })) }],
+  }), true);
+  tabela('box', [{ h: 'UF', k: 'uf' }, { h: 'Municípios', n: 1, k: 'n' }, { h: 'Mín.', n: 1, f: l => pct(l.q[0]) }, { h: 'Q1', n: 1, f: l => pct(l.q[1]) }, { h: 'Mediana', n: 1, f: l => pct(l.q[2]) }, { h: 'Q3', n: 1, f: l => pct(l.q[3]) }, { h: 'Máx.', n: 1, f: l => pct(l.q[4]) }], bx);
+
+  // Jitter por região
+  $('#card-jitter .q').textContent = `Cada ponto é um município. Posição horizontal: % de ${ra}. Os pontos são espalhados na vertical só para não se sobreporem.`;
+  let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+  chart('ch-jitter').setOption(base(t, {
+    grid: { left: 100, right: 20, top: 10, bottom: 40 },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${esc(p.name)}</div>` + linhaTip(t.series[0], pct(p.value[0]), ra) },
+    xAxis: eixo(t, { type: 'value', min: 0, max: 100, axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    yAxis: eixo(t, { type: 'value', min: -1, max: 5, interval: 1, inverse: true, splitLine: { show: false }, axisLabel: { color: t.ink2, formatter: v => REG[v] || '' } }),
+    series: [{ type: 'scatter', progressive: 0, symbolSize: 5, data: L.filter(r => REG.includes(r.regiao)).map(r => ({ value: [+r.pa.toFixed(2), REG.indexOf(r.regiao) + (rnd() - .5) * .7], name: r.municipio + ' (' + r.uf + ')', itemStyle: { color: !S.uf || r.uf === S.uf ? t.series[0] : t.other, opacity: !S.uf || r.uf === S.uf ? .55 : .25 } })) }],
+  }), true);
+  const resumoReg = REG.map(rg => { const a = L.filter(r => r.regiao === rg).map(r => r.pa); return { rg, n: a.length, q: a.length ? quantis(a) : [] }; });
+  tabela('jitter', [{ h: 'Região', k: 'rg' }, { h: 'Municípios', n: 1, f: l => nf.format(l.n) }, { h: 'Q1', n: 1, f: l => pct(l.q[1]) }, { h: 'Mediana', n: 1, f: l => pct(l.q[2]) }, { h: 'Q3', n: 1, f: l => pct(l.q[3]) }], resumoReg);
+
+  // Ranking (tabela como gráfico)
+  $('#rank-h').textContent = 'Municípios com maior % para ' + ra;
+  $('#rank-q').textContent = `${S.uf ? NOME_UF(S.uf) : 'Brasil'}, municípios com pelo menos 1.000 votos válidos.`;
+  tabela('rank', [{ h: '#', n: 1, f: l => l.i }, { h: 'Município', k: 'municipio' }, { h: 'UF', k: 'uf' }, { h: ra, n: 1, f: l => pct(l.pa) }, { h: rb, n: 1, f: l => pct(l.pb) }, { h: 'Válidos', n: 1, f: l => nf.format(l.validos) }],
+    foco.filter(r => r.validos >= 1000).sort((x, y) => y.pa - x.pa).slice(0, 100).map((r, i) => ({ ...r, i: i + 1 })));
+}
+
+// ================================================================= Seções
+async function rSecoes(sec, vivo) {
+  if (!['1', '3'].includes(S.cargo)) {
+    sec.dataset.chave = ''; sec.replaceChildren(el('div', { class: 'banner', text: 'A análise por seção está disponível para Presidente e Governador. Troque o cargo no filtro acima.' })); return;
+  }
+  if (viaWeb()) {
+    sec.dataset.chave = ''; sec.replaceChildren(el('div', { class: 'banner', text: `O TSE ainda não publicou a votação por seção do ${S.turno}º turno (o arquivo nacional ainda é a versão de 06/10). Por enquanto, o ${S.turno}º turno está disponível por município, nas outras abas. Para ver seções, escolha o 1º turno no filtro. Quando o arquivo sair, rode os comandos de atualização e esta aba passa a mostrar o ${S.turno}º turno.` })); return;
+  }
+  const [h, bn] = await Promise.all([api('/api/secoes', { turno: S.turno, cargo: S.cargo, partido: S.a, uf: S.uf }), api('/api/brancos_nulos', { turno: S.turno, cargo: S.cargo, uf: S.uf })]);
+  if (!vivo()) return;
+  const t = tokens(), ra = rotulo(S.a);
+  montar(sec, 'secoes', () => [el('div', { class: 'grid' },
+    el('div', { class: 'kpis', id: 'kpis-s' }),
+    card('hsec', 'Distribuição por seção', '', { w: 6 }),
+    card('hbn', 'Brancos e nulos por seção', 'Em quantas seções brancos+nulos somaram cada faixa do total de votos?', { w: 6 }),
+    (() => { const c = el('div', { class: 'card w12' }, el('h2', { id: 'ext-h' }), el('p', { class: 'q', text: 'Seções com pelo menos 50 votos válidos, da maior fatia para a menor. Útil para conferir no boletim de urna.' }), el('div', { class: 'tablewrap', id: 'tb-ext', style: 'max-height:480px' })); return c; })(),
+  )]);
+  const altos = h.bins.slice(18).reduce((s, b) => s + b.secoes, 0);
+  $('#kpis-s').replaceChildren(
+    kpi('Seções analisadas', nf.format(h.secoes), nomeCargo(S.cargo) + ' · ' + escopo(), true),
+    kpi('Seções sem nenhum voto para ' + ra, nf.format(h.secoes_zero), pct(100 * h.secoes_zero / h.secoes) + ' das seções'),
+    kpi('Seções com 90% ou mais para ' + ra, nf.format(altos), pct(100 * altos / h.secoes) + ' das seções'),
+  );
+  $('#card-hsec h2').textContent = 'Distribuição por seção · ' + ra;
+  $('#card-hsec .q').textContent = `Em quantas seções ${ra} teve cada faixa de % dos votos válidos?`;
+  const hb = (id, bins, cor_) => chart('ch-' + id).setOption(base(t, {
+    grid: { left: 60, right: 20, top: 20, bottom: 40 },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${nf.format(bins[p.dataIndex].de)}–${nf.format(bins[p.dataIndex].ate)}%</div><b>${nf.format(p.value)}</b> seções` },
+    xAxis: eixo(t, { type: 'category', data: bins.map(b => b.de + '%'), splitLine: { show: false }, axisLabel: { color: t.muted, interval: 1 } }),
+    yAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: v => nfc.format(v) } }),
+    series: [{ type: 'bar', barCategoryGap: '6%', data: bins.map(b => b.secoes), itemStyle: { color: cor_, borderRadius: [4, 4, 0, 0] } }],
+  }), true);
+  hb('hsec', h.bins, t.series[0]);
+  tabela('hsec', [{ h: 'Faixa', f: l => l.de + '–' + l.ate + '%' }, { h: 'Seções', n: 1, f: l => nf.format(l.secoes) }], h.bins);
+  hb('hbn', bn, t.nulo);
+  tabela('hbn', [{ h: 'Faixa', f: l => l.de + '–' + l.ate + '%' }, { h: 'Seções', n: 1, f: l => nf.format(l.secoes) }], bn);
+  $('#ext-h').textContent = 'As 50 seções com maior % para ' + ra;
+  tabela('ext', [{ h: 'UF', k: 'uf' }, { h: 'Município', k: 'municipio' }, { h: 'Zona', k: 'zona' }, { h: 'Seção', k: 'secao' }, { h: 'Votos de ' + ra, n: 1, f: l => nf.format(l.votos) }, { h: 'Válidos', n: 1, f: l => nf.format(l.validos) }, { h: '%', n: 1, f: l => pct(l.pct) }], h.extremos);
+}
+
+// ================================================================= Partidos e deputados
+async function rPartidos(sec, vivo) {
+  const cargo = ['6', '7', '8'].includes(S.cargo) ? S.cargo : '6';
+  const turno = '1';   // deputados só existem no 1º turno
+  if (S.turno !== '1') {
+    sec.dataset.chave = ''; sec.replaceChildren(el('div', { class: 'banner', text: 'Deputados são eleitos só no 1º turno. Escolha "1º turno" no filtro para ver esta aba.' })); return;
+  }
+  const [cs, d, nat] = await Promise.all([api('/api/candidatos', { turno, cargo, uf: S.uf, limite: 400 }), api('/api/uf', { turno, cargo }), api('/api/resumo', { turno, cargo })]);
+  if (!vivo()) return;
+  const t = tokens();
+  // Cores dos partidos neste painel seguem o ranking nacional do cargo de deputado escolhido.
+  const ENTsalvo = ENT, ORDsalvo = ENT_ORD; definirEntidades(nat.itens);
+  montar(sec, 'partidos', () => [el('div', { class: 'grid' },
+    el('div', { class: 'banner', id: 'part-nota', style: 'grid-column:span 12;margin:0' }),
+    card('tree', 'Partidos e seus candidatos', 'Cada retângulo é um candidato, agrupado pelo partido. A área é o número de votos nominais.', { w: 12, cls: 'xtall' }),
+    card('sun', 'Região, UF e partido', 'Anel interno: região. Anel do meio: UF. Anel externo: os 4 partidos mais votados de cada UF.', { w: 6, cls: 'tall' }),
+    card('marimekko', 'Peso de cada UF e divisão entre partidos', 'A largura da coluna é o total de votos válidos da UF. A altura de cada bloco é a fatia do partido.', { w: 6, cls: 'tall' }),
+  )]);
+  $('#part-nota').textContent = 'Cargo nesta aba: ' + nomeCargo(cargo) + (S.cargo !== cargo ? ' (escolha Deputado Estadual ou Distrital no filtro para trocar).' : '.') + ' ' + escopo() + '.';
+  const grupos = {};
+  cs.forEach(c => (grupos[c.partido] = grupos[c.partido] || []).push(c));
+  chart('ch-tree').setOption(base(t, {
+    tooltip: { ...base(t).tooltip, formatter: p => p.data.uf ? `<div>${esc(p.name)} · ${esc(p.data.sig)} · ${esc(p.data.uf)}</div><b>${nf.format(p.value)}</b> votos` : `<div>${esc(p.name)}</div><b>${nf.format(p.value)}</b> votos (candidatos exibidos)` },
+    series: [{ type: 'treemap', roam: false, nodeClick: false, breadcrumb: { show: false }, width: '100%', height: '100%', top: 0, left: 0,
+      upperLabel: { show: true, height: 20, color: t.ink, fontSize: 12, fontWeight: 600 },
+      label: { show: true, fontSize: 11, overflow: 'truncate', formatter: p => p.name },
+      levels: [{ itemStyle: { borderColor: t.surface, borderWidth: 3, gapWidth: 3 } }, { itemStyle: { borderColor: t.surface, borderWidth: 1, gapWidth: 1 } }],
+      data: Object.entries(grupos).map(([p, arr]) => { const c = cor(p, t); return { name: sigla(p), value: arr.reduce((s, x) => s + x.votos, 0), itemStyle: { color: c },
+        upperLabel: { color: t.ink }, children: arr.map(x => ({ name: curto(x.nome), value: x.votos, uf: x.uf, sig: sigla(p), itemStyle: { color: c }, label: { color: tinta(c) } })) }; }) }],
+  }), true);
+  tabela('tree', [{ h: 'Candidato', f: l => titulo(l.nome) }, { h: 'Partido', f: l => sigla(l.partido) }, { h: 'UF', k: 'uf' }, { h: 'Votos', n: 1, f: l => nf.format(l.votos) }], cs);
+
+  // Sunburst: região > UF > top 4 partidos + outros
+  const vot = {}; d.votos.forEach(x => (vot[x.uf] = vot[x.uf] || []).push(x));
+  const REGS = ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul'];
+  const tons = [mix(t.surface, t.ink2, .55), mix(t.surface, t.ink2, .35)];
+  const sun = REGS.map((rg, ri) => ({ name: rg, itemStyle: { color: tons[0] }, children: Object.keys(vot).filter(u => S.meta.regiao[u] === rg).map(u => {
+    const arr = vot[u].slice().sort((a, b) => b.votos - a.votos), top = arr.slice(0, 4), resto = arr.slice(4).reduce((s, x) => s + x.votos, 0);
+    return { name: u, itemStyle: { color: tons[1] }, children: [...top.map(x => ({ name: sigla(x.partido), value: x.votos, itemStyle: { color: cor(x.partido, t) } })), { name: 'Outros', value: resto, itemStyle: { color: t.other } }] };
+  }) }));
+  chart('ch-sun').setOption(base(t, {
+    tooltip: { ...base(t).tooltip, formatter: p => `<div>${esc(p.treePathInfo.slice(1).map(x => x.name).join(' › '))}</div><b>${nf.format(p.value)}</b> votos` },
+    series: [{ type: 'sunburst', data: sun, radius: ['8%', '96%'], sort: null, itemStyle: { borderColor: t.surface, borderWidth: 2 },
+      label: { color: t.ink, fontSize: 10, minAngle: 8 }, levels: [{}, { label: { color: t.ink, fontSize: 11, rotate: 'tangential' } }, { label: { color: t.ink, fontSize: 10 } }, { label: { show: false } }] }],
+  }), true);
+  tabela('sun', [{ h: 'UF', k: 'uf' }, { h: 'Partido', f: l => sigla(l.partido) }, { h: 'Votos', n: 1, f: l => nf.format(l.votos) }], d.votos.slice().sort((a, b) => a.uf.localeCompare(b.uf) || b.votos - a.votos));
+
+  // Marimekko (colunas de largura variável, desenhado com série custom)
+  const tops = ENT_ORD.slice(0, 6);
+  const tot = Object.fromEntries(d.totais.map(x => [x.uf, x.validos]));
+  const ufsM = d.totais.filter(x => x.uf !== 'ZZ').sort((a, b) => b.validos - a.validos).map(x => x.uf);
+  const soma = ufsM.reduce((s, u) => s + tot[u], 0);
+  let x0 = 0; const blocos = [];
+  ufsM.forEach(u => {
+    const w = 100 * tot[u] / soma; let y0 = 0;
+    const partes = [...tops.map(p => ({ p, v: ((vot[u] || []).find(x => x.partido === p) || {}).votos || 0 }))];
+    partes.push({ p: '_o', v: tot[u] - partes.reduce((s, x) => s + x.v, 0) });
+    // A cor vai junto do bloco: o desenho acontece depois, quando ENT já voltou ao cargo do filtro.
+    partes.forEach(x => { const h = 100 * x.v / tot[u]; blocos.push([x0, x0 + w, y0, y0 + h, u, x.p, x.v, x.p === '_o' ? t.other : cor(x.p, t)]); y0 += h; });
+    x0 += w;
+  });
+  chart('ch-marimekko').setOption(base(t, {
+    grid: { left: 40, right: 10, top: 40, bottom: 40 },
+    legend: { top: 0, left: 0, textStyle: { color: t.ink2 }, itemWidth: 10, itemHeight: 10, data: [...tops.map(sigla), 'Outros'] },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => { const b = p.value; return `<div>${esc(b[4])} · ${esc(b[5] === '_o' ? 'Outros' : sigla(b[5]))}</div><b>${pct(b[3] - b[2])}</b> dos válidos da UF<div style="opacity:.75">${nf.format(b[6])} votos</div>`; } },
+    xAxis: eixo(t, { type: 'value', min: 0, max: 100, splitLine: { show: false }, axisLabel: { show: false } }),
+    yAxis: eixo(t, { type: 'value', min: 0, max: 100, axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    series: [...tops.map(p => ({ name: sigla(p), type: 'custom', itemStyle: { color: cor(p, t) }, data: [] })), { name: 'Outros', type: 'custom', itemStyle: { color: t.other }, data: [] },
+      { type: 'custom', data: blocos, encode: { x: [0, 1], y: [2, 3] },
+        renderItem: (pr, a) => { const p1 = a.coord([a.value(0), a.value(3)]), p2 = a.coord([a.value(1), a.value(2)]);
+          const c = blocos[pr.dataIndex][7];
+          const g = { type: 'group', children: [{ type: 'rect', shape: { x: p1[0], y: p1[1], width: Math.max(p2[0] - p1[0] - 1.5, .5), height: Math.max(p2[1] - p1[1] - 1, 0) }, style: { fill: c } }] };
+          if (blocos[pr.dataIndex][2] === 0 && p2[0] - p1[0] > 16) g.children.push({ type: 'text', style: { text: blocos[pr.dataIndex][4], x: (p1[0] + p2[0]) / 2, y: a.coord([0, 0])[1] + 6, align: 'center', verticalAlign: 'top', fill: t.ink2, fontSize: 10 } });
+          return g; } }],
+  }), true);
+  tabela('marimekko', [{ h: 'UF', f: l => l[4] }, { h: 'Partido', f: l => l[5] === '_o' ? 'Outros' : sigla(l[5]) }, { h: '% válidos da UF', n: 1, f: l => pct(l[3] - l[2]) }, { h: 'Votos', n: 1, f: l => nf.format(l[6]) }], blocos);
+  ENT = ENTsalvo; ENT_ORD = ORDsalvo;
+}
+
+// ================================================================= Entre cargos
+async function rCargos(sec, vivo) {
+  const pa = S.a, pb = S.b;
+  const [linhas, m1, m3, uf1] = await Promise.all([
+    api('/api/partido_cargos', { turno: S.turno, partidos: [pa, pb].join(',') }),
+    api('/api/municipios', { turno: S.turno, cargo: '1', a: pa }),
+    api('/api/municipios', { turno: S.turno, cargo: '3', a: pa }),
+    api('/api/uf', { turno: S.turno, cargo: '1' }),
+  ]);
+  if (!vivo()) return;
+  const t = tokens(), sa = sigla(pa), sb = sigla(pb);
+  const CG = ['1', '3', '5', '6', '7'].filter(c => ((S.meta.cargos_por_turno || {})[S.turno] || []).includes(c));
+  const val = {}; linhas.forEach(l => (val[l.partido + '|' + l.cargo + '|' + l.uf] = l.pct));
+  const ufs = [...new Set(linhas.filter(l => l.uf !== 'ZZ').map(l => l.uf))].sort();
+  const v = (p, c, u) => val[p + '|' + c + '|' + u] ?? 0;
+  montar(sec, 'cargos', () => [el('div', { class: 'grid' },
+    el('div', { class: 'banner', id: 'cg-nota', style: 'grid-column:span 12;margin:0' }),
+    card('paral', 'O mesmo partido em cada cargo', '', { w: 12, cls: 'tall' }),
+    card('slope', 'Presidente → Governador', '', { w: 6, cls: 'tall' }),
+    card('quad', 'Quadrantes por município', '', { w: 6, cls: 'tall' }),
+    card('radar', 'Perfil por região (Presidente)', '', { w: 6, cls: 'tall' }),
+  )]);
+  $('#cg-nota').textContent = `Partidos comparados: ${nomePartido(pa)} (${sa}) e ${nomePartido(pb)} (${sb}). Troque em "Partido A" e "Partido B" no filtro. O voto é secreto: estes gráficos comparam totais por UF ou município, não o voto de cada eleitor.`;
+
+  // Coordenadas paralelas: eixos = cargos, linhas = UFs, valor = % do partido A
+  $('#card-paral h2').textContent = `${sa} em cada cargo, por UF`;
+  $('#card-paral .q').textContent = `Cada linha é uma UF. Cada eixo mostra o % dos votos válidos de ${sa} naquele cargo. ${S.uf ? 'Em destaque: ' + NOME_UF(S.uf) + '.' : 'Escolha uma UF no filtro para destacá-la.'}`;
+  chart('ch-paral').setOption(base(t, {
+    parallelAxis: CG.map((c, i) => ({ dim: i, name: nomeCargo(c), nameTextStyle: { color: t.ink2, fontSize: 12 }, min: 0, axisLine: { lineStyle: { color: t.axis } }, axisLabel: { color: t.muted, formatter: '{value}%' }, axisTick: { show: false } })),
+    parallel: { left: 50, right: 60, top: 50, bottom: 30 },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${esc(p.name)}</div>` + CG.map((c, i) => `<div>${esc(nomeCargo(c))}: <b>${pct(p.value[i])}</b></div>`).join('') },
+    series: [{ type: 'parallel', smooth: false, data: ufs.map(u => ({ name: u, value: CG.map(c => +v(pa, c, u).toFixed(2)), lineStyle: { color: u === S.uf ? t.series[0] : (S.uf ? t.other : t.series[0]), width: u === S.uf ? 3 : 2, opacity: u === S.uf ? 1 : (S.uf ? .5 : .45) } })) }],
+  }), true);
+  tabela('paral', [{ h: 'UF', k: 'u' }, ...CG.map((c, i) => ({ h: nomeCargo(c), n: 1, f: l => pct(v(pa, c, l.u)) }))], ufs.map(u => ({ u })));
+
+  // Slope: presidente -> governador, % do partido A
+  $('#card-slope h2').textContent = `${sa}: Presidente → Governador`;
+  // Só UFs onde o partido teve votos para governador (sem candidato, o 0% seria um falso resultado).
+  const semGov = ufs.filter(u => !(v(pa, '3', u) > 0));
+  $('#card-slope .q').textContent = `% dos válidos de ${sa} para presidente (esquerda) e para governador (direita), em cada UF. ${semGov.length ? 'Fora do gráfico, por não ter candidato a governador do partido: ' + semGov.join(', ') + '.' : ''}`;
+  const dif = ufs.filter(u => v(pa, '3', u) > 0).map(u => ({ u, p: v(pa, '1', u), g: v(pa, '3', u) })).map(x => ({ ...x, d: x.g - x.p }));
+  const marcar = new Set([S.uf, ...dif.slice().sort((a, b) => b.d - a.d).slice(0, 2).map(x => x.u), ...dif.slice().sort((a, b) => a.d - b.d).slice(0, 2).map(x => x.u)].filter(Boolean));
+  chart('ch-slope').setOption(base(t, {
+    grid: { left: 60, right: 60, top: 20, bottom: 30 },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => { const x = dif.find(z => z.u === p.seriesName); return `<div>${esc(p.seriesName)}</div><div>Presidente: <b>${pct(x.p)}</b></div><div>Governador: <b>${pct(x.g)}</b></div>`; } },
+    xAxis: eixo(t, { type: 'category', data: ['Presidente', 'Governador'], boundaryGap: false, splitLine: { show: false }, axisLabel: { color: t.ink2 } }),
+    yAxis: eixo(t, { type: 'value', min: 0, axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    series: dif.map(x => { const on = marcar.has(x.u); return { name: x.u, type: 'line', data: [+x.p.toFixed(2), +x.g.toFixed(2)], symbol: 'circle', symbolSize: on ? 8 : 5, z: on ? 3 : 1,
+      lineStyle: { width: 2, color: on ? t.series[0] : t.other, opacity: on ? 1 : .5 }, itemStyle: { color: on ? t.series[0] : t.other, borderColor: t.surface, borderWidth: on ? 2 : 0 },
+      endLabel: { show: on, color: t.ink2, fontSize: 11, formatter: x.u }, emphasis: { focus: 'series' } }; }),
+  }), true);
+  tabela('slope', [{ h: 'UF', k: 'u' }, { h: 'Presidente', n: 1, f: l => pct(l.p) }, { h: 'Governador', n: 1, f: l => pct(l.g) }, { h: 'Diferença (p.p.)', n: 1, f: l => nf1.format(l.d) }], dif.slice().sort((a, b) => b.d - a.d));
+
+  // Quadrantes: município, % de A para presidente × % de A para governador
+  const g3 = Object.fromEntries(m3.map(r => [r.uf + r.mun, 100 * r.a / r.validos]));
+  const comGov = new Set(m3.filter(r => r.a > 0).map(r => r.uf));
+  const Q = m1.filter(r => (r.uf + r.mun) in g3 && comGov.has(r.uf)).map(r => ({ uf: r.uf, nome: r.municipio, x: 100 * r.a / r.validos, y: g3[r.uf + r.mun], tot: r.total }));
+  const mx = quantis(Q.map(q => q.x))[2], my = quantis(Q.map(q => q.y))[2];
+  $('#card-quad .q').textContent = `Cada ponto é um município. Horizontal: % de ${sa} para presidente. Vertical: % de ${sa} para governador. As linhas marcam as medianas. Só entram as ${comGov.size} UFs onde ${sa} teve candidato a governador.`;
+  const quadN = [[1, 1], [0, 1], [0, 0], [1, 0]].map(([a, b]) => Q.filter(q => (q.x >= mx) === !!a && (q.y >= my) === !!b).length);
+  chart('ch-quad').setOption(base(t, {
+    grid: { left: 50, right: 20, top: 20, bottom: 40 },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${esc(p.name)}</div><div>Presidente: <b>${pct(p.value[0])}</b></div><div>Governador: <b>${pct(p.value[1])}</b></div>` },
+    xAxis: eixo(t, { type: 'value', min: 0, max: 100, name: 'Presidente', nameLocation: 'middle', nameGap: 26, axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    yAxis: eixo(t, { type: 'value', min: 0, max: 100, name: 'Governador', nameLocation: 'middle', nameGap: 36, axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    series: [{ type: 'scatter', progressive: 0, symbolSize: 5, data: Q.map(q => ({ value: [+q.x.toFixed(2), +q.y.toFixed(2)], name: q.nome + ' (' + q.uf + ')', itemStyle: { color: !S.uf || q.uf === S.uf ? t.series[0] : t.other, opacity: !S.uf || q.uf === S.uf ? .5 : .2 } })),
+      markLine: { silent: true, symbol: 'none', lineStyle: { color: t.axis, type: 'solid', width: 1 }, label: { show: false }, data: [{ xAxis: +mx.toFixed(2) }, { yAxis: +my.toFixed(2) }] } }],
+    graphic: [['right', 'top', 0], ['left', 'top', 1], ['left', 'bottom', 2], ['right', 'bottom', 3]].map(([h, v, i]) => ({ type: 'text', [h]: h === 'right' ? 28 : 60, [v]: v === 'top' ? 26 : 50,
+      style: { text: ['Alto nos dois', 'Alto só p/ governador', 'Baixo nos dois', 'Alto só p/ presidente'][i] + ' · ' + nf.format(quadN[i]), fill: t.muted, fontSize: 11 } })),
+  }), true);
+  tabela('quad', [{ h: 'Município', k: 'nome' }, { h: 'UF', k: 'uf' }, { h: 'Presidente', n: 1, f: l => pct(l.x) }, { h: 'Governador', n: 1, f: l => pct(l.y) }], Q.slice().sort((a, b) => b.tot - a.tot).slice(0, 500));
+
+  // Radar por região (presidente): A e B
+  const REG = ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul'];
+  const agg = Object.fromEntries(REG.map(r => [r, { v: 0, a: 0, b: 0 }]));
+  uf1.totais.forEach(x => { const r = S.meta.regiao[x.uf]; if (agg[r]) agg[r].v += x.validos; });
+  uf1.votos.forEach(x => { const r = S.meta.regiao[x.uf]; if (!agg[r]) return; if (x.partido === pa) agg[r].a += x.votos; if (x.partido === pb) agg[r].b += x.votos; });
+  const ra_ = REG.map(r => 100 * agg[r].a / agg[r].v), rb_ = REG.map(r => 100 * agg[r].b / agg[r].v);
+  const ml = S.cargo === '1' ? rotulo : sigla;
+  $('#card-radar .q').textContent = `% dos válidos para presidente em cada região: ${ml(pa)} e ${ml(pb)}.`;
+  const rmax = Math.ceil(Math.max(...ra_, ...rb_) / 10) * 10;
+  chart('ch-radar').setOption(base(t, {
+    legend: { bottom: 0, textStyle: { color: t.ink2 }, data: [ml(pa), ml(pb)] },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${esc(p.name)}</div>` + REG.map((r, i) => `<div>${r}: <b>${pct(p.value[i])}</b></div>`).join('') },
+    radar: { indicator: REG.map(r => ({ name: r, max: rmax })), radius: '65%', axisName: { color: t.ink2 }, splitLine: { lineStyle: { color: t.grid } }, splitArea: { show: false }, axisLine: { lineStyle: { color: t.grid } } },
+    series: [{ type: 'radar', symbolSize: 8, data: [
+      { name: ml(pa), value: ra_.map(v => +v.toFixed(2)), lineStyle: { color: t.A, width: 2 }, itemStyle: { color: t.A, borderColor: t.surface, borderWidth: 2 }, areaStyle: { color: t.A, opacity: .1 } },
+      { name: ml(pb), value: rb_.map(v => +v.toFixed(2)), lineStyle: { color: t.B, width: 2 }, itemStyle: { color: t.B, borderColor: t.surface, borderWidth: 2 }, areaStyle: { color: t.B, opacity: .1 } }] }],
+  }), true);
+  tabela('radar', [{ h: 'Região', k: 'r' }, { h: ml(pa), n: 1, f: l => pct(l.a) }, { h: ml(pb), n: 1, f: l => pct(l.b) }], REG.map((r, i) => ({ r, a: ra_[i], b: rb_[i] })));
+}
+
+// ================================================================= 1º × 2º turno
+async function rTurnos(sec, vivo) {
+  const tem2 = (S.meta.cargos_por_turno || {})['2'] || [];
+  if (!tem2.length) { sec.dataset.chave = ''; sec.replaceChildren(el('div', { class: 'banner', text: 'O 2º turno ainda não foi carregado. Rode "py -3 main.py resultados-web".' })); return; }
+  const cargo = tem2.includes(S.cargo) ? S.cargo : '1';
+  // A e B: os dois mais votados do 2º turno no país (finalistas), salvo se o filtro já aponta para eles.
+  const r2 = await api('/api/resumo', { turno: '2', cargo });
+  const fin = [...new Set(r2.itens.map(i => i.partido))];
+  const pa = fin.includes(S.a) ? S.a : fin[0], pb = fin.includes(S.b) && S.b !== pa ? S.b : fin.find(p => p !== pa);
+  const [rows, conf, r1] = await Promise.all([api('/api/turnos', { cargo, a: pa, b: pb }), cargo === '1' ? api('/api/conferencia') : null, api('/api/resumo', { turno: '1', cargo })]);
+  if (!vivo()) return;
+  const t = tokens();
+  const nomeDe = (r, p) => { const it = r.itens.find(i => i.partido === p); return it && it.nome ? curto(it.nome) + ' (' + sigla(p) + ')' : sigla(p); };
+  const ra = cargo === '1' ? nomeDe(r2, pa) : sigla(pa), rb = cargo === '1' ? nomeDe(r2, pb) : sigla(pb);
+  const L = rows.filter(r => (r.uf !== 'ZZ' || cargo === '1') && r.val1 > 0 && r.val2 > 0).map(r => ({ ...r,
+    pa1: 100 * r.a1 / r.val1, pb1: 100 * r.b1 / r.val1, pa2: 100 * r.a2 / r.val2, pb2: 100 * r.b2 / r.val2, pout1: 100 * r.out1 / r.val1,
+    abs1: r.ele1 ? 100 * (1 - r.comp1 / r.ele1) : null, abs2: r.ele2 ? 100 * (1 - r.comp2 / r.ele2) : null }));
+  L.forEach(r => { r.lider1 = r.a1 >= r.b1 ? 'A' : 'B'; r.lider2 = r.a2 >= r.b2 ? 'A' : 'B'; r.virou = r.lider1 !== r.lider2; });
+  const foco = S.uf ? L.filter(r => r.uf === S.uf) : L;
+  const soma = (arr, k) => arr.reduce((s, r) => s + (r[k] || 0), 0);
+
+  montar(sec, 'turnos', () => [el('div', { class: 'grid' },
+    el('div', { class: 'banner', id: 'tr-nota', style: 'grid-column:span 12;margin:0' }),
+    el('div', { class: 'kpis', id: 'kpis-t' }),
+    card('wfa', '', '', { w: 6 }), card('wfb', '', '', { w: 6 }),
+    card('slopeuf', 'Margem em cada UF, do 1º para o 2º turno', '', { w: 6, cls: 'xtall' }),
+    card('dumbt', '', '', { w: 6, cls: 'xtall' }),
+    card('sct', 'Cada município: 1º turno × 2º turno', '', { w: 6, cls: 'tall' }),
+    card('transf', 'Onde estavam os votos dos outros candidatos', '', { w: 6, cls: 'tall' }),
+    card('hdelta', 'Distribuição da variação por município', '', { w: 6 }),
+    card('abst', 'Abstenção em cada UF, nos dois turnos', '', { w: 6, cls: 'xtall' }),
+    (() => { const c = el('div', { class: 'card w12' }, el('h2', { id: 'vir-h' }), el('p', { class: 'q', id: 'vir-q' }), el('div', { class: 'tablewrap', id: 'tb-vir', style: 'max-height:480px' })); return c; })(),
+    (() => { const c = el('div', { class: 'card w12', id: 'card-conf' }, el('h2', { text: 'Conferência: totalização oficial × CSV por seção (1º turno, Presidente)' }),
+      el('p', { class: 'q', text: 'Soma, município a município e candidato a candidato, do CSV de votação por seção, comparada com a totalização publicada no site de resultados do TSE.' }),
+      el('div', { class: 'kpis', id: 'kpis-conf', style: 'margin-bottom:12px' }), el('div', { class: 'tablewrap', id: 'tb-conf' })); return c; })(),
+  )]);
+  $('#tr-nota').textContent = `${nomeCargo(cargo)}: ${ra} e ${rb}, os dois finalistas. ${viaWeb('2', cargo) ? 'O 2º turno vem da totalização oficial por município (resultados.tse.jus.br); o CSV por seção ainda não foi publicado. ' : ''}O voto é secreto: estes gráficos comparam totais por município e UF, não mostram para quem foi o voto de cada eleitor.${S.uf ? ' Em destaque: ' + NOME_UF(S.uf) + '.' : ''}`;
+
+  // KPIs
+  const A1 = soma(foco, 'a1'), A2 = soma(foco, 'a2'), B1 = soma(foco, 'b1'), B2 = soma(foco, 'b2'), V1 = soma(foco, 'val1'), V2 = soma(foco, 'val2');
+  const E1 = soma(foco, 'ele1'), E2 = soma(foco, 'ele2'), C1 = soma(foco, 'comp1'), C2 = soma(foco, 'comp2');
+  const sinal = v => (v >= 0 ? '+' : '') + nf.format(v);
+  const vir = foco.filter(r => r.virou);
+  $('#kpis-t').replaceChildren(
+    kpi(ra + ' no 2º turno', pct(100 * A2 / V2), `${nf.format(A2)} votos · 1º turno ${pct(100 * A1 / V1)} · ${sinal(A2 - A1)} votos`, true),
+    kpi(rb + ' no 2º turno', pct(100 * B2 / V2), `${nf.format(B2)} votos · 1º turno ${pct(100 * B1 / V1)} · ${sinal(B2 - B1)} votos`, true),
+    E1 && E2 ? kpi('Comparecimento', pct(100 * C2 / E2), `1º turno ${pct(100 * C1 / E1)} · ${sinal(C2 - C1)} eleitores`) : null,
+    kpi('Municípios que trocaram de líder', nf.format(vir.length), `de ${nf.format(foco.length)} · ${nf.format(vir.filter(r => r.lider2 === 'B').length)} para ${rb}, ${nf.format(vir.filter(r => r.lider2 === 'A').length)} para ${ra}`),
+  );
+
+  // Cascata (waterfall): votos 1º turno + variação por região = votos 2º turno
+  const REG = ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul', ...(cargo === '1' ? ['Exterior'] : [])];
+  const cascata = (id, k1, k2, rot, corP) => {
+    const deltas = REG.map(rg => { const a = foco.filter(r => r.regiao === rg); return { rg, d: soma(a, k2) - soma(a, k1) }; }).filter(x => x.d !== 0 || !S.uf);
+    const ini = soma(foco, k1), fim = soma(foco, k2);
+    let acc = ini; const baseV = [0], valV = [ini], cores = [corP], rots = ['1º turno'];
+    deltas.forEach(x => { const lo = x.d >= 0 ? acc : acc + x.d; baseV.push(lo); valV.push(Math.abs(x.d)); cores.push(x.d >= 0 ? mix(t.surface, corP, .6) : mix(t.surface, t.muted, .7)); rots.push(x.rg); acc += x.d; });
+    baseV.push(0); valV.push(fim); cores.push(corP); rots.push('2º turno');
+    $('#card-' + id + ' h2').textContent = `${rot}: de onde veio a variação`;
+    $('#card-' + id + ' .q').textContent = `Votos no 1º turno, mais o ganho ou a perda em cada região, chegam aos votos do 2º turno. Barras claras sobem (ganho); cinza descem (perda).`;
+    chart('ch-' + id).setOption(base(t, {
+      grid: { left: 60, right: 20, top: 30, bottom: 40 },
+      tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => { const i = p.dataIndex; const d = i === 0 || i === rots.length - 1 ? nf.format(valV[i]) + ' votos' : (deltas[i - 1].d >= 0 ? '+' : '−') + nf.format(Math.abs(deltas[i - 1].d)) + ' votos'; return `<div>${esc(rot)} · ${esc(rots[i])}</div><b>${d}</b>`; } },
+      xAxis: eixo(t, { type: 'category', data: rots, splitLine: { show: false }, axisLabel: { color: t.ink2, interval: 0, fontSize: 11 } }),
+      yAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: v => nfc.format(v) } }),
+      series: [{ type: 'bar', stack: 'w', silent: true, itemStyle: { color: 'transparent' }, data: baseV },
+        { type: 'bar', stack: 'w', barMaxWidth: 40, data: valV.map((v, i) => ({ value: v, itemStyle: { color: cores[i], borderRadius: 4 } })),
+          label: { show: true, position: 'top', color: t.ink2, fontSize: 11, formatter: p => { const i = p.dataIndex; return i === 0 || i === rots.length - 1 ? nfc.format(valV[i]) : (deltas[i - 1].d >= 0 ? '+' : '−') + nfc.format(Math.abs(deltas[i - 1].d)); } } }],
+    }), true);
+    tabela(id, [{ h: 'Etapa', k: 'rg' }, { h: 'Votos', n: 1, f: l => (l.sinal ? (l.v >= 0 ? '+' : '−') + nf.format(Math.abs(l.v)) : nf.format(l.v)) }],
+      [{ rg: '1º turno', v: ini }, ...deltas.map(x => ({ rg: x.rg, v: x.d, sinal: 1 })), { rg: '2º turno', v: fim }]);
+  };
+  cascata('wfa', 'a1', 'a2', ra, t.A);
+  cascata('wfb', 'b1', 'b2', rb, t.B);
+
+  // Por UF
+  const porUF = {};
+  L.forEach(r => { const u = porUF[r.uf] = porUF[r.uf] || { uf: r.uf, a1: 0, b1: 0, v1: 0, a2: 0, b2: 0, v2: 0, e1: 0, c1: 0, e2: 0, c2: 0 };
+    u.a1 += r.a1; u.b1 += r.b1; u.v1 += r.val1; u.a2 += r.a2; u.b2 += r.b2; u.v2 += r.val2; u.e1 += r.ele1 || 0; u.c1 += r.comp1 || 0; u.e2 += r.ele2 || 0; u.c2 += r.comp2 || 0; });
+  const U = Object.values(porUF).map(u => ({ ...u, m1: 100 * (u.a1 - u.b1) / u.v1, m2: 100 * (u.a2 - u.b2) / u.v2, pa1: 100 * u.a1 / u.v1, pa2: 100 * u.a2 / u.v2,
+    ab1: u.e1 ? 100 * (1 - u.c1 / u.e1) : null, ab2: u.e2 ? 100 * (1 - u.c2 / u.e2) : null }));
+  U.forEach(u => u.virou = Math.sign(u.m1) !== Math.sign(u.m2));
+
+  // Slope da margem
+  $('#card-slopeuf .q').textContent = `Margem de ${ra} sobre ${rb} (p.p. dos válidos). Acima de zero, ${ra} à frente. Em destaque, as UFs onde o líder mudou.`;
+  const destaca = u => u.virou || u.uf === S.uf;
+  chart('ch-slopeuf').setOption(base(t, {
+    grid: { left: 60, right: 70, top: 20, bottom: 30 },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => { const u = porUF[p.seriesName] ? U.find(x => x.uf === p.seriesName) : null; return u ? `<div>${esc(NOME_UF(u.uf))}${u.virou ? ' · trocou de líder' : ''}</div><div>1º turno: <b>${nf1.format(u.m1)} p.p.</b></div><div>2º turno: <b>${nf1.format(u.m2)} p.p.</b></div>` : ''; } },
+    xAxis: eixo(t, { type: 'category', data: ['1º turno', '2º turno'], boundaryGap: false, splitLine: { show: false }, axisLabel: { color: t.ink2 } }),
+    yAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: v => (v > 0 ? '+' : '') + v } }),
+    series: U.map(u => ({ name: u.uf, type: 'line', data: [+u.m1.toFixed(2), +u.m2.toFixed(2)], symbol: 'circle', symbolSize: destaca(u) ? 8 : 5, z: destaca(u) ? 3 : 1,
+      lineStyle: { width: 2, color: destaca(u) ? (u.m2 >= 0 ? t.A : t.B) : t.other, opacity: destaca(u) ? 1 : .55 }, itemStyle: { color: destaca(u) ? (u.m2 >= 0 ? t.A : t.B) : t.other, borderColor: t.surface, borderWidth: destaca(u) ? 2 : 0 },
+      endLabel: { show: destaca(u), color: t.ink2, fontSize: 11, formatter: NOME_UF(u.uf) }, emphasis: { focus: 'series' },
+      markLine: u === U[0] ? { silent: true, symbol: 'none', lineStyle: { color: t.axis, type: 'solid' }, label: { show: false }, data: [{ yAxis: 0 }] } : undefined })),
+  }), true);
+  tabela('slopeuf', [{ h: 'UF', f: l => NOME_UF(l.uf) }, { h: 'Margem 1º (p.p.)', n: 1, f: l => nf1.format(l.m1) }, { h: 'Margem 2º (p.p.)', n: 1, f: l => nf1.format(l.m2) }, { h: 'Trocou de líder', f: l => l.virou ? 'sim' : 'não' }], U.slice().sort((a, b) => b.m2 - a.m2));
+
+  // Haltere: % de A nos dois turnos, por UF
+  const Ud = U.slice().sort((x, y) => (x.pa2 - x.pa1) - (y.pa2 - y.pa1));
+  $('#card-dumbt h2').textContent = `${ra}: 1º turno → 2º turno, por UF`;
+  $('#card-dumbt .q').textContent = `% dos votos válidos de ${ra} em cada turno. No 2º turno, o restante é de ${rb}. Ordenado pelo tamanho da variação.`;
+  chart('ch-dumbt').setOption(base(t, {
+    grid: { left: 60, right: 30, top: 34, bottom: 30 },
+    legend: { top: 0, left: 0, textStyle: { color: t.ink2 }, data: ['1º turno', '2º turno'] },
+    tooltip: { ...base(t).tooltip, trigger: 'axis', axisPointer: { type: 'line', lineStyle: { color: t.axis } }, formatter: ps => { const u = Ud[ps[0].dataIndex]; return `<div>${esc(NOME_UF(u.uf))}</div>` + linhaTip(mix(t.surface, t.A, .45), pct(u.pa1), '1º turno') + linhaTip(t.A, pct(u.pa2), '2º turno'); } },
+    xAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    yAxis: eixo(t, { type: 'category', data: Ud.map(u => NOME_UF(u.uf)), splitLine: { show: false }, axisLabel: { color: t.ink2 } }),
+    series: [
+      { type: 'custom', silent: true, data: Ud.map((u, i) => [i, u.pa1, u.pa2]), encode: { x: [1, 2], y: 0 },
+        renderItem: (p, a) => { const p1 = a.coord([a.value(1), a.value(0)]), p2 = a.coord([a.value(2), a.value(0)]); return { type: 'line', shape: { x1: p1[0], y1: p1[1], x2: p2[0], y2: p2[1] }, style: { stroke: t.axis, lineWidth: 2 } }; } },
+      { name: '1º turno', type: 'scatter', symbolSize: 10, data: Ud.map((u, i) => [+u.pa1.toFixed(2), i]), itemStyle: { color: mix(t.surface, t.A, .45), borderColor: t.surface, borderWidth: 2 } },
+      { name: '2º turno', type: 'scatter', symbolSize: 10, data: Ud.map((u, i) => [+u.pa2.toFixed(2), i]), itemStyle: { color: t.A, borderColor: t.surface, borderWidth: 2 } },
+    ],
+  }), true);
+  tabela('dumbt', [{ h: 'UF', f: l => NOME_UF(l.uf) }, { h: '1º turno', n: 1, f: l => pct(l.pa1) }, { h: '2º turno', n: 1, f: l => pct(l.pa2) }, { h: 'Variação (p.p.)', n: 1, f: l => nf1.format(l.pa2 - l.pa1) }], Ud.slice().reverse());
+
+  // Dispersão municipal 1º × 2º
+  $('#card-sct .q').textContent = `% de ${ra} no 1º turno (horizontal) e no 2º (vertical). Acima da diagonal, ${ra} cresceu. Em destaque, municípios que trocaram de líder.`;
+  const pt = r => ({ value: [+r.pa1.toFixed(2), +r.pa2.toFixed(2)], name: r.municipio + ' (' + r.uf + ')' });
+  const fora = S.uf ? L.filter(r => r.uf !== S.uf) : [];
+  chart('ch-sct').setOption(base(t, {
+    grid: { left: 50, right: 20, top: 30, bottom: 40 },
+    legend: { top: 0, left: 0, textStyle: { color: t.ink2 }, data: ['Manteve o líder', 'Trocou de líder'] },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${esc(p.name)}</div><div>1º turno: <b>${pct(p.value[0])}</b></div><div>2º turno: <b>${pct(p.value[1])}</b></div>` },
+    xAxis: eixo(t, { type: 'value', min: 0, max: 100, name: '1º turno', nameLocation: 'middle', nameGap: 26, axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    yAxis: eixo(t, { type: 'value', min: 0, max: 100, name: '2º turno', nameLocation: 'middle', nameGap: 36, axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    series: [
+      { type: 'line', silent: true, data: [[0, 0], [100, 100]], symbol: 'none', lineStyle: { color: t.axis, width: 1 } },
+      ...(fora.length ? [{ type: 'scatter', progressive: 0, symbolSize: 4, data: fora.map(pt), itemStyle: { color: t.other, opacity: .25 } }] : []),
+      { name: 'Manteve o líder', type: 'scatter', progressive: 0, symbolSize: 5, data: foco.filter(r => !r.virou).map(pt), itemStyle: { color: t.series[0], opacity: .4 } },
+      { name: 'Trocou de líder', type: 'scatter', progressive: 0, symbolSize: 8, data: foco.filter(r => r.virou).map(pt), itemStyle: { color: t.series[1], borderColor: t.surface, borderWidth: 1.5 } },
+    ],
+  }), true);
+  tabela('sct', [{ h: 'Município', k: 'municipio' }, { h: 'UF', k: 'uf' }, { h: '1º turno', n: 1, f: l => pct(l.pa1) }, { h: '2º turno', n: 1, f: l => pct(l.pa2) }], foco.slice().sort((a, b) => b.val2 - a.val2).slice(0, 500));
+
+  // Votos dos outros candidatos no 1º turno × crescimento de B
+  $('#card-transf .q').textContent = `Horizontal: % dos válidos que foram para os demais candidatos no 1º turno. Vertical: quanto ${rb} cresceu, em pontos percentuais. Uma tendência aqui é correlação entre municípios, não prova de para onde foi cada voto.`;
+  chart('ch-transf').setOption(base(t, {
+    grid: { left: 50, right: 20, top: 20, bottom: 40 },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${esc(p.name)}</div><div>Outros no 1º turno: <b>${pct(p.value[0])}</b></div><div>Crescimento de ${esc(rb)}: <b>${nf1.format(p.value[1])} p.p.</b></div>` },
+    xAxis: eixo(t, { type: 'value', min: 0, name: 'Outros candidatos no 1º turno', nameLocation: 'middle', nameGap: 26, axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    yAxis: eixo(t, { type: 'value', name: 'Crescimento (p.p.)', nameLocation: 'middle', nameGap: 36, axisLabel: { color: t.muted } }),
+    series: [{ type: 'scatter', progressive: 0, symbolSize: 5, data: L.map(r => ({ value: [+r.pout1.toFixed(2), +(r.pb2 - r.pb1).toFixed(2)], name: r.municipio + ' (' + r.uf + ')', itemStyle: { color: !S.uf || r.uf === S.uf ? t.B : t.other, opacity: !S.uf || r.uf === S.uf ? .45 : .2 } })),
+      markLine: { silent: true, symbol: 'none', lineStyle: { color: t.axis, type: 'solid' }, label: { show: false }, data: [{ yAxis: 0 }] } }],
+  }), true);
+  tabela('transf', [{ h: 'Município', k: 'municipio' }, { h: 'UF', k: 'uf' }, { h: 'Outros 1º turno', n: 1, f: l => pct(l.pout1) }, { h: 'Crescimento ' + rb + ' (p.p.)', n: 1, f: l => nf1.format(l.pb2 - l.pb1) }], foco.slice().sort((a, b) => b.pout1 - a.pout1).slice(0, 500));
+
+  // Histograma da variação de A
+  const NB = 30, deltas = foco.map(r => r.pa2 - r.pa1), dmin = Math.floor(Math.min(...deltas)), dmax = Math.ceil(Math.max(...deltas)), larg = (dmax - dmin) / NB || 1;
+  const hb = Array(NB).fill(0); deltas.forEach(d => hb[Math.min(NB - 1, Math.floor((d - dmin) / larg))]++);
+  $('#card-hdelta .q').textContent = `Quantos municípios tiveram cada variação no % de ${ra} entre os turnos (pontos percentuais).`;
+  chart('ch-hdelta').setOption(base(t, {
+    grid: { left: 50, right: 20, top: 20, bottom: 40 },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${nf1.format(dmin + p.dataIndex * larg)} a ${nf1.format(dmin + (p.dataIndex + 1) * larg)} p.p.</div><b>${nf.format(p.value)}</b> municípios` },
+    xAxis: eixo(t, { type: 'category', data: hb.map((_, i) => nf1.format(dmin + i * larg)), splitLine: { show: false }, axisLabel: { color: t.muted, interval: 4 } }),
+    yAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: v => nfc.format(v) } }),
+    series: [{ type: 'bar', barCategoryGap: '6%', data: hb.map((v, i) => ({ value: v, itemStyle: { color: dmin + (i + .5) * larg >= 0 ? t.A : t.B, borderRadius: [3, 3, 0, 0] } })) }],
+  }), true);
+  tabela('hdelta', [{ h: 'De (p.p.)', n: 1, f: l => nf1.format(l.de) }, { h: 'Até (p.p.)', n: 1, f: l => nf1.format(l.de + larg) }, { h: 'Municípios', n: 1, f: l => nf.format(l.v) }], hb.map((v, i) => ({ de: dmin + i * larg, v })));
+
+  // Abstenção por UF
+  const Ua = U.filter(u => u.ab1 != null && u.ab2 != null).sort((x, y) => (x.ab2 - x.ab1) - (y.ab2 - y.ab1));
+  $('#card-abst .q').textContent = Ua.length ? '% do eleitorado que não votou, em cada turno (fonte: totalização oficial por município). Ordenado pela variação.' : 'Dados de eleitorado não disponíveis.';
+  chart('ch-abst').setOption(base(t, {
+    grid: { left: 60, right: 30, top: 34, bottom: 30 },
+    legend: { top: 0, left: 0, textStyle: { color: t.ink2 }, data: ['1º turno', '2º turno'] },
+    tooltip: { ...base(t).tooltip, trigger: 'axis', axisPointer: { type: 'line', lineStyle: { color: t.axis } }, formatter: ps => { const u = Ua[ps[0].dataIndex]; return `<div>${esc(NOME_UF(u.uf))}</div>` + linhaTip(t.other, pct(u.ab1), '1º turno') + linhaTip(t.nulo, pct(u.ab2), '2º turno'); } },
+    xAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    yAxis: eixo(t, { type: 'category', data: Ua.map(u => NOME_UF(u.uf)), splitLine: { show: false }, axisLabel: { color: t.ink2 } }),
+    series: [
+      { type: 'custom', silent: true, data: Ua.map((u, i) => [i, u.ab1, u.ab2]), encode: { x: [1, 2], y: 0 },
+        renderItem: (p, a) => { const p1 = a.coord([a.value(1), a.value(0)]), p2 = a.coord([a.value(2), a.value(0)]); return { type: 'line', shape: { x1: p1[0], y1: p1[1], x2: p2[0], y2: p2[1] }, style: { stroke: t.axis, lineWidth: 2 } }; } },
+      { name: '1º turno', type: 'scatter', symbolSize: 10, data: Ua.map((u, i) => [+u.ab1.toFixed(2), i]), itemStyle: { color: t.other, borderColor: t.surface, borderWidth: 2 } },
+      { name: '2º turno', type: 'scatter', symbolSize: 10, data: Ua.map((u, i) => [+u.ab2.toFixed(2), i]), itemStyle: { color: t.ink2, borderColor: t.surface, borderWidth: 2 } },
+    ],
+  }), true);
+  tabela('abst', [{ h: 'UF', f: l => NOME_UF(l.uf) }, { h: '1º turno', n: 1, f: l => pct(l.ab1) }, { h: '2º turno', n: 1, f: l => pct(l.ab2) }, { h: 'Variação (p.p.)', n: 1, f: l => nf1.format(l.ab2 - l.ab1) }], Ua.slice().reverse());
+
+  // Municípios que viraram
+  $('#vir-h').textContent = `Municípios que trocaram de líder entre ${ra} e ${rb}`;
+  $('#vir-q').textContent = `${S.uf ? NOME_UF(S.uf) : 'Brasil'} · ${nf.format(vir.length)} municípios, do maior para o menor em votos válidos.`;
+  tabela('vir', [{ h: 'Município', k: 'municipio' }, { h: 'UF', k: 'uf' }, { h: 'Líder 1º', f: l => l.lider1 === 'A' ? ra : rb }, { h: 'Líder 2º', f: l => l.lider2 === 'A' ? ra : rb },
+    { h: ra + ' 1º', n: 1, f: l => pct(l.pa1) }, { h: ra + ' 2º', n: 1, f: l => pct(l.pa2) }, { h: rb + ' 1º', n: 1, f: l => pct(l.pb1) }, { h: rb + ' 2º', n: 1, f: l => pct(l.pb2) },
+    { h: 'Válidos 2º', n: 1, f: l => nf.format(l.val2) }], vir.slice().sort((a, b) => b.val2 - a.val2));
+
+  // Conferência
+  const cc = $('#card-conf');
+  if (!conf || !conf.disponivel) { cc.style.display = 'none'; }
+  else {
+    cc.style.display = '';
+    $('#kpis-conf').replaceChildren(
+      kpi('Pares município × candidato comparados', nf.format(conf.pares_comparados), `${nf.format(conf.municipios_web)} municípios na totalização · ${nf.format(conf.municipios_csv)} no CSV`),
+      kpi('Votos na totalização', nf.format(conf.votos_web), 'site de resultados do TSE'),
+      kpi('Votos no CSV por seção', nf.format(conf.votos_csv), 'soma das seções'),
+      kpi('Municípios com diferença', nf.format(conf.municipios_divergentes), conf.municipios_nao_explicados ? nf.format(conf.municipios_nao_explicados) + ' sem explicação automática' : 'todas explicadas (veja abaixo)'),
+    );
+    const anul = Object.entries(conf.votos_anulados_por_candidato || {});
+    const expl = [];
+    if (conf.votos_web === conf.votos_csv) expl.push('O total de votos é idêntico nas duas fontes.');
+    anul.forEach(([n, v]) => expl.push(`Em ${nf.format(conf.municipios_explicados_nulo_tecnico)} municípios, a única diferença é que o CSV registra ${nf.format(v)} votos no número ${n}, e a totalização conta exatamente esses votos como nulos (o candidato ${n} não consta da lista de candidatos da totalização; votos de candidatura anulada viram "nulos técnicos").`));
+    if (conf.municipios_so_totalizacao) expl.push(`${nf.format(conf.municipios_so_totalizacao)} municípios aparecem só na totalização, com ${nf.format(conf.votos_municipios_so_totalizacao)} votos (cidades do exterior sem eleitores votando).`);
+    expl.push(conf.municipios_nao_explicados ? `${nf.format(conf.municipios_nao_explicados)} municípios têm diferenças de outro tipo: confira na lista.` : 'Nenhuma outra diferença foi encontrada.');
+    let nota = $('#conf-expl');
+    if (!nota) { nota = el('p', { class: 'q', id: 'conf-expl' }); $('#kpis-conf').after(nota); }
+    nota.textContent = expl.join(' ');
+    tabela('conf', [{ h: 'UF', k: 'uf' }, { h: 'Município', k: 'municipio' }, { h: 'Nº votável', k: 'votavel' }, { h: 'Totalização', n: 1, f: l => nf.format(l.totalizacao) }, { h: 'CSV por seção', n: 1, f: l => nf.format(l.csv_secao) }, { h: 'Diferença', n: 1, f: l => nf.format(l.diferenca) }], conf.lista);
+  }
+}
+
+// ================================================================= SQL livre
+async function rSql(sec) {
+  montar(sec, 'sql', () => {
+    const ta = el('textarea', { id: 'sql-q', spellcheck: 'false', 'aria-label': 'Consulta SQL' });
+    ta.value = "SELECT uf, SUM(votos) AS votos\nFROM ag_mun\nWHERE turno = 1 AND cargo = '1' AND partido = '22'\nGROUP BY uf ORDER BY votos DESC";
+    const bt = el('button', { class: 'btn primary', type: 'button', text: 'Executar' });
+    const out = el('div', { id: 'sql-out' });
+    bt.addEventListener('click', async () => {
+      out.replaceChildren(el('p', { class: 'note', text: 'Consultando...' }));
+      try {
+        const r = await fetch('/api/sql', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ query: ta.value }) }).then(x => x.json());
+        if (r.erro) throw new Error(r.erro);
+        const box = el('div', { class: 'card w12', style: 'margin-top:16px' }, el('h2', { text: r.linhas.length + ' linhas (máximo 1.000)' }));
+        const numerico = r.colunas.length === 2 && r.linhas.length && r.linhas.every(l => typeof l[1] === 'number');
+        if (numerico) box.append(el('div', { class: 'chart', id: 'ch-sqlc', role: 'img', 'aria-label': 'Resultado em barras' }));
+        box.append(el('div', { class: 'tablewrap', id: 'tb-sqlt', style: 'max-height:480px' }));
+        out.replaceChildren(box);
+        tabela('sqlt', r.colunas.map((c, i) => ({ h: c, n: typeof (r.linhas[0] || [])[i] === 'number', f: l => typeof l[i] === 'number' ? nf.format(l[i]) : (l[i] ?? '') })), r.linhas);
+        if (numerico) {
+          const t = tokens(), L = r.linhas.slice(0, 40);
+          chart('ch-sqlc').setOption(base(t, {
+            grid: { left: 60, right: 20, top: 20, bottom: 60 },
+            tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${esc(p.name)}</div><b>${nf.format(p.value)}</b>` },
+            xAxis: eixo(t, { type: 'category', data: L.map(l => String(l[0])), splitLine: { show: false }, axisLabel: { color: t.ink2, rotate: 30 } }),
+            yAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: v => nfc.format(v) } }),
+            series: [{ type: 'bar', barMaxWidth: 24, data: L.map(l => l[1]), itemStyle: { color: t.series[0], borderRadius: [4, 4, 0, 0] } }],
+          }), true);
+        }
+      } catch (e) { out.replaceChildren(el('p', { class: 'err', text: e.message })); }
+    });
+    const ajuda = el('div', { class: 'card w12' }, el('h2', { text: 'Consulta livre (somente leitura)' }),
+      el('p', { class: 'q', text: 'Tabelas: votos (bruta, 68 milhões de linhas, lenta), ag_mun, ag_mun_tot, ag_cand, ag_secao, ag_secao_tot, ag_partidos. Se o resultado tiver 2 colunas e a segunda for numérica, aparece um gráfico de barras.' }),
+      ta, el('div', { style: 'margin-top:8px' }, bt), out);
+    return [el('div', { class: 'grid' }, ajuda)];
+  });
+}
+
+iniciar().catch(e => $('#main').replaceChildren(el('div', { class: 'banner err', text: 'Erro ao iniciar: ' + e.message })));
+</script>
+</body>
+</html>

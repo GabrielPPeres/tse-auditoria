@@ -1,0 +1,16 @@
+
+{ "ele" : "6260", "t" : "2", "f" : "o", "sup" : "n", "tpabr" : "mu", "cdabr" : "93459", "dg" : "25/10/2026", "hg" : "21:45:32", "idg" : "4214394", "dt" : "25/10/2026", "ht" : "21:44:50", "dv" : "s", "tf" : "s", "and" : "f", "esae" : "n", "mnae" : [  ], "carg" : [ 
+{ "cd" : "3", "nmn" : "Governador", "nmm" : "Governador", "nmf" : "Governadora", "nv" : "1", "fed" : [ 
+{ "n" : "104", "sg" : "44-UNIÃO/11-PP", "nm" : "FEDERAÇÃO UNIÃO PROGRESSISTA", "com" : "44-UNIÃO/11-PP", "npar" : [ "11", "44" ] }, 
+{ "n" : "100", "sg" : "45-PSDB/23-CIDADANIA", "nm" : "FEDERAÇÃO PSDB CIDADANIA", "com" : "45-PSDB/23-CIDADANIA", "npar" : [ "23", "45" ] } ], "agr" : [ 
+{ "n" : "270001800725", "nm" : "PRA CIMA TOCANTINS", "tp" : "c", "com" : "MDB / CIDADANIA / PSDB", "tvtn" : "2415", "tvan" : "2415", "par" : [ 
+{ "n" : "45", "sg" : "PSDB", "nm" : "PARTIDO DA SOCIAL DEMOCRACIA BRASILEIRA", "nfed" : "100", "tvtn" : "2415", "tvan" : "2415", "cand" : [ 
+{ "n" : "45", "sqcand" : "270002544544", "nm" : "VICENTE ALVES DE OLIVEIRA JÚNIOR", "nmu" : "VICENTINHO JÚNIOR", "dt" : "11/04/1985", "dvt" : "Válido", "seq" : "1", "e" : "s", "st" : "Eleito", "vap" : "2415", "pvap" : "63,34", "pvapn" : "63,335955940", "vs" : [ 
+{ "tp" : "v", "sqcand" : "270002544545", "nm" : "AMELIO CAYRES DE ALMEIDA", "nmu" : "AMÉLIO CAYRES", "sgp" : "MDB" } ] } ] } ] }, 
+{ "n" : "270001800733", "nm" : "UNIÃO PELO TOCANTINS", "tp" : "c", "com" : "REPUBLICANOS / PODE / AVANTE / PL / PRD / SOLIDARIEDADE / PP / UNIÃO", "tvtn" : "1398", "tvan" : "1398", "par" : [ 
+{ "n" : "44", "sg" : "UNIÃO", "nm" : "UNIÃO BRASIL", "nfed" : "104", "tvtn" : "1398", "tvan" : "1398", "cand" : [ 
+{ "n" : "44", "sqcand" : "270002544599", "nm" : "MARIA AUXILIADORA SEABRA REZENDE", "nmu" : "PROFESSORA DORINHA", "dt" : "01/10/1964", "dvt" : "Válido", "seq" : "2", "e" : "n", "st" : "Não eleito", "vap" : "1398", "pvap" : "36,66", "pvapn" : "36,664044060", "vs" : [ 
+{ "tp" : "v", "sqcand" : "270002544600", "nm" : "ATOS GOMES DE ARAÚJO", "nmu" : "ATOS GOMES", "sgp" : "REPUBLICANOS" } ] } ] } ] } ] } ], "s" : 
+{ "ts" : "18", "st" : "18", "pst" : "100,00", "pstn" : "100", "snt" : "0", "psnt" : "0,00", "psntn" : "0", "si" : "18", "psi" : "100,00", "psin" : "100", "sni" : "0", "psni" : "0,00", "psnin" : "0", "sa" : "18", "psa" : "100,00", "psan" : "100", "sna" : "0", "psna" : "0,00", "psnan" : "0" }, "e" : 
+{ "te" : "5082", "est" : "5082", "pest" : "100,00", "pestn" : "100", "esnt" : "0", "pesnt" : "0,00", "pesntn" : "0", "esi" : "5082", "pesi" : "100,00", "pesin" : "100", "esni" : "0", "pesni" : "0,00", "pesnin" : "0", "esa" : "5082", "pesa" : "100,00", "pesan" : "100", "esna" : "0", "pesna" : "0,00", "pesnan" : "0", "c" : "4072", "pc" : "80,13", "pcn" : "80,125934671", "a" : "1010", "pa" : "19,87", "pan" : "19,874065329" }, "v" : 
+{ "tv" : "4072", "vvc" : "3813", "pvvc" : "93,64", "pvvcn" : "93,639489194", "vv" : "3813", "pvv" : "100,00", "pvvn" : "100", "vnom" : "3813", "pvnom" : "100,00", "pvnomn" : "100", "van" : "0", "pvan" : "0,00", "pvann" : "0", "vansj" : "0", "pvansj" : "0,00", "pvansjn" : "0", "vb" : "30", "pvb" : "0,74", "pvbn" : "0,736738703", "tvn" : "229", "ptvn" : "5,62", "ptvnn" : "5,623772102", "vn" : "229", "pvn" : "100,00", "pvnn" : "100", "vnt" : "0", "pvnt" : "0,00", "pvntn" : "0", "vsan" : "0", "vscv" : "0" } }

@@ -1,0 +1,2858 @@
+{
+ "e006260\\mun-e006260-cm.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/config/mun-e006260-cm.json",
+  "bytes": 44151,
+  "sha256": "d7719badcdb7ab52c08e0155ccdace1ed28b2b87f965e1f916dadc8ba1629858",
+  "baixado_em_utc": "2026-10-26T20:40:31.583440+00:00"
+ },
+ "ac\\ac-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac-c0003-e006260-u.json",
+  "bytes": 3123,
+  "sha256": "7bf1f65f9c1f77ff9e70fbbbf8ce15c4f3bf843f9ed97783340f95d0fbf5fa88",
+  "baixado_em_utc": "2026-10-26T20:40:31.698418+00:00"
+ },
+ "am\\am-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am-c0003-e006260-u.json",
+  "bytes": 3037,
+  "sha256": "ad814f7694d9cf6d5c4847cbdfdf1f23a281991cd7207f068dc9ddebf3db9acb",
+  "baixado_em_utc": "2026-10-26T20:40:31.801961+00:00"
+ },
+ "df\\df-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/df/df-c0003-e006260-u.json",
+  "bytes": 3399,
+  "sha256": "362a011c437b2120b66f96314703a2c803eaac81a0ed075790bea1cc4989b901",
+  "baixado_em_utc": "2026-10-26T20:40:31.910946+00:00"
+ },
+ "es\\es-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es-c0003-e006260-u.json",
+  "bytes": 3089,
+  "sha256": "ed715ecbb21d48c5e10dc8dda4e7c738bbeb72ad9bb1963d010dcacf9314da0c",
+  "baixado_em_utc": "2026-10-26T20:40:32.044518+00:00"
+ },
+ "rn\\rn-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn-c0003-e006260-u.json",
+  "bytes": 3360,
+  "sha256": "6ba7877cba3837cbccca75c839917fe697fdbf8917a3b8cb4580e5d7d760d869",
+  "baixado_em_utc": "2026-10-26T20:40:32.155553+00:00"
+ },
+ "to\\to-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to-c0003-e006260-u.json",
+  "bytes": 3373,
+  "sha256": "6629b897507db1a4f2f861831fd26425e2b00cd2bcdb2701f57b4283db3e0bf5",
+  "baixado_em_utc": "2026-10-26T20:40:32.275732+00:00"
+ },
+ "ac\\ac01570-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01570-c0003-e006260-u.json",
+  "bytes": 3072,
+  "sha256": "cd7865cc508b798f95bd053503e3c5d69c9d600024d1909e1e81adcd4cd214dc",
+  "baixado_em_utc": "2026-10-26T20:40:32.387304+00:00"
+ },
+ "ac\\ac01058-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01058-c0003-e006260-u.json",
+  "bytes": 3081,
+  "sha256": "67fc579bb3e19075b6271e5331696e00ad4ec2d9b47c827929d05d50835040b2",
+  "baixado_em_utc": "2026-10-26T20:40:32.395538+00:00"
+ },
+ "ac\\ac01120-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01120-c0003-e006260-u.json",
+  "bytes": 3076,
+  "sha256": "29b2ef55929e579eb7e4127f2ce2c55900fa57507f517be33d63542d8c79f85b",
+  "baixado_em_utc": "2026-10-26T20:40:32.402597+00:00"
+ },
+ "ac\\ac01015-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01015-c0003-e006260-u.json",
+  "bytes": 3071,
+  "sha256": "866200d06d3e36d3edb69ed05f1c8dc9278cca622463fc1916b9c96026135e2f",
+  "baixado_em_utc": "2026-10-26T20:40:32.404935+00:00"
+ },
+ "ac\\ac01074-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01074-c0003-e006260-u.json",
+  "bytes": 3099,
+  "sha256": "cfc19e50100ce142fab8c8269842d34dd17fb5a0fdef559b65c49676d438b37a",
+  "baixado_em_utc": "2026-10-26T20:40:32.415192+00:00"
+ },
+ "ac\\ac01139-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01139-c0003-e006260-u.json",
+  "bytes": 3083,
+  "sha256": "18b53efad2348de451b75c21b4d4998b170468d5e35a65c23c2761eaff3780e8",
+  "baixado_em_utc": "2026-10-26T20:40:32.444539+00:00"
+ },
+ "ac\\ac01112-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01112-c0003-e006260-u.json",
+  "bytes": 3078,
+  "sha256": "3abb16b873e1b4e63675497f5aa81b8d834b054ae18c5cc5d28e3ee635908b99",
+  "baixado_em_utc": "2026-10-26T20:40:32.446793+00:00"
+ },
+ "ac\\ac01007-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01007-c0003-e006260-u.json",
+  "bytes": 3076,
+  "sha256": "079e79d6af5436a6002925ddb82a6c092ea86e731fbec59018fb81f317e7f9b0",
+  "baixado_em_utc": "2026-10-26T20:40:32.457100+00:00"
+ },
+ "ac\\ac01104-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01104-c0003-e006260-u.json",
+  "bytes": 3071,
+  "sha256": "88cd76a942a39b2ef03d230ec55d99c08bc810e0be2cdb596adc0dabfb0e18fb",
+  "baixado_em_utc": "2026-10-26T20:40:32.498082+00:00"
+ },
+ "ac\\ac01554-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01554-c0003-e006260-u.json",
+  "bytes": 3072,
+  "sha256": "369dcdc7e6eeb81fe21b9cdba72f6d4e4613e0ca70a04009d8bf071bcb1a1672",
+  "baixado_em_utc": "2026-10-26T20:40:32.512689+00:00"
+ },
+ "ac\\ac01040-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01040-c0003-e006260-u.json",
+  "bytes": 3075,
+  "sha256": "7441a9ff92e1fb9ebc05fc865cf2c95bb5dcbcf13e9e48fda45201c01ebf0223",
+  "baixado_em_utc": "2026-10-26T20:40:32.532806+00:00"
+ },
+ "ac\\ac01511-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01511-c0003-e006260-u.json",
+  "bytes": 3076,
+  "sha256": "41fa4fd88523ad9ad5796f539eb78ef22686094f24343f16ffe1f5174e34d95e",
+  "baixado_em_utc": "2026-10-26T20:40:32.534440+00:00"
+ },
+ "ac\\ac01090-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01090-c0003-e006260-u.json",
+  "bytes": 3078,
+  "sha256": "7c2020172f9791ea41413992e696bce13bc559503d0ffdc88558a82b2584cf74",
+  "baixado_em_utc": "2026-10-26T20:40:32.538803+00:00"
+ },
+ "ac\\ac01066-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01066-c0003-e006260-u.json",
+  "bytes": 3071,
+  "sha256": "dddac23c6c7b0322f8fd6c4c63d4b369bdce1cc6a0c6512f6c36b11c1ea9af39",
+  "baixado_em_utc": "2026-10-26T20:40:32.551409+00:00"
+ },
+ "ac\\ac01023-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01023-c0003-e006260-u.json",
+  "bytes": 3078,
+  "sha256": "f25a0664233f952c79504056916722a91fbf4a2483a14bd7678fd3a6cdddaa3f",
+  "baixado_em_utc": "2026-10-26T20:40:32.556875+00:00"
+ },
+ "ac\\ac01392-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01392-c0003-e006260-u.json",
+  "bytes": 3115,
+  "sha256": "f3aae964bf1c8c4784c8c61a3a9c090470d0c148cc5756d7787c51e0193cb699",
+  "baixado_em_utc": "2026-10-26T20:40:32.561416+00:00"
+ },
+ "ac\\ac01082-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01082-c0003-e006260-u.json",
+  "bytes": 3075,
+  "sha256": "330ae3d545f5abaa5149266e75c8b4b362fa6eb700b679d70d325612e96d8433",
+  "baixado_em_utc": "2026-10-26T20:40:32.620339+00:00"
+ },
+ "ac\\ac01031-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01031-c0003-e006260-u.json",
+  "bytes": 3066,
+  "sha256": "654b2aff40e3c522579f2fffce80833dad910f2e5af9677b4c6dfcf11d4efffc",
+  "baixado_em_utc": "2026-10-26T20:40:32.625451+00:00"
+ },
+ "ac\\ac01473-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01473-c0003-e006260-u.json",
+  "bytes": 3093,
+  "sha256": "aeb2aefea58fd0ede67148f678627e4e6959ee7d9325dda20dcd9727dca57cd0",
+  "baixado_em_utc": "2026-10-26T20:40:32.642875+00:00"
+ },
+ "ac\\ac01457-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01457-c0003-e006260-u.json",
+  "bytes": 3092,
+  "sha256": "8e287b28f829f5159b43ad87418593d3cb799d0b0691fd548b03a99f5b2f988a",
+  "baixado_em_utc": "2026-10-26T20:40:32.646078+00:00"
+ },
+ "ac\\ac01538-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01538-c0003-e006260-u.json",
+  "bytes": 3086,
+  "sha256": "27f4a2000cb7f80d44a59a8543acfe9d68e4f3cc6360bf80debba91d9e9d0585",
+  "baixado_em_utc": "2026-10-26T20:40:32.655679+00:00"
+ },
+ "am\\am02895-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02895-c0003-e006260-u.json",
+  "bytes": 2975,
+  "sha256": "968f52cd6e056fc292a8c798074d42d23494a8055ffb2c0ae10afdadfe316411",
+  "baixado_em_utc": "2026-10-26T20:40:32.661190+00:00"
+ },
+ "am\\am02917-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02917-c0003-e006260-u.json",
+  "bytes": 2966,
+  "sha256": "3cbe0a734a95a19f262c283b9357b642a0e0d3caebeac0698344cc4e0ff221a8",
+  "baixado_em_utc": "2026-10-26T20:40:32.727351+00:00"
+ },
+ "ac\\ac01490-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/ac/ac01490-c0003-e006260-u.json",
+  "bytes": 3076,
+  "sha256": "d4e324aad08bbb4669587eb94e5ff365ad7b1508be9894be5c323d0a4a6f280b",
+  "baixado_em_utc": "2026-10-26T20:40:32.734916+00:00"
+ },
+ "am\\am02038-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02038-c0003-e006260-u.json",
+  "bytes": 2975,
+  "sha256": "234c53058f0a8530952db56273294aca28a6d4bbae01e17fac844ae7b43bd199",
+  "baixado_em_utc": "2026-10-26T20:40:32.750220+00:00"
+ },
+ "am\\am02054-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02054-c0003-e006260-u.json",
+  "bytes": 2966,
+  "sha256": "cf694746991ab671e6129c14fd25a4a85fe50412fab76ef3ca4b497eb378ce90",
+  "baixado_em_utc": "2026-10-26T20:40:32.762335+00:00"
+ },
+ "am\\am02933-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02933-c0003-e006260-u.json",
+  "bytes": 2971,
+  "sha256": "b6024d38aeb1d5a8fc04decb6470442736992725699e2a14a11659381f2ad8d2",
+  "baixado_em_utc": "2026-10-26T20:40:32.764066+00:00"
+ },
+ "am\\am02003-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02003-c0003-e006260-u.json",
+  "bytes": 2976,
+  "sha256": "d34cab73dca7d0abd04827bbef0d58828f3b8b1dd2375e2266722b669926da47",
+  "baixado_em_utc": "2026-10-26T20:40:32.773563+00:00"
+ },
+ "am\\am02097-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02097-c0003-e006260-u.json",
+  "bytes": 2975,
+  "sha256": "bff373f725d0771cab4adcdfb5319b60e0dde2e91cb25401f7491cc6a31def7b",
+  "baixado_em_utc": "2026-10-26T20:40:32.787532+00:00"
+ },
+ "am\\am02070-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02070-c0003-e006260-u.json",
+  "bytes": 2991,
+  "sha256": "18fc3ab4e32d6ac11744fac0fa87e8728dd05175ac691a27bf1bab3357ba12b8",
+  "baixado_em_utc": "2026-10-26T20:40:32.806103+00:00"
+ },
+ "am\\am02135-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02135-c0003-e006260-u.json",
+  "bytes": 2986,
+  "sha256": "632a23acf0eb44d0ad3e54ad00ddd904a4ab785a807fda23b8cd333f4422ee4f",
+  "baixado_em_utc": "2026-10-26T20:40:32.839102+00:00"
+ },
+ "am\\am02119-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02119-c0003-e006260-u.json",
+  "bytes": 2983,
+  "sha256": "e54d539ce1ea13b6924c461060f49373a7418cd1c9ae3736f36c21cb632c2a78",
+  "baixado_em_utc": "2026-10-26T20:40:32.849113+00:00"
+ },
+ "am\\am02151-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02151-c0003-e006260-u.json",
+  "bytes": 2986,
+  "sha256": "c9dc92dba0940c90d25cb22e6dcc196384e656d9fc647598364c30433b2c59d5",
+  "baixado_em_utc": "2026-10-26T20:40:32.878375+00:00"
+ },
+ "am\\am02178-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02178-c0003-e006260-u.json",
+  "bytes": 2985,
+  "sha256": "689d4e8a01ffc74ab4189351741bd29a4ca29692f471995ef70e1baf7db4575f",
+  "baixado_em_utc": "2026-10-26T20:40:32.888219+00:00"
+ },
+ "am\\am02950-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02950-c0003-e006260-u.json",
+  "bytes": 2980,
+  "sha256": "42bc75858e326ceb0636d559caa5c8b5eb0e06d5294d31b9b90d57b565336ad9",
+  "baixado_em_utc": "2026-10-26T20:40:32.889595+00:00"
+ },
+ "am\\am02976-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02976-c0003-e006260-u.json",
+  "bytes": 2968,
+  "sha256": "e8b5705f8a4427361f977a8e6c99256cb9800d75378de93f69c7a8ddadfdbeb8",
+  "baixado_em_utc": "2026-10-26T20:40:32.911823+00:00"
+ },
+ "am\\am02992-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02992-c0003-e006260-u.json",
+  "bytes": 2971,
+  "sha256": "59ff73bb938111ea82be3c13f45511dc74e891177db75b72cece367ba63bf6b3",
+  "baixado_em_utc": "2026-10-26T20:40:32.914179+00:00"
+ },
+ "am\\am02194-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02194-c0003-e006260-u.json",
+  "bytes": 2975,
+  "sha256": "00f9f64efaa0847673117623e5f0f04f3b78026f76ec2a6971f90cceb34745a6",
+  "baixado_em_utc": "2026-10-26T20:40:32.915651+00:00"
+ },
+ "am\\am02232-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02232-c0003-e006260-u.json",
+  "bytes": 2986,
+  "sha256": "aca9986821ee904854d780ddd1beb8b02dd9e3205e334f8185715d7e206659f4",
+  "baixado_em_utc": "2026-10-26T20:40:32.962676+00:00"
+ },
+ "am\\am02216-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02216-c0003-e006260-u.json",
+  "bytes": 2986,
+  "sha256": "68567cadbca6d824181a5f22a9497a0b38b413f8338653c92cc40e4dae00d8be",
+  "baixado_em_utc": "2026-10-26T20:40:32.964138+00:00"
+ },
+ "am\\am02046-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02046-c0003-e006260-u.json",
+  "bytes": 2981,
+  "sha256": "9e6f86264ff9371c573f8ead1a1137d623a32b41330373b6945806c16ee7885f",
+  "baixado_em_utc": "2026-10-26T20:40:33.003289+00:00"
+ },
+ "am\\am02259-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02259-c0003-e006260-u.json",
+  "bytes": 2998,
+  "sha256": "04e2958f862f453f18ae045ed329cc66d8db7bf8272a15682e0245c1c9003cf2",
+  "baixado_em_utc": "2026-10-26T20:40:33.010135+00:00"
+ },
+ "am\\am02313-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02313-c0003-e006260-u.json",
+  "bytes": 2975,
+  "sha256": "68a8be9ac5213fcaf1278d9a10493d1a0dc2b69a7619f275f4be4b35433b6422",
+  "baixado_em_utc": "2026-10-26T20:40:33.011877+00:00"
+ },
+ "am\\am02291-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02291-c0003-e006260-u.json",
+  "bytes": 2986,
+  "sha256": "797255e12f1f5c867afe8632deadc4fa4b1e537bae48a8dd16c58062dc296f8b",
+  "baixado_em_utc": "2026-10-26T20:40:33.028297+00:00"
+ },
+ "am\\am02275-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02275-c0003-e006260-u.json",
+  "bytes": 2980,
+  "sha256": "e1d6924228b33676ec89bc9b21335b2cb6ff4733c34dbea369e1569b1697801e",
+  "baixado_em_utc": "2026-10-26T20:40:33.030338+00:00"
+ },
+ "am\\am02330-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02330-c0003-e006260-u.json",
+  "bytes": 2985,
+  "sha256": "ead047f4c0f6893ed34df14dae56761947593a4673c8e016f1916451dc13de5d",
+  "baixado_em_utc": "2026-10-26T20:40:33.031821+00:00"
+ },
+ "am\\am02020-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02020-c0003-e006260-u.json",
+  "bytes": 2976,
+  "sha256": "075451e30a1aaa63873731953d479929c036e58c6c428916022a707ff5ea1b90",
+  "baixado_em_utc": "2026-10-26T20:40:33.069274+00:00"
+ },
+ "am\\am02356-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02356-c0003-e006260-u.json",
+  "bytes": 2995,
+  "sha256": "d4bd6543481f020088eaf41a8928d81b08138a23392fb1883bbbf88a0c663552",
+  "baixado_em_utc": "2026-10-26T20:40:33.088213+00:00"
+ },
+ "am\\am02399-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02399-c0003-e006260-u.json",
+  "bytes": 2970,
+  "sha256": "a32c46d12a0c12909dc6390534597c0f04b1b54e03dc226ca3cb87d381375e40",
+  "baixado_em_utc": "2026-10-26T20:40:33.118492+00:00"
+ },
+ "am\\am02453-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02453-c0003-e006260-u.json",
+  "bytes": 2964,
+  "sha256": "3371d6ddc42b9ac2e2dc28a9c23b4008603ba7a91dc85060d834762713fcca0c",
+  "baixado_em_utc": "2026-10-26T20:40:33.137878+00:00"
+ },
+ "am\\am98353-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am98353-c0003-e006260-u.json",
+  "bytes": 2997,
+  "sha256": "bbbdbdf3b56746ad022c0b78cc8c4e9afa3766ba863c429541d284f0fa3344bd",
+  "baixado_em_utc": "2026-10-26T20:40:33.139995+00:00"
+ },
+ "am\\am02410-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02410-c0003-e006260-u.json",
+  "bytes": 2998,
+  "sha256": "f0f56cd60f078c4e6337cdb1c7b969d54e27db784f414a6c01ac59179505c775",
+  "baixado_em_utc": "2026-10-26T20:40:33.141769+00:00"
+ },
+ "am\\am02437-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02437-c0003-e006260-u.json",
+  "bytes": 2971,
+  "sha256": "7c55729e65bd1dc42fb42a49649f4e46435f169213bf6f7a236750a9bf137e6a",
+  "baixado_em_utc": "2026-10-26T20:40:33.152143+00:00"
+ },
+ "am\\am98370-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am98370-c0003-e006260-u.json",
+  "bytes": 2966,
+  "sha256": "e37821344502db9ac4be8c12986c20ad4eaeefccf28c7b2d2b82d7f68dcded97",
+  "baixado_em_utc": "2026-10-26T20:40:33.154096+00:00"
+ },
+ "am\\am02470-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02470-c0003-e006260-u.json",
+  "bytes": 2971,
+  "sha256": "aee0f374d83c4bba5e13353d582bbcb93f10cbbfac82e913d35e8f751709721d",
+  "baixado_em_utc": "2026-10-26T20:40:33.177723+00:00"
+ },
+ "am\\am02496-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02496-c0003-e006260-u.json",
+  "bytes": 2980,
+  "sha256": "b5a431fb47b4945cb2c00decae768b3b92b0b29cc6cf77bf5deac1ef90ef8ae1",
+  "baixado_em_utc": "2026-10-26T20:40:33.198406+00:00"
+ },
+ "am\\am02550-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02550-c0003-e006260-u.json",
+  "bytes": 3035,
+  "sha256": "d92f97c04f376be60e69da594c43d637574c31a0ec696b2b15de6f23ed45ed94",
+  "baixado_em_utc": "2026-10-26T20:40:33.257670+00:00"
+ },
+ "am\\am02518-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02518-c0003-e006260-u.json",
+  "bytes": 2986,
+  "sha256": "9971a40af4449fbfc6993ee98377a67498b4896095e9aa00d907f97bbbf34cf2",
+  "baixado_em_utc": "2026-10-26T20:40:33.259146+00:00"
+ },
+ "am\\am98396-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am98396-c0003-e006260-u.json",
+  "bytes": 2977,
+  "sha256": "ab3d9efb7766408189d5bb7e1fe84565b9541c647d4374ff105dcaf1ce3767f1",
+  "baixado_em_utc": "2026-10-26T20:40:33.261353+00:00"
+ },
+ "am\\am02593-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02593-c0003-e006260-u.json",
+  "bytes": 2971,
+  "sha256": "93327b66806d99c1b614b8527ed7936a643662545dc87fe25da905d5a5277777",
+  "baixado_em_utc": "2026-10-26T20:40:33.269760+00:00"
+ },
+ "am\\am02534-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02534-c0003-e006260-u.json",
+  "bytes": 2998,
+  "sha256": "5c118d0d07c9567a25c9241a4b09c890b62034e22f30cb961e075825da74d26b",
+  "baixado_em_utc": "2026-10-26T20:40:33.277649+00:00"
+ },
+ "am\\am02577-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02577-c0003-e006260-u.json",
+  "bytes": 2990,
+  "sha256": "51147d84406e2317e05d06b7cc6d0cd2911fb6dcbf2a7aaa21cf6b2b7af0444f",
+  "baixado_em_utc": "2026-10-26T20:40:33.292565+00:00"
+ },
+ "am\\am02615-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02615-c0003-e006260-u.json",
+  "bytes": 2991,
+  "sha256": "f1d3173d86e967248c60eb9d64111d24bec99ea6321bfc6a3fbd8fc196a69f61",
+  "baixado_em_utc": "2026-10-26T20:40:33.314689+00:00"
+ },
+ "am\\am02631-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02631-c0003-e006260-u.json",
+  "bytes": 2980,
+  "sha256": "1f62998870ac800468e9234ddadd631dee4a4b30298d1dca651bd7280336239b",
+  "baixado_em_utc": "2026-10-26T20:40:33.318534+00:00"
+ },
+ "am\\am02011-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02011-c0003-e006260-u.json",
+  "bytes": 2975,
+  "sha256": "17cf71efb199ac6980465085c91d35c66279322af086b17c0e188e3e62147750",
+  "baixado_em_utc": "2026-10-26T20:40:33.382508+00:00"
+ },
+ "am\\am02712-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02712-c0003-e006260-u.json",
+  "bytes": 2975,
+  "sha256": "ad320dda2151e872ce84fbe6d515af24a2706ec6174572ace54060f83a79c10e",
+  "baixado_em_utc": "2026-10-26T20:40:33.385345+00:00"
+ },
+ "am\\am02658-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02658-c0003-e006260-u.json",
+  "bytes": 2985,
+  "sha256": "e6f91bd8a3482fc26d46685b93f560fc68ba3548fadbe202625e69ffb06b4bf2",
+  "baixado_em_utc": "2026-10-26T20:40:33.387783+00:00"
+ },
+ "am\\am02674-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02674-c0003-e006260-u.json",
+  "bytes": 2975,
+  "sha256": "7840255ceffd61c737e6efa292819f6a9cf0a7579cb13357f43d66cc62da009c",
+  "baixado_em_utc": "2026-10-26T20:40:33.390380+00:00"
+ },
+ "am\\am02690-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02690-c0003-e006260-u.json",
+  "bytes": 2993,
+  "sha256": "27dd947505ea6696b84e94addeb79a32e4a210f741b567822939f93657da07bd",
+  "baixado_em_utc": "2026-10-26T20:40:33.396204+00:00"
+ },
+ "am\\am02372-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02372-c0003-e006260-u.json",
+  "bytes": 2971,
+  "sha256": "f1c79f47886ac00f81037366d2ee4fc4a1a8103c057a3f1f223ab1d4e868439f",
+  "baixado_em_utc": "2026-10-26T20:40:33.426102+00:00"
+ },
+ "am\\am98434-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am98434-c0003-e006260-u.json",
+  "bytes": 2981,
+  "sha256": "3c634be2696481c82a02e148946e969b4c3c2d255c8544bd5f7694a9d340614c",
+  "baixado_em_utc": "2026-10-26T20:40:33.453487+00:00"
+ },
+ "am\\am02739-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02739-c0003-e006260-u.json",
+  "bytes": 2985,
+  "sha256": "7f8146030b4dbc6c8f90fcad42c2b34790c891bfa7a0f815e0570a00c513b31e",
+  "baixado_em_utc": "2026-10-26T20:40:33.482832+00:00"
+ },
+ "am\\am98418-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am98418-c0003-e006260-u.json",
+  "bytes": 2986,
+  "sha256": "9a5250ae4eecda25a3791e1b1698a62f8ac7e341f02a461781dcf6814bbbc844",
+  "baixado_em_utc": "2026-10-26T20:40:33.486356+00:00"
+ },
+ "am\\am02771-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02771-c0003-e006260-u.json",
+  "bytes": 2971,
+  "sha256": "dbb9e96652947b677fd6e78ff94a5717e54c1eb6b61a545737e1e267e1002c2f",
+  "baixado_em_utc": "2026-10-26T20:40:33.490331+00:00"
+ },
+ "am\\am02836-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02836-c0003-e006260-u.json",
+  "bytes": 2990,
+  "sha256": "6ada8c13bbcdb9d9dbbdb03e5028028ede17a4fa31ab3d2b57fea25b79d6c777",
+  "baixado_em_utc": "2026-10-26T20:40:33.512781+00:00"
+ },
+ "am\\am02755-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02755-c0003-e006260-u.json",
+  "bytes": 2985,
+  "sha256": "89880a6e2fbbf571e8bb263e5f0bdea2a30a6972649c355ab685ce9e749ca091",
+  "baixado_em_utc": "2026-10-26T20:40:33.518184+00:00"
+ },
+ "am\\am98450-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am98450-c0003-e006260-u.json",
+  "bytes": 2971,
+  "sha256": "72ff581b430f364822cbc2664e609a10a8d3016dde195331e7630a94c5fe5a40",
+  "baixado_em_utc": "2026-10-26T20:40:33.519928+00:00"
+ },
+ "am\\am98477-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am98477-c0003-e006260-u.json",
+  "bytes": 2992,
+  "sha256": "71c7d8d2e46feffe91159c58f32312e13bca23a71b1d8becb84c4a116906467e",
+  "baixado_em_utc": "2026-10-26T20:40:33.539069+00:00"
+ },
+ "am\\am02798-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02798-c0003-e006260-u.json",
+  "bytes": 2975,
+  "sha256": "d8abb11e44032ef2302b120dad6126d83221a5d2a2e09274d6694e900d683dc4",
+  "baixado_em_utc": "2026-10-26T20:40:33.575646+00:00"
+ },
+ "am\\am02810-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02810-c0003-e006260-u.json",
+  "bytes": 2993,
+  "sha256": "24ca7ec611d363f410dac46839b232f0cd5d69b21deb7b962227167432538bfb",
+  "baixado_em_utc": "2026-10-26T20:40:33.596944+00:00"
+ },
+ "am\\am98515-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am98515-c0003-e006260-u.json",
+  "bytes": 2975,
+  "sha256": "a652c341ffe9884a433a7f841cc8fa095ce1ba8be7df252200345aa4e72fadd6",
+  "baixado_em_utc": "2026-10-26T20:40:33.599179+00:00"
+ },
+ "am\\am98493-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am98493-c0003-e006260-u.json",
+  "bytes": 2971,
+  "sha256": "9ddaf568e7973c8d59cf5c34684a1e423c7483e0ec101c14215563154f2895e9",
+  "baixado_em_utc": "2026-10-26T20:40:33.600965+00:00"
+ },
+ "am\\am02879-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02879-c0003-e006260-u.json",
+  "bytes": 2975,
+  "sha256": "bd81b606a41e3a7a9bb562caf139eedf9cdb6580e8d21d8244c7d2dca423aff9",
+  "baixado_em_utc": "2026-10-26T20:40:33.634629+00:00"
+ },
+ "am\\am02852-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/am/am02852-c0003-e006260-u.json",
+  "bytes": 2975,
+  "sha256": "766033e997562d567ca8e2a4f153b6767114e2af44f81446cad482c1102c198c",
+  "baixado_em_utc": "2026-10-26T20:40:33.641340+00:00"
+ },
+ "df\\df97012-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/df/df97012-c0003-e006260-u.json",
+  "bytes": 3402,
+  "sha256": "0b50578192fe3223ed83cf14e8a8d5c68cf495d601254c71733406c880d28b10",
+  "baixado_em_utc": "2026-10-26T20:40:33.660889+00:00"
+ },
+ "es\\es56014-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56014-c0003-e006260-u.json",
+  "bytes": 3033,
+  "sha256": "001383675c731ec91824c3754033ff27d4c6b00322993bd2e06263db825fa35f",
+  "baixado_em_utc": "2026-10-26T20:40:33.662099+00:00"
+ },
+ "es\\es56030-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56030-c0003-e006260-u.json",
+  "bytes": 3031,
+  "sha256": "9f29d03bc78df5775e76f7d7bb8e2acfddfc171a792ba3ebea08956d970d013e",
+  "baixado_em_utc": "2026-10-26T20:40:33.688164+00:00"
+ },
+ "es\\es56065-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56065-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "40e28a368eaa3a3b9ceae89b8bcf0594512136a33d0df15037b9fb00b087a4be",
+  "baixado_em_utc": "2026-10-26T20:40:33.723766+00:00"
+ },
+ "es\\es56057-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56057-c0003-e006260-u.json",
+  "bytes": 3023,
+  "sha256": "e6320c669ad8bd4ace35c95e5c4716049ef91c3782528b44779151732f22dd8f",
+  "baixado_em_utc": "2026-10-26T20:40:33.727207+00:00"
+ },
+ "es\\es56090-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56090-c0003-e006260-u.json",
+  "bytes": 3016,
+  "sha256": "17d5e4d4f626f162a4fb1871b1807b3c530dca4e629ef2cf6fce8e6ba5518402",
+  "baixado_em_utc": "2026-10-26T20:40:33.742624+00:00"
+ },
+ "es\\es56073-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56073-c0003-e006260-u.json",
+  "bytes": 3033,
+  "sha256": "984dd100275e743b73986febbce97b1dffe502df5286a3da64d22f9f72416314",
+  "baixado_em_utc": "2026-10-26T20:40:33.758066+00:00"
+ },
+ "es\\es56154-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56154-c0003-e006260-u.json",
+  "bytes": 3026,
+  "sha256": "e0385fe6c8e8a731719c65c3385ce54b16bcf16836d7b418fc128811a4209e18",
+  "baixado_em_utc": "2026-10-26T20:40:33.778773+00:00"
+ },
+ "es\\es56138-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56138-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "08386aaa010017b8f2017d1e14af0f73245319491eb6466ca513ec398a2b52e4",
+  "baixado_em_utc": "2026-10-26T20:40:33.782511+00:00"
+ },
+ "es\\es56111-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56111-c0003-e006260-u.json",
+  "bytes": 3044,
+  "sha256": "19076ba347a2e7a80356e97f8b9a1fdf90dd234964fca650a4210101b293921f",
+  "baixado_em_utc": "2026-10-26T20:40:33.785829+00:00"
+ },
+ "es\\es56170-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56170-c0003-e006260-u.json",
+  "bytes": 3042,
+  "sha256": "579296c2541b3ff0bf91c1a98aa83c1bd3359b0f62331507041c8746f2a61a98",
+  "baixado_em_utc": "2026-10-26T20:40:33.793494+00:00"
+ },
+ "es\\es56197-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56197-c0003-e006260-u.json",
+  "bytes": 3021,
+  "sha256": "ef9e2342d3b68d96f41eaa61a438f2573f1d5af888152c5cbf3641d23ee8a1e1",
+  "baixado_em_utc": "2026-10-26T20:40:33.853210+00:00"
+ },
+ "es\\es56219-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56219-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "dfa8a5ab327191edd777b86f2b407fd6510470e7e60af993c9a7bc4ca54274ff",
+  "baixado_em_utc": "2026-10-26T20:40:33.854348+00:00"
+ },
+ "es\\es56146-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56146-c0003-e006260-u.json",
+  "bytes": 3021,
+  "sha256": "c6eae22731917de022047d145834452f453588d4fbea569ce92d48ce646f93f2",
+  "baixado_em_utc": "2026-10-26T20:40:33.866757+00:00"
+ },
+ "es\\es56235-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56235-c0003-e006260-u.json",
+  "bytes": 3053,
+  "sha256": "e70b03c8badbff2bada36a3ae843d1a54d2aa6ada2e0f5bba2f19b33049fe3ac",
+  "baixado_em_utc": "2026-10-26T20:40:33.884493+00:00"
+ },
+ "es\\es56278-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56278-c0003-e006260-u.json",
+  "bytes": 3037,
+  "sha256": "71f03fcf99d400d956f28bcd9fe30996efd45417ee90164b0113bc4a976310da",
+  "baixado_em_utc": "2026-10-26T20:40:33.897784+00:00"
+ },
+ "es\\es56294-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56294-c0003-e006260-u.json",
+  "bytes": 3044,
+  "sha256": "f447360f8470981d8b103ef18ad4cd55b840a6660f51a666f3317e47c40ebcf9",
+  "baixado_em_utc": "2026-10-26T20:40:33.899402+00:00"
+ },
+ "es\\es56251-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56251-c0003-e006260-u.json",
+  "bytes": 3060,
+  "sha256": "eadc63537e0ea30f4ab95e7b26179c004ef2fe58b93e096b9d04abbb31a84c66",
+  "baixado_em_utc": "2026-10-26T20:40:33.904387+00:00"
+ },
+ "es\\es56316-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56316-c0003-e006260-u.json",
+  "bytes": 3033,
+  "sha256": "204a447ff825bd438c6dba9c36be424fb9c26ecc3f5c98ee0971873b740d02cb",
+  "baixado_em_utc": "2026-10-26T20:40:33.908138+00:00"
+ },
+ "es\\es56375-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56375-c0003-e006260-u.json",
+  "bytes": 3033,
+  "sha256": "188641030b3b4ba838f292ad7f9d53cfc676d221c34337695ee396ca510b0821",
+  "baixado_em_utc": "2026-10-26T20:40:33.967472+00:00"
+ },
+ "es\\es56359-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56359-c0003-e006260-u.json",
+  "bytes": 3015,
+  "sha256": "c38fd3525e67abcb3689057c585c0b194a3fbc5169533e1a18bbf30e8a7e45cd",
+  "baixado_em_utc": "2026-10-26T20:40:33.973052+00:00"
+ },
+ "es\\es56332-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56332-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "86e9bd5d2bc7ab77ea562ab4485a454cbb48a8ff82836fc2bdc725f35bb2dcf2",
+  "baixado_em_utc": "2026-10-26T20:40:33.993752+00:00"
+ },
+ "es\\es56308-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56308-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "cc61db59f3d67436c5f02e7d60e4b3741c9c4dd2bfa4406a6051b43384a14d30",
+  "baixado_em_utc": "2026-10-26T20:40:34.014773+00:00"
+ },
+ "es\\es56391-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56391-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "285606b0806476b59ac5a2cd50623b95a375c474246ef74fc3f83e7404d8fbc1",
+  "baixado_em_utc": "2026-10-26T20:40:34.019497+00:00"
+ },
+ "es\\es56430-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56430-c0003-e006260-u.json",
+  "bytes": 3026,
+  "sha256": "f04d27d16eef324d778ec6104fdd46bd9607e57e80a48caf92f0e5d37206f65a",
+  "baixado_em_utc": "2026-10-26T20:40:34.020940+00:00"
+ },
+ "es\\es56413-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56413-c0003-e006260-u.json",
+  "bytes": 3026,
+  "sha256": "9e38c5e57e34f622e7090de9a19aff14708e50e9ac6c42f0722c8e3b40d4e93b",
+  "baixado_em_utc": "2026-10-26T20:40:34.040659+00:00"
+ },
+ "es\\es56472-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56472-c0003-e006260-u.json",
+  "bytes": 3048,
+  "sha256": "6e9dd468c1c5c83d83bd4f5143b5afc712a5a10d215cc147564ea695269d9281",
+  "baixado_em_utc": "2026-10-26T20:40:34.056912+00:00"
+ },
+ "es\\es57096-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es57096-c0003-e006260-u.json",
+  "bytes": 3028,
+  "sha256": "6523fc2666388f416a1ca48ef37173bc05aae448ba04633b55cf1ef7f3ee3b24",
+  "baixado_em_utc": "2026-10-26T20:40:34.083185+00:00"
+ },
+ "es\\es56456-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56456-c0003-e006260-u.json",
+  "bytes": 3026,
+  "sha256": "d02c8d530ec071a15d5e9a2ab4fc9e97f5b924228e53e99f8d8a9454ef0973a4",
+  "baixado_em_utc": "2026-10-26T20:40:34.087144+00:00"
+ },
+ "es\\es56499-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56499-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "91f3dc6fedcd16e6da4cb6dbc1d2d57540b46d9aeacdae324174e5f2aefd6357",
+  "baixado_em_utc": "2026-10-26T20:40:34.110586+00:00"
+ },
+ "es\\es56502-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56502-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "8c7be00d505547008c53a9e88d97f184c7d692501baaa07bc0b9dfbd859ba1bd",
+  "baixado_em_utc": "2026-10-26T20:40:34.116561+00:00"
+ },
+ "es\\es56049-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56049-c0003-e006260-u.json",
+  "bytes": 3021,
+  "sha256": "2a1a889346d4546a0e3ffbf47d498691dfdef24ab5ee43ae300c37eacbc46f02",
+  "baixado_em_utc": "2026-10-26T20:40:34.127156+00:00"
+ },
+ "es\\es56510-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56510-c0003-e006260-u.json",
+  "bytes": 3021,
+  "sha256": "ab5d02fbed33339267ec9ff9d487ca63e9bbfea3f2cf6e360285c37e9301b8f9",
+  "baixado_em_utc": "2026-10-26T20:40:34.132577+00:00"
+ },
+ "es\\es56553-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56553-c0003-e006260-u.json",
+  "bytes": 3042,
+  "sha256": "761c1e1e92266ea2367ed1c88738f497d062dd2cc6329910f4bc31ce24f0184f",
+  "baixado_em_utc": "2026-10-26T20:40:34.189983+00:00"
+ },
+ "es\\es56570-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56570-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "a71bb141af04b91912be3d11123efa108a5b94f762d2e92b4dc3ac771595396c",
+  "baixado_em_utc": "2026-10-26T20:40:34.211252+00:00"
+ },
+ "es\\es56618-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56618-c0003-e006260-u.json",
+  "bytes": 3021,
+  "sha256": "848e993a2c90576147ab1d376d6c1514752494e565b4bcb68eaed1e8ea9422bc",
+  "baixado_em_utc": "2026-10-26T20:40:34.220259+00:00"
+ },
+ "es\\es56537-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56537-c0003-e006260-u.json",
+  "bytes": 3021,
+  "sha256": "2907f100e1d3a3039c4e6d3c4275db8c9cdf2fa17b2b9f3cb18324a9044676c3",
+  "baixado_em_utc": "2026-10-26T20:40:34.224182+00:00"
+ },
+ "es\\es57916-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es57916-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "6c80a044a56344cf5ce52ca0fb6a2543c38e6b31885b612c0d0dd94be9f6c13e",
+  "baixado_em_utc": "2026-10-26T20:40:34.241247+00:00"
+ },
+ "es\\es56596-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56596-c0003-e006260-u.json",
+  "bytes": 3028,
+  "sha256": "94ba41a703de58ac14b5952e54ffe960c6ad0a278738399fda527c3b8253054b",
+  "baixado_em_utc": "2026-10-26T20:40:34.256431+00:00"
+ },
+ "es\\es56626-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56626-c0003-e006260-u.json",
+  "bytes": 3023,
+  "sha256": "59c1c83a907c76fc96c72532254f53093fdca814119704882f15539ed9891e47",
+  "baixado_em_utc": "2026-10-26T20:40:34.274346+00:00"
+ },
+ "es\\es57134-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es57134-c0003-e006260-u.json",
+  "bytes": 3033,
+  "sha256": "d806559ee90114ea7cceeecbcd86ac1166a8ae67948d54a7884470eeace08095",
+  "baixado_em_utc": "2026-10-26T20:40:34.296528+00:00"
+ },
+ "es\\es56634-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56634-c0003-e006260-u.json",
+  "bytes": 3048,
+  "sha256": "9a7129cd3fef6cd4adc37ae0fc527ba0ac8b084aa3b84a26691d3e552e2f14f0",
+  "baixado_em_utc": "2026-10-26T20:40:34.324548+00:00"
+ },
+ "es\\es56120-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56120-c0003-e006260-u.json",
+  "bytes": 3042,
+  "sha256": "466086a3a53cc4288b1856f4f520af79295aebc6ed2731501b64aa5368e54a59",
+  "baixado_em_utc": "2026-10-26T20:40:34.331206+00:00"
+ },
+ "es\\es56103-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56103-c0003-e006260-u.json",
+  "bytes": 3026,
+  "sha256": "265b19b2b188e5e548cf7cb3bd900ec40345e7f16983477437709237ab2daf93",
+  "baixado_em_utc": "2026-10-26T20:40:34.333170+00:00"
+ },
+ "es\\es56650-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56650-c0003-e006260-u.json",
+  "bytes": 3021,
+  "sha256": "8ed8b085eb44975c18f2b8736c80cc2ed8ef46205dc4361d9ad767ae9d1a80f3",
+  "baixado_em_utc": "2026-10-26T20:40:34.364612+00:00"
+ },
+ "es\\es57070-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es57070-c0003-e006260-u.json",
+  "bytes": 3021,
+  "sha256": "8df3b139332d028cbf3eb0c2aef290dd0625fed8dc91bc9071b850f0032d86b8",
+  "baixado_em_utc": "2026-10-26T20:40:34.382180+00:00"
+ },
+ "es\\es56677-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56677-c0003-e006260-u.json",
+  "bytes": 3028,
+  "sha256": "5892bb0a5f1ca9f7802b68dc4d2d7cce387e55141e86840fac13833b0711458f",
+  "baixado_em_utc": "2026-10-26T20:40:34.384057+00:00"
+ },
+ "es\\es56693-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56693-c0003-e006260-u.json",
+  "bytes": 3026,
+  "sha256": "3e36d54dc7ab8d525d6c1c48fd9d13901cea2937b84d0c31b76b3599b055057c",
+  "baixado_em_utc": "2026-10-26T20:40:34.423002+00:00"
+ },
+ "es\\es56715-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56715-c0003-e006260-u.json",
+  "bytes": 3016,
+  "sha256": "3c67cf50589e3fa094dc89769ea961a0037cc0e39ac19d53e073d2d686b4b893",
+  "baixado_em_utc": "2026-10-26T20:40:34.431044+00:00"
+ },
+ "es\\es56758-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56758-c0003-e006260-u.json",
+  "bytes": 3021,
+  "sha256": "ee33f36657a208f821dd8d281a058e6a029706791335060fb30476eac665d456",
+  "baixado_em_utc": "2026-10-26T20:40:34.440525+00:00"
+ },
+ "es\\es56731-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56731-c0003-e006260-u.json",
+  "bytes": 3026,
+  "sha256": "cfd8a43140198aaeb580cbdab846b20912d350159615e8d3b4736aa7c43c343e",
+  "baixado_em_utc": "2026-10-26T20:40:34.458721+00:00"
+ },
+ "es\\es56774-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56774-c0003-e006260-u.json",
+  "bytes": 3042,
+  "sha256": "617f0b4cfca281f7ab47409ba9d162b017f9a2524ad391a2d54fe1ae489357a0",
+  "baixado_em_utc": "2026-10-26T20:40:34.474025+00:00"
+ },
+ "es\\es56790-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56790-c0003-e006260-u.json",
+  "bytes": 3026,
+  "sha256": "29fe0ae41f7585a98b4d73bd0afef240faac57343947e8367ac12d47129b0f6d",
+  "baixado_em_utc": "2026-10-26T20:40:34.484183+00:00"
+ },
+ "es\\es57150-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es57150-c0003-e006260-u.json",
+  "bytes": 3026,
+  "sha256": "1c1b8fbcbefcb3264a7bcb697d926e76bc04a114aea5d290296a429272240ae7",
+  "baixado_em_utc": "2026-10-26T20:40:34.505154+00:00"
+ },
+ "es\\es56812-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56812-c0003-e006260-u.json",
+  "bytes": 3026,
+  "sha256": "a2b4b344fb844db52a1d2ae6310b60c0e836b068c352489afc0eb9e49890bdd6",
+  "baixado_em_utc": "2026-10-26T20:40:34.548623+00:00"
+ },
+ "es\\es56839-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56839-c0003-e006260-u.json",
+  "bytes": 3026,
+  "sha256": "8d9e5406e8624c32c2f7586511c4a0ffb6a53788e134cc2b1efd7d9be5aec17f",
+  "baixado_em_utc": "2026-10-26T20:40:34.558313+00:00"
+ },
+ "es\\es57118-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es57118-c0003-e006260-u.json",
+  "bytes": 3026,
+  "sha256": "1b2cc04b1f41c2bbdf011a7ba19ead2be05cd0861881b9cd206cbb1a769e06c3",
+  "baixado_em_utc": "2026-10-26T20:40:34.569865+00:00"
+ },
+ "es\\es56855-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56855-c0003-e006260-u.json",
+  "bytes": 3023,
+  "sha256": "e8ceb20c96abee0ab5724e9027b9d0a7f5b85b6461ae3707fdd350c1e1ef9935",
+  "baixado_em_utc": "2026-10-26T20:40:34.571466+00:00"
+ },
+ "es\\es56871-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56871-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "29fbd7996738c1a2df4205ea46753ee38e42d05d51e6c378b9ed87353f239ab7",
+  "baixado_em_utc": "2026-10-26T20:40:34.588243+00:00"
+ },
+ "es\\es56200-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56200-c0003-e006260-u.json",
+  "bytes": 3016,
+  "sha256": "4502bef5b4d242cf1631326f1bffb210a803a1478bfb1edf4718ec81e21f814f",
+  "baixado_em_utc": "2026-10-26T20:40:34.590208+00:00"
+ },
+ "es\\es56898-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56898-c0003-e006260-u.json",
+  "bytes": 3021,
+  "sha256": "f019b782adcb9422e11579100b00c0920f6a6a4283e51273fb08b676f64e262f",
+  "baixado_em_utc": "2026-10-26T20:40:34.597054+00:00"
+ },
+ "es\\es57932-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es57932-c0003-e006260-u.json",
+  "bytes": 3033,
+  "sha256": "ed2e2cbe3b5be57f15658c761e5c1a73133ee83331e6d38e0471ec5ee99a69cc",
+  "baixado_em_utc": "2026-10-26T20:40:34.612747+00:00"
+ },
+ "es\\es56189-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56189-c0003-e006260-u.json",
+  "bytes": 3028,
+  "sha256": "156e4d5f6747d9a5b5248f4ef792eab53d2706aa23b90bc26929cdf114c92409",
+  "baixado_em_utc": "2026-10-26T20:40:34.676450+00:00"
+ },
+ "es\\es56006-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56006-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "6e1a8314f661df0d8185ac6afa21ddce9f4ca02e68422349bada1c221be95cd8",
+  "baixado_em_utc": "2026-10-26T20:40:34.682345+00:00"
+ },
+ "es\\es56952-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56952-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "9026364f0a543d52c76bfa733fbdb2456940f06b8b3712cfc26fd2a72f27606c",
+  "baixado_em_utc": "2026-10-26T20:40:34.703744+00:00"
+ },
+ "es\\es56995-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56995-c0003-e006260-u.json",
+  "bytes": 3069,
+  "sha256": "5e929e0da6d4ffcbe773f8aa64a900f38fe96d122fc7c8831f067fd9aea14be4",
+  "baixado_em_utc": "2026-10-26T20:40:34.710917+00:00"
+ },
+ "es\\es56910-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56910-c0003-e006260-u.json",
+  "bytes": 3026,
+  "sha256": "dcbe2fe74c45806c11aa7d54716052ded26ff5c8635979873b8f257b564f1a52",
+  "baixado_em_utc": "2026-10-26T20:40:34.719035+00:00"
+ },
+ "es\\es56979-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56979-c0003-e006260-u.json",
+  "bytes": 3044,
+  "sha256": "686d55dfb21a6ebc5f5cdb7003f24ce7330a269f90e6a7c9f31426c02729e719",
+  "baixado_em_utc": "2026-10-26T20:40:34.720758+00:00"
+ },
+ "es\\es56936-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56936-c0003-e006260-u.json",
+  "bytes": 3033,
+  "sha256": "a0d48f2edbdb29450399a5d3306507207e149983cd9563d4a5fc6aa3bb715c9f",
+  "baixado_em_utc": "2026-10-26T20:40:34.724101+00:00"
+ },
+ "es\\es56162-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56162-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "e333b218d92531326e6f2877c9a56aab3abcdb7eac01bd87fca34f82938c0030",
+  "baixado_em_utc": "2026-10-26T20:40:34.733304+00:00"
+ },
+ "es\\es57959-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es57959-c0003-e006260-u.json",
+  "bytes": 3026,
+  "sha256": "e6c8518770b0efdf17d7133d4aeb4d8cae518f5d014e4c9066510b709842e80d",
+  "baixado_em_utc": "2026-10-26T20:40:34.777661+00:00"
+ },
+ "es\\es57975-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es57975-c0003-e006260-u.json",
+  "bytes": 3031,
+  "sha256": "a18ecc33b982e65271be13b6764f0a29cac5009f4a138621ef80162e274aeadb",
+  "baixado_em_utc": "2026-10-26T20:40:34.797994+00:00"
+ },
+ "es\\es57010-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es57010-c0003-e006260-u.json",
+  "bytes": 3043,
+  "sha256": "1c19bc1b735259641311e88e6c2b384879d6c73bcd3e871b5f32ba570367533a",
+  "baixado_em_utc": "2026-10-26T20:40:34.807864+00:00"
+ },
+ "es\\es57053-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es57053-c0003-e006260-u.json",
+  "bytes": 3058,
+  "sha256": "424c7ae97cceea6133828d43f1cc66784c8102214494b12514cb11466e66840f",
+  "baixado_em_utc": "2026-10-26T20:40:34.833914+00:00"
+ },
+ "es\\es56227-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56227-c0003-e006260-u.json",
+  "bytes": 3026,
+  "sha256": "b04aebd3d65b6bb0c58b23780963631301b69ee4717617d616b5ebc125aa3cbb",
+  "baixado_em_utc": "2026-10-26T20:40:34.842308+00:00"
+ },
+ "es\\es57037-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es57037-c0003-e006260-u.json",
+  "bytes": 3069,
+  "sha256": "857caa15455068e0e6c33ede8177abded675feaf707170c8889b98fcbfee34cb",
+  "baixado_em_utc": "2026-10-26T20:40:34.844244+00:00"
+ },
+ "es\\es56022-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56022-c0003-e006260-u.json",
+  "bytes": 3021,
+  "sha256": "34b2b83d6644ad7e7f82efb929abb2a1a183197e2623e0fbc218e1590861914c",
+  "baixado_em_utc": "2026-10-26T20:40:34.845855+00:00"
+ },
+ "es\\es57991-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es57991-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "16fb1f1a11cc9d5cb4b58d9263fddeb7d35b33abe957b27fb1e341fca564fbbf",
+  "baixado_em_utc": "2026-10-26T20:40:34.890772+00:00"
+ },
+ "es\\es56081-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/es/es56081-c0003-e006260-u.json",
+  "bytes": 3017,
+  "sha256": "867b30f51031cdfd0216ae21ae6f442c34a6f88537a78fac3f68c1e0c63f648a",
+  "baixado_em_utc": "2026-10-26T20:40:34.907995+00:00"
+ },
+ "rn\\rn16055-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16055-c0003-e006260-u.json",
+  "bytes": 3293,
+  "sha256": "cb0dec040131eaa2a91ce64ed51109ff0f104844e4b5c91dd06d4656a8da30ff",
+  "baixado_em_utc": "2026-10-26T20:40:34.912281+00:00"
+ },
+ "rn\\rn16012-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16012-c0003-e006260-u.json",
+  "bytes": 3290,
+  "sha256": "925d863d6ffe84d36ef4ed793af7bdbe177ffa04c287fd476f4d9c1a9576a553",
+  "baixado_em_utc": "2026-10-26T20:40:34.918629+00:00"
+ },
+ "rn\\rn16098-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16098-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "bcb6cd19033da951a91def6cfa06838e9aaf738083d72336b29c590149b414aa",
+  "baixado_em_utc": "2026-10-26T20:40:34.946387+00:00"
+ },
+ "rn\\rn16136-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16136-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "c5150a7a3836882bfbb500a5059d7ec7ef747221d7aefa33539963f30ea7ee53",
+  "baixado_em_utc": "2026-10-26T20:40:34.965110+00:00"
+ },
+ "rn\\rn16152-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16152-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "a6cedbedf22821fbb77e00ca70d4d21816a4b6591c5923b0e19e37010e1b5c51",
+  "baixado_em_utc": "2026-10-26T20:40:34.966577+00:00"
+ },
+ "rn\\rn16110-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16110-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "4d7fe16771fe3e305e5290693f7c419323a0cae3f7e3e87ccc6551c0f1d3d2dc",
+  "baixado_em_utc": "2026-10-26T20:40:34.969870+00:00"
+ },
+ "rn\\rn16179-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16179-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "172ccf93efc7c912d8a0373c9a4cda52d213c7042ca16513baa3f4e7c6a4ee1d",
+  "baixado_em_utc": "2026-10-26T20:40:35.005324+00:00"
+ },
+ "rn\\rn16217-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16217-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "922f91e81a9bb33d780b18bd6ccb8983d2288cf7e5d8e5463a797eee00bdccc4",
+  "baixado_em_utc": "2026-10-26T20:40:35.020379+00:00"
+ },
+ "rn\\rn16233-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16233-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "c19f4eaf2f6064053286b180b13a42a4483642722418124880bf30e1941d402a",
+  "baixado_em_utc": "2026-10-26T20:40:35.036411+00:00"
+ },
+ "rn\\rn16039-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16039-c0003-e006260-u.json",
+  "bytes": 3315,
+  "sha256": "049ce4fa2f7a26ffa2feb2275925e19f93a368418da919578b4b453734b771a5",
+  "baixado_em_utc": "2026-10-26T20:40:35.055806+00:00"
+ },
+ "rn\\rn16195-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16195-c0003-e006260-u.json",
+  "bytes": 3304,
+  "sha256": "fa8c7bfc741fd580429b9c7ecd0d92d51d635ef5a48b885a14f89db167a1c996",
+  "baixado_em_utc": "2026-10-26T20:40:35.059306+00:00"
+ },
+ "rn\\rn16276-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16276-c0003-e006260-u.json",
+  "bytes": 3290,
+  "sha256": "9714fd3ee731ce08e96a58ed927c4da72d3a54f7d9b2f36028201d6b9d842424",
+  "baixado_em_utc": "2026-10-26T20:40:35.089711+00:00"
+ },
+ "rn\\rn30031-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn30031-c0003-e006260-u.json",
+  "bytes": 3304,
+  "sha256": "da3d9d76a77f00a0a6e1a4514f04cfcff5348757aa3854bd061345bf3a86052c",
+  "baixado_em_utc": "2026-10-26T20:40:35.091422+00:00"
+ },
+ "rn\\rn16292-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16292-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "05cb4c7b6f4507e050efc9be90ec571ffa67535c5df3d74ac3395354d18b7f4d",
+  "baixado_em_utc": "2026-10-26T20:40:35.093208+00:00"
+ },
+ "rn\\rn16314-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16314-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "12bbeaed6e7b14d09f741891cb3a38cfccc418f5f2c2d2dabb1928a3078d40a5",
+  "baixado_em_utc": "2026-10-26T20:40:35.124335+00:00"
+ },
+ "rn\\rn17035-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17035-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "2575742c9ece8485dfc25d17b46c1ad92b08b42d22af7f93ee12bd4f94245e72",
+  "baixado_em_utc": "2026-10-26T20:40:35.146336+00:00"
+ },
+ "rn\\rn16101-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16101-c0003-e006260-u.json",
+  "bytes": 3281,
+  "sha256": "9ab175506a44c2a4d7e888c0083c1ad4441ffd8866d7a1b3e7475eab9642b7bb",
+  "baixado_em_utc": "2026-10-26T20:40:35.152301+00:00"
+ },
+ "rn\\rn16357-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16357-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "98452b2488ff238c1673a634c1fa732bc5eef6b700c5581a5bb799d055e1f3f2",
+  "baixado_em_utc": "2026-10-26T20:40:35.175387+00:00"
+ },
+ "rn\\rn16047-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16047-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "d2b8bfec264a5297de54f4e9e96a3bd30756305704cb258b945c1fd57877de15",
+  "baixado_em_utc": "2026-10-26T20:40:35.194053+00:00"
+ },
+ "rn\\rn16373-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16373-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "71d0729ab9f42635b4e279fd6ee6b15b6f91f5712901e98b4786e14a03c25b72",
+  "baixado_em_utc": "2026-10-26T20:40:35.196772+00:00"
+ },
+ "rn\\rn16330-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16330-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "c801f50f9f8e32dc39664e5f2003f5fe9b86d74ac871aab2979bbc2cef4e8ea3",
+  "baixado_em_utc": "2026-10-26T20:40:35.223679+00:00"
+ },
+ "rn\\rn16390-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16390-c0003-e006260-u.json",
+  "bytes": 3315,
+  "sha256": "b6769ea3112fac23a41da2c9b269025aa79686c23c829642228fa8a17a9d34e2",
+  "baixado_em_utc": "2026-10-26T20:40:35.236449+00:00"
+ },
+ "rn\\rn16438-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16438-c0003-e006260-u.json",
+  "bytes": 3304,
+  "sha256": "155c3c56498f248b7ae20a2985774ce9bbf29f9a737e68fb567f76bd632ca4c2",
+  "baixado_em_utc": "2026-10-26T20:40:35.265680+00:00"
+ },
+ "rn\\rn16411-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16411-c0003-e006260-u.json",
+  "bytes": 3290,
+  "sha256": "9a9cffb481504bb33d6e3beff36119b1c544ba93acf079d4a070af1c046c3afd",
+  "baixado_em_utc": "2026-10-26T20:40:35.274416+00:00"
+ },
+ "rn\\rn16250-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16250-c0003-e006260-u.json",
+  "bytes": 3290,
+  "sha256": "4d636818d5bbc0299165796b673c3bd3e620266292102754687a8049f77c5782",
+  "baixado_em_utc": "2026-10-26T20:40:35.285584+00:00"
+ },
+ "rn\\rn16454-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16454-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "51bd858f84dc37555ac06865b97fc3c75e9dde3d4940d1d35b448acecd073605",
+  "baixado_em_utc": "2026-10-26T20:40:35.315188+00:00"
+ },
+ "rn\\rn16470-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16470-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "5394a67af205f1694b150e2dbdd66976ed62f0b07152bdf103b075330e83c53b",
+  "baixado_em_utc": "2026-10-26T20:40:35.338478+00:00"
+ },
+ "rn\\rn16497-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16497-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "19c568cb053ca6abf1e15dc28593ec5a69c4f079ad5831cecb7e8565d991b760",
+  "baixado_em_utc": "2026-10-26T20:40:35.340646+00:00"
+ },
+ "rn\\rn16535-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16535-c0003-e006260-u.json",
+  "bytes": 3290,
+  "sha256": "675fd396283c55d8d19b932734a09a808de5bfd4cccb52f14151fbed06091b69",
+  "baixado_em_utc": "2026-10-26T20:40:35.372901+00:00"
+ },
+ "rn\\rn16578-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16578-c0003-e006260-u.json",
+  "bytes": 3283,
+  "sha256": "ad21b171b04754f233d1fc4392498eb533bd68469aeff3fa8809ddab23c885b0",
+  "baixado_em_utc": "2026-10-26T20:40:35.400307+00:00"
+ },
+ "rn\\rn16594-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16594-c0003-e006260-u.json",
+  "bytes": 3290,
+  "sha256": "018e409e0ca362260de9cbe40792bde00d55bb59d1821633b2f375054ceba48d",
+  "baixado_em_utc": "2026-10-26T20:40:35.402119+00:00"
+ },
+ "rn\\rn16551-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16551-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "75cc5440aee6e1f9d4827296bedb52697c7d0a4239e488cce6b0550678b703bc",
+  "baixado_em_utc": "2026-10-26T20:40:35.416278+00:00"
+ },
+ "rn\\rn16519-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16519-c0003-e006260-u.json",
+  "bytes": 3315,
+  "sha256": "eb034fe5928fd1f822d893878cadabfa2c856a845d6a1b1c89953ca90652eacb",
+  "baixado_em_utc": "2026-10-26T20:40:35.424897+00:00"
+ },
+ "rn\\rn16616-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16616-c0003-e006260-u.json",
+  "bytes": 3315,
+  "sha256": "01162a489685fbb5789ece9ec84705e39a3fe99065073c3bbc859c69d6c5d9c0",
+  "baixado_em_utc": "2026-10-26T20:40:35.433520+00:00"
+ },
+ "rn\\rn16659-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16659-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "c640a30fc3ea664cd863bb00030b4c003f1d9c45b4ef23da2b2ce5403473ef03",
+  "baixado_em_utc": "2026-10-26T20:40:35.456319+00:00"
+ },
+ "rn\\rn16632-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16632-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "c34fb19e4bc281bd17d1fa00ba2c3bd4689a6e1e391767cf2e04bf5e8ec8f6c1",
+  "baixado_em_utc": "2026-10-26T20:40:35.472298+00:00"
+ },
+ "rn\\rn16675-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16675-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "e40d1a995063a530abaccf49110598bfe5bf8340479697e3d92395dc80a1b126",
+  "baixado_em_utc": "2026-10-26T20:40:35.492629+00:00"
+ },
+ "rn\\rn16691-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16691-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "725fc011564e58b348916fe63ae4dcd8db61079f51c1c529a2036c19b16e0f91",
+  "baixado_em_utc": "2026-10-26T20:40:35.521734+00:00"
+ },
+ "rn\\rn16713-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16713-c0003-e006260-u.json",
+  "bytes": 3315,
+  "sha256": "47ee81ffb167241575ecf4fcdc2c7848f9f163f60a70ec6492d246028b96b153",
+  "baixado_em_utc": "2026-10-26T20:40:35.523275+00:00"
+ },
+ "rn\\rn16730-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16730-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "82cfbabb8ae60fa66565203d1a1885b51b9615bde0cd4752a3f97fc589a231e1",
+  "baixado_em_utc": "2026-10-26T20:40:35.528533+00:00"
+ },
+ "rn\\rn16144-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16144-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "2dd0653779574e44e1c43b4ddda606571f23a0a06a5df6c4590f0a0f84a03e52",
+  "baixado_em_utc": "2026-10-26T20:40:35.543651+00:00"
+ },
+ "rn\\rn16772-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16772-c0003-e006260-u.json",
+  "bytes": 3281,
+  "sha256": "3b1fbdf8b131c86fcded97b927e623ec8ede1a843877ddf384a2f641ae47a1f6",
+  "baixado_em_utc": "2026-10-26T20:40:35.567202+00:00"
+ },
+ "rn\\rn16756-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16756-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "71f6acef9315d761f739be9deea09e595c4596417e2905a77f1884740362eb61",
+  "baixado_em_utc": "2026-10-26T20:40:35.574445+00:00"
+ },
+ "rn\\rn17515-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17515-c0003-e006260-u.json",
+  "bytes": 3281,
+  "sha256": "a840bf68f6d1d2b8c52ff0e4091bbc8dd7418623fda0fc6d024174690d96ab5d",
+  "baixado_em_utc": "2026-10-26T20:40:35.584943+00:00"
+ },
+ "rn\\rn16799-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16799-c0003-e006260-u.json",
+  "bytes": 3281,
+  "sha256": "15a22745cf90ca46e0264c6590aa7eebf3f9c2270af1994b9eb290222b7e768f",
+  "baixado_em_utc": "2026-10-26T20:40:35.632630+00:00"
+ },
+ "rn\\rn16837-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16837-c0003-e006260-u.json",
+  "bytes": 3296,
+  "sha256": "26525995069753673314ce7c06c2fae4612e4d0a647429c89304dba3c442fa53",
+  "baixado_em_utc": "2026-10-26T20:40:35.643732+00:00"
+ },
+ "rn\\rn16870-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16870-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "981ba63a6acb592a0b6221cefff7582ed5ae1b98afa21b7eb8dd67b4b2a5ba2a",
+  "baixado_em_utc": "2026-10-26T20:40:35.664828+00:00"
+ },
+ "rn\\rn16810-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16810-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "18ea9656680c8cc7c6efac41afb0d94ed01e3b1378c56fdb19d5fa9842e3fd2f",
+  "baixado_em_utc": "2026-10-26T20:40:35.667028+00:00"
+ },
+ "rn\\rn16853-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16853-c0003-e006260-u.json",
+  "bytes": 3290,
+  "sha256": "880ce6ad2be59883e0774ea0ffbb7c9b1d200b9855c38dbb7f717f6dfc703f15",
+  "baixado_em_utc": "2026-10-26T20:40:35.672198+00:00"
+ },
+ "rn\\rn16896-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16896-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "16be24635626834d6448531f4224d4fa764df83f84d9b29570c26d9a9e583d3d",
+  "baixado_em_utc": "2026-10-26T20:40:35.721474+00:00"
+ },
+ "rn\\rn16934-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16934-c0003-e006260-u.json",
+  "bytes": 3272,
+  "sha256": "5916ccad653ab01ca225e745d0d207f92f1ad8ff569eb36cc331bb4567e5c159",
+  "baixado_em_utc": "2026-10-26T20:40:35.735307+00:00"
+ },
+ "rn\\rn16918-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16918-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "5015d13dfd6bcb98532b91131a7f1918fab242e4c02ff2253f9e4ea4b934a1fd",
+  "baixado_em_utc": "2026-10-26T20:40:35.749007+00:00"
+ },
+ "rn\\rn16080-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16080-c0003-e006260-u.json",
+  "bytes": 3290,
+  "sha256": "48d75eeb631ff85f29b571bdf087b3fab6b4f03695d579004ea1a8c118116fbb",
+  "baixado_em_utc": "2026-10-26T20:40:35.764318+00:00"
+ },
+ "rn\\rn16950-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16950-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "b3cab03bfdd25d20c3cafd541c85c16018db71e34a2607b1eb55de642f5268e9",
+  "baixado_em_utc": "2026-10-26T20:40:35.767603+00:00"
+ },
+ "rn\\rn17019-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17019-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "458bbfa0c75e5542c07c668f9d6e4065a19d611c77108efd8818a6191d0924ce",
+  "baixado_em_utc": "2026-10-26T20:40:35.769463+00:00"
+ },
+ "rn\\rn16993-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16993-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "6f762eb0700c91a44378277bec396076405d856bfd866450ebbd1a796bc8dd65",
+  "baixado_em_utc": "2026-10-26T20:40:35.770997+00:00"
+ },
+ "rn\\rn17051-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17051-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "48db7b894645b78caffe60b770bd3fa7f6cca3d411ad4ddf2ce8cb271d09884e",
+  "baixado_em_utc": "2026-10-26T20:40:35.807629+00:00"
+ },
+ "rn\\rn17078-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17078-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "dcfa3515b69db6c6271eaf8f1a46b32b594c519d4a32f8984800d27ea586dde2",
+  "baixado_em_utc": "2026-10-26T20:40:35.831733+00:00"
+ },
+ "rn\\rn17094-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17094-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "23c146ed19905e5f57aa3f269fb6150d93a67fc64b39f40887dee264e95d5e6c",
+  "baixado_em_utc": "2026-10-26T20:40:35.845968+00:00"
+ },
+ "rn\\rn17175-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17175-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "0b4082cff0bd6d28b7c95d092653b3166adccd373850af336cb475cbbd294daa",
+  "baixado_em_utc": "2026-10-26T20:40:35.879182+00:00"
+ },
+ "rn\\rn17132-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17132-c0003-e006260-u.json",
+  "bytes": 3309,
+  "sha256": "1e06b80d1c23a47c68c604e8b8fdec9e2246da25dccfba3d4ed5f1c574a26412",
+  "baixado_em_utc": "2026-10-26T20:40:35.881563+00:00"
+ },
+ "rn\\rn16977-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16977-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "e7667849465afdbd2bc32239e616014c15e85172e4652e1d669bf688f3b0b380",
+  "baixado_em_utc": "2026-10-26T20:40:35.883310+00:00"
+ },
+ "rn\\rn17116-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17116-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "3c0f9945ad82f6e41cd193acd17fda92aaf5709cab9ee77f3ccc1a49cf18c8f0",
+  "baixado_em_utc": "2026-10-26T20:40:35.898913+00:00"
+ },
+ "rn\\rn17191-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17191-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "2b2525e967271eb959aaa4b110fa736a8e41eda568d05ca8217aaa3fa642b0cc",
+  "baixado_em_utc": "2026-10-26T20:40:35.952537+00:00"
+ },
+ "rn\\rn17159-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17159-c0003-e006260-u.json",
+  "bytes": 3281,
+  "sha256": "21bcda1d3473a383343c4e6e11eb9e57a78624263b887e5269bdecc9c3ca4611",
+  "baixado_em_utc": "2026-10-26T20:40:35.955050+00:00"
+ },
+ "rn\\rn17230-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17230-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "fd42a0cdfb8c3a80a2cd8bfc6471bebb7ef69fcf7f52d06292fe9647e920081e",
+  "baixado_em_utc": "2026-10-26T20:40:35.973427+00:00"
+ },
+ "rn\\rn17256-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17256-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "b998c8dc36c9a4148a3482ca431ab5400e5134786553ef2d854d626a86511c22",
+  "baixado_em_utc": "2026-10-26T20:40:35.989259+00:00"
+ },
+ "rn\\rn17299-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17299-c0003-e006260-u.json",
+  "bytes": 3296,
+  "sha256": "840af3a9bb75a4a192b6e03f21cc236d56cbec86f74795d1b7c61d61c34ffc13",
+  "baixado_em_utc": "2026-10-26T20:40:35.994334+00:00"
+ },
+ "rn\\rn16306-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16306-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "91831f2ebee960b43cb0bf849068810dc28e7ab2fd7fd867e278880320075c5b",
+  "baixado_em_utc": "2026-10-26T20:40:35.996323+00:00"
+ },
+ "rn\\rn17272-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17272-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "9cb2da261a4dbf22a6cc59b0575c77e94dda8ae77924940b70e1940c8fec1029",
+  "baixado_em_utc": "2026-10-26T20:40:36.003389+00:00"
+ },
+ "rn\\rn17310-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17310-c0003-e006260-u.json",
+  "bytes": 3290,
+  "sha256": "0935d2f167ebbb2e3f15a47e19d8dd7f1a545ee635eafc9e51e18bcded565750",
+  "baixado_em_utc": "2026-10-26T20:40:36.005030+00:00"
+ },
+ "rn\\rn17337-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17337-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "754dd4233b235f58e2926ac83dbba3efbacd79276698ceeea0e6bf2f45c7b9da",
+  "baixado_em_utc": "2026-10-26T20:40:36.070578+00:00"
+ },
+ "rn\\rn17353-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17353-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "552d0a5e76a7268d710840f59286de9d44b72baf42abe902980c22d98a770ac5",
+  "baixado_em_utc": "2026-10-26T20:40:36.078709+00:00"
+ },
+ "rn\\rn17370-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17370-c0003-e006260-u.json",
+  "bytes": 3281,
+  "sha256": "ff6876bf6e64a85a6633583ef3d612bea31ea838159c9677ab049badfb8deea9",
+  "baixado_em_utc": "2026-10-26T20:40:36.086822+00:00"
+ },
+ "rn\\rn17434-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17434-c0003-e006260-u.json",
+  "bytes": 3304,
+  "sha256": "bcc07be7c49a525e6d2064474ff7527aa5bb07100dba6431c1a3f60f16778243",
+  "baixado_em_utc": "2026-10-26T20:40:36.105938+00:00"
+ },
+ "rn\\rn17396-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17396-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "05ed0ac083c8d0f1f6d59ee09c8ed9a1f93b27e68348f78dd13f46effdd14358",
+  "baixado_em_utc": "2026-10-26T20:40:36.109577+00:00"
+ },
+ "rn\\rn17418-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17418-c0003-e006260-u.json",
+  "bytes": 3315,
+  "sha256": "c97cf662c46e3479659c595996c24369ff1dd9258331b9a057aa8b6f93faced9",
+  "baixado_em_utc": "2026-10-26T20:40:36.111402+00:00"
+ },
+ "rn\\rn16160-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16160-c0003-e006260-u.json",
+  "bytes": 3281,
+  "sha256": "e1567e8695728cc6b5818424fba1799c08870b77b64df7820eb000be472aefc8",
+  "baixado_em_utc": "2026-10-26T20:40:36.127058+00:00"
+ },
+ "rn\\rn17450-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17450-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "770ca2271f19148fb683154e8ab3f781da5fd1136d1830c4af376df6853bd58b",
+  "baixado_em_utc": "2026-10-26T20:40:36.128823+00:00"
+ },
+ "rn\\rn17493-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17493-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "b812210d107b1d953522f43a5af9fa34d88c8ff78969bfcd565c0257939d7ae9",
+  "baixado_em_utc": "2026-10-26T20:40:36.194744+00:00"
+ },
+ "rn\\rn17477-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17477-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "ebb4d3385b742a44caef3735bf5505df41ab37595dced4f033197a6599debb98",
+  "baixado_em_utc": "2026-10-26T20:40:36.201018+00:00"
+ },
+ "rn\\rn17574-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17574-c0003-e006260-u.json",
+  "bytes": 3281,
+  "sha256": "660a13fe9df78c6e86cc344c8b84ab87ebcd7def8b75f22ead7405aae854bdb1",
+  "baixado_em_utc": "2026-10-26T20:40:36.218141+00:00"
+ },
+ "rn\\rn17558-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17558-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "c95d537deeca705c9aebb686f8c2448f62420f7c77a6af24f7ffae4d03b5c0c5",
+  "baixado_em_utc": "2026-10-26T20:40:36.230912+00:00"
+ },
+ "rn\\rn17590-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17590-c0003-e006260-u.json",
+  "bytes": 3326,
+  "sha256": "aa14d93c6b5b759cae5bd511971fb0ac6eb7130745a8c331e8ea943900a626b1",
+  "baixado_em_utc": "2026-10-26T20:40:36.240842+00:00"
+ },
+ "rn\\rn17531-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17531-c0003-e006260-u.json",
+  "bytes": 3290,
+  "sha256": "523e230a6e9a0229f6d61360b2016c1399991bc4581a0945c759ac51d9cb4b5c",
+  "baixado_em_utc": "2026-10-26T20:40:36.249567+00:00"
+ },
+ "rn\\rn17213-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17213-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "6e975399b691d01f910479b53739b787b6c8848b8f2142bb5a07b85fd4365109",
+  "baixado_em_utc": "2026-10-26T20:40:36.258009+00:00"
+ },
+ "rn\\rn17612-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17612-c0003-e006260-u.json",
+  "bytes": 3342,
+  "sha256": "02da4f6aa9957f938ecbf8e39d3d45714277a0ff37e36611375dabf4ccdf7767",
+  "baixado_em_utc": "2026-10-26T20:40:36.266278+00:00"
+ },
+ "rn\\rn17639-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17639-c0003-e006260-u.json",
+  "bytes": 3304,
+  "sha256": "cafde82706bafff34624a92c1bdb185f26377b548ad667572c670fbae1986a60",
+  "baixado_em_utc": "2026-10-26T20:40:36.320947+00:00"
+ },
+ "rn\\rn17655-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17655-c0003-e006260-u.json",
+  "bytes": 3304,
+  "sha256": "9152c4949a68fa010aebc26d7cb9fc885c02b5d8196777c4a0df32ed53c6f316",
+  "baixado_em_utc": "2026-10-26T20:40:36.323330+00:00"
+ },
+ "rn\\rn17671-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17671-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "1fe1761d6b716c6f0cec0e8b08794d7c24a8ff4ff46a4edcb45c74ea70d25ea6",
+  "baixado_em_utc": "2026-10-26T20:40:36.324858+00:00"
+ },
+ "rn\\rn17736-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17736-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "9657e5cdf6159d3e1f12ccdb42cf4d3f4d1d983b9d5dfbe5cf666a40cc27e6e4",
+  "baixado_em_utc": "2026-10-26T20:40:36.361209+00:00"
+ },
+ "rn\\rn17779-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17779-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "53bb3bc29b3606361f24e03f207733e68a12e0c4471db2d902100ace5370998a",
+  "baixado_em_utc": "2026-10-26T20:40:36.373418+00:00"
+ },
+ "rn\\rn17698-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17698-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "b9c406bff4190dfacf19f3fcc89d47ff90b53ebb21b4b4a38af01ccd8758745f",
+  "baixado_em_utc": "2026-10-26T20:40:36.377197+00:00"
+ },
+ "rn\\rn17752-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17752-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "9917ec66ba3680457770422c43da6356ed1e163fd382c41a6285d580a4172812",
+  "baixado_em_utc": "2026-10-26T20:40:36.398663+00:00"
+ },
+ "rn\\rn17710-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17710-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "665442e7f7244a3ec2beeff84c874dfea78707f36ea359940ad777c255417b1c",
+  "baixado_em_utc": "2026-10-26T20:40:36.401364+00:00"
+ },
+ "rn\\rn17817-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17817-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "b6b77108d9d5a3242b9978819377966932ff9d4a17b779ac73a1d829e4b2953f",
+  "baixado_em_utc": "2026-10-26T20:40:36.423422+00:00"
+ },
+ "rn\\rn17795-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17795-c0003-e006260-u.json",
+  "bytes": 3326,
+  "sha256": "ebe2b743ccdbb9f6844ba0d4be7be6e8a18b24743345ab9ceeeba293185c6aa8",
+  "baixado_em_utc": "2026-10-26T20:40:36.432909+00:00"
+ },
+ "rn\\rn17833-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17833-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "9a0cff4c0378593588a6110d62ac63cd3c8d0c8ddd06848abcc6ac2a96004d3c",
+  "baixado_em_utc": "2026-10-26T20:40:36.436433+00:00"
+ },
+ "rn\\rn17850-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17850-c0003-e006260-u.json",
+  "bytes": 3290,
+  "sha256": "d33746f006ab1cf1c684511ea2dbb10f8a1fa1b0f682a9212ee95070fd86f5b0",
+  "baixado_em_utc": "2026-10-26T20:40:36.473736+00:00"
+ },
+ "rn\\rn17892-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17892-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "45b1106207a4807a937c43191acba6237e9ddf6ea7fae3bf4da6022fabcfa91d",
+  "baixado_em_utc": "2026-10-26T20:40:36.486192+00:00"
+ },
+ "rn\\rn17876-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17876-c0003-e006260-u.json",
+  "bytes": 3304,
+  "sha256": "41e8c31486919459d02beb96517e77f0c4be623fac9428c5ff239365bda1e631",
+  "baixado_em_utc": "2026-10-26T20:40:36.490732+00:00"
+ },
+ "rn\\rn17930-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17930-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "37bdf0494b8bf0709d889c8a160aa65b0e739d6c5945bbb7463b4c468fa85c35",
+  "baixado_em_utc": "2026-10-26T20:40:36.512605+00:00"
+ },
+ "rn\\rn17914-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17914-c0003-e006260-u.json",
+  "bytes": 3281,
+  "sha256": "97d272dbe9f613c79fb445af7d34c3d0fd82edea260e2a7ca3147f221ad7bfb1",
+  "baixado_em_utc": "2026-10-26T20:40:36.518570+00:00"
+ },
+ "rn\\rn17957-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17957-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "1053146aaafbbc76147dc5c4f1aa2539afe28ceee5f56743de734a075cea4de1",
+  "baixado_em_utc": "2026-10-26T20:40:36.550382+00:00"
+ },
+ "rn\\rn17973-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17973-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "392204e0d9fd89202a20cab002bfe0ce1ddb309e81bd058cdcd8d2604836a901",
+  "baixado_em_utc": "2026-10-26T20:40:36.552865+00:00"
+ },
+ "rn\\rn17990-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn17990-c0003-e006260-u.json",
+  "bytes": 3281,
+  "sha256": "024bd78d4de17a170992af90eebdb78b7161eab5f56a2336db0f9980934bb696",
+  "baixado_em_utc": "2026-10-26T20:40:36.557650+00:00"
+ },
+ "rn\\rn18031-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18031-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "3628db929a8c29789caf2cdedec6263af997da8b6ae78a4bdc6d90312e3411ef",
+  "baixado_em_utc": "2026-10-26T20:40:36.595307+00:00"
+ },
+ "rn\\rn18015-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18015-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "9bf5e295f164f9f84245c1ca662550a9391e86f18f814d9e624da4ca5260f2ce",
+  "baixado_em_utc": "2026-10-26T20:40:36.600303+00:00"
+ },
+ "rn\\rn18074-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18074-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "5f094b3b2b0d0d8520c0b6129d7370fe8d7740922703d4b76c47ac9d79106d89",
+  "baixado_em_utc": "2026-10-26T20:40:36.633417+00:00"
+ },
+ "rn\\rn18090-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18090-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "5910081355b8f7d5ce34af0899b4982afaa716c3141c0092d19a242406107282",
+  "baixado_em_utc": "2026-10-26T20:40:36.660217+00:00"
+ },
+ "rn\\rn18937-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18937-c0003-e006260-u.json",
+  "bytes": 3284,
+  "sha256": "d837e88b72aa10abe2df1f38aab24be928108a9ccd56c146c05e371e9c56efee",
+  "baixado_em_utc": "2026-10-26T20:40:36.667404+00:00"
+ },
+ "rn\\rn18112-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18112-c0003-e006260-u.json",
+  "bytes": 3282,
+  "sha256": "82b14b9a2b7999109e751100fe0d89d6bdc4eb4603c129ab76e6b725857c91b4",
+  "baixado_em_utc": "2026-10-26T20:40:36.674823+00:00"
+ },
+ "rn\\rn18139-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18139-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "afd18d6203505541856fe0016df0fca2276682db93aa1cf8475c37365b62b3d1",
+  "baixado_em_utc": "2026-10-26T20:40:36.679266+00:00"
+ },
+ "rn\\rn16284-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16284-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "a0d4df4a04bf0feebb87e0bc62c1bb26f6fb17387c5397701a61101d23a11b10",
+  "baixado_em_utc": "2026-10-26T20:40:36.690169+00:00"
+ },
+ "rn\\rn18155-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18155-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "af1dc2d7dbb82c4962c37dc5e197c875b90fc75dafae5ae30c923c0f03390924",
+  "baixado_em_utc": "2026-10-26T20:40:36.702336+00:00"
+ },
+ "rn\\rn16268-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16268-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "693fc62ed49662b40ccfa0f70632b07288e3641dde12cd018a72ac882273d242",
+  "baixado_em_utc": "2026-10-26T20:40:36.716753+00:00"
+ },
+ "rn\\rn18171-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18171-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "93d230843287ce786dd881fe5ce530f5be6fafd2e3997016de5f29a58fa42d4b",
+  "baixado_em_utc": "2026-10-26T20:40:36.764771+00:00"
+ },
+ "rn\\rn18198-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18198-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "bf1bb9745a9d7d67b92d024dd8828595487c69cfa1877002c615a3fbbc44ba0c",
+  "baixado_em_utc": "2026-10-26T20:40:36.774464+00:00"
+ },
+ "rn\\rn18236-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18236-c0003-e006260-u.json",
+  "bytes": 3304,
+  "sha256": "bcc98cd68d8c7023eddd68f8100e75c1056c46948f020962e6e782665999575d",
+  "baixado_em_utc": "2026-10-26T20:40:36.781626+00:00"
+ },
+ "rn\\rn18279-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18279-c0003-e006260-u.json",
+  "bytes": 3293,
+  "sha256": "1e6c6e8b8a415762589cf89db4c14c7aa8c5871503e69d340037eade0083d74b",
+  "baixado_em_utc": "2026-10-26T20:40:36.790608+00:00"
+ },
+ "rn\\rn16241-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16241-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "9eb42b285323e2315fd448da59f052c2b0a54f068833683cbf4c8d99c52275f5",
+  "baixado_em_utc": "2026-10-26T20:40:36.792780+00:00"
+ },
+ "rn\\rn18252-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18252-c0003-e006260-u.json",
+  "bytes": 3283,
+  "sha256": "1cda8f038f1f209a4ffe488c665a467425dd687e38cebab43ca3aaa093e51670",
+  "baixado_em_utc": "2026-10-26T20:40:36.794429+00:00"
+ },
+ "rn\\rn18295-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18295-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "6cce5c2691aa6747d7a22ca3b3f8c46c19b4ad3d89e9411a734a065fcff5d4dc",
+  "baixado_em_utc": "2026-10-26T20:40:36.823109+00:00"
+ },
+ "rn\\rn18597-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18597-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "8f5e89f49d3ab946b0333d433f1366efabbbc48a07e75cb67c95e320176a720c",
+  "baixado_em_utc": "2026-10-26T20:40:36.851328+00:00"
+ },
+ "rn\\rn18619-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18619-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "b08de16d05db9fd45cbf36f782ccce7584b9a57d2f90f6db01d883d62dc98855",
+  "baixado_em_utc": "2026-10-26T20:40:36.879164+00:00"
+ },
+ "rn\\rn18058-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18058-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "cba523e700159fa0ef4f984419dac90d9771879a7f6833124b6273cb0a294c41",
+  "baixado_em_utc": "2026-10-26T20:40:36.893623+00:00"
+ },
+ "rn\\rn18651-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18651-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "4ef8e0c2e9b8876f207ca00236c2aecb56ff20dade1a28984134037dd9976310",
+  "baixado_em_utc": "2026-10-26T20:40:36.895931+00:00"
+ },
+ "rn\\rn16020-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16020-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "ce61c027829a55829adc7859e49638aeb4ee00f085c59abc8d436dcc5baa63d1",
+  "baixado_em_utc": "2026-10-26T20:40:36.897514+00:00"
+ },
+ "rn\\rn18678-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18678-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "75f4b7867cea4d743ffc73b8829cd63f56e685f0dcec5356ea264540c79e4447",
+  "baixado_em_utc": "2026-10-26T20:40:36.906270+00:00"
+ },
+ "rn\\rn18635-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18635-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "c0e4d3c625e692bd617f33c15fd18a8da855e2ac2515847b08a4d66adabdaca5",
+  "baixado_em_utc": "2026-10-26T20:40:36.922472+00:00"
+ },
+ "rn\\rn16209-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16209-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "b51bd67d7e5b02e0fddecb9e9f927a55a604a9eb1188a8a03a4b02952e9f0319",
+  "baixado_em_utc": "2026-10-26T20:40:36.931692+00:00"
+ },
+ "rn\\rn18694-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18694-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "93491750767bce4d126212454e680fdfccc14a429225862c82785d1c4bdcc1de",
+  "baixado_em_utc": "2026-10-26T20:40:36.987905+00:00"
+ },
+ "rn\\rn18317-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18317-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "f3d616ec0b2bf456f2647110cd4793d02d4ac096816fb478014656e42283455c",
+  "baixado_em_utc": "2026-10-26T20:40:36.997049+00:00"
+ },
+ "rn\\rn18350-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18350-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "c3760e22b22d0ccef05ac936371c655fbe1554e5dc20c30473731bbfc01624e1",
+  "baixado_em_utc": "2026-10-26T20:40:37.004983+00:00"
+ },
+ "rn\\rn18210-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18210-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "8e034d88eeb1680da990235c8af8645cabf74d95a3b1d5b9febec682c9be94bf",
+  "baixado_em_utc": "2026-10-26T20:40:37.011500+00:00"
+ },
+ "rn\\rn18333-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18333-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "37460acd7241c13b70b057e181f2450afc5204ee8104dd4a00a457e5e585e531",
+  "baixado_em_utc": "2026-10-26T20:40:37.013100+00:00"
+ },
+ "rn\\rn18414-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18414-c0003-e006260-u.json",
+  "bytes": 3315,
+  "sha256": "29d073adc8be32d52b94cef7f12f0ad5b34f0494cb67fbbd952370e01af0a994",
+  "baixado_em_utc": "2026-10-26T20:40:37.038905+00:00"
+ },
+ "rn\\rn18376-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18376-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "7590b1a80490c158a76cf791796ac0a894c4bcbde0f4e8b65901e4b09fa6f282",
+  "baixado_em_utc": "2026-10-26T20:40:37.043698+00:00"
+ },
+ "rn\\rn18430-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18430-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "6b7ed1d51a3064025f01523681518579f86fca3d84f15263aa3f58d9d687627e",
+  "baixado_em_utc": "2026-10-26T20:40:37.056687+00:00"
+ },
+ "rn\\rn18392-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18392-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "63bbd980e74f8b28501a3a40fc89441436922f00fbfeb51f36fe476666b0ab98",
+  "baixado_em_utc": "2026-10-26T20:40:37.113748+00:00"
+ },
+ "rn\\rn16063-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16063-c0003-e006260-u.json",
+  "bytes": 3290,
+  "sha256": "dd2ee8e4a55cad72b14df6ae0d7b807ff55a60df28257cf550bf0d072d5677b0",
+  "baixado_em_utc": "2026-10-26T20:40:37.115411+00:00"
+ },
+ "rn\\rn18473-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18473-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "aaeb54daa10ba859231bba5c4a22e3435359165d7e178b1ebd62123bd31d5250",
+  "baixado_em_utc": "2026-10-26T20:40:37.122722+00:00"
+ },
+ "rn\\rn18490-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18490-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "ca26a71db8c4432abfb79cc3c6f63e04d25882459a9e2295aa01c29b45e96671",
+  "baixado_em_utc": "2026-10-26T20:40:37.140688+00:00"
+ },
+ "rn\\rn18457-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18457-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "591abd2b8bbcce30471c541b72f99bf18cb6fa51336a67b23962c58b0741deda",
+  "baixado_em_utc": "2026-10-26T20:40:37.163599+00:00"
+ },
+ "rn\\rn18538-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18538-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "1fe357f2d28b3a3cf8fdd7b2dfe9ff312c5d4824c3c61a447fb173c86153e97d",
+  "baixado_em_utc": "2026-10-26T20:40:37.190272+00:00"
+ },
+ "rn\\rn18511-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18511-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "3b4530d0fb53ac4739cbb481866ccb035f6f4205712f361027d6d0bf130d653a",
+  "baixado_em_utc": "2026-10-26T20:40:37.214529+00:00"
+ },
+ "rn\\rn18716-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18716-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "3774407fcdf4680536a83904edef32c475fb657484540fa83100a37300bba3d1",
+  "baixado_em_utc": "2026-10-26T20:40:37.228463+00:00"
+ },
+ "rn\\rn18554-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18554-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "a97dfdf07bedcbe0a7040ae0a2258328b8ec1bcfe8c0ea2c747c9bb447d9e667",
+  "baixado_em_utc": "2026-10-26T20:40:37.230355+00:00"
+ },
+ "rn\\rn18570-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18570-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "c63aae0bfaeabfadee6ed2ffd97404aca4d556f07d5e7e553fdd5739acd0725a",
+  "baixado_em_utc": "2026-10-26T20:40:37.232634+00:00"
+ },
+ "rn\\rn18732-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18732-c0003-e006260-u.json",
+  "bytes": 3281,
+  "sha256": "50fe4fb8664040d292cdd9f61b607db0dfd2bd7d037e32719ba13a4dca96269e",
+  "baixado_em_utc": "2026-10-26T20:40:37.234346+00:00"
+ },
+ "rn\\rn18759-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18759-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "df7c2626000ef23dd57a8c0ef221883fe6a9043a6d4896ee3c494dfcdbdf5243",
+  "baixado_em_utc": "2026-10-26T20:40:37.245367+00:00"
+ },
+ "rn\\rn18775-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18775-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "108390f838b814cf099488e8970554fef2ed2f03bf875dd87c67cf2ff480a026",
+  "baixado_em_utc": "2026-10-26T20:40:37.280072+00:00"
+ },
+ "rn\\rn18791-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18791-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "f4bd2e3d29f2362b9de58e9f8678c37697ad61117775a48fc6e27de67f0f3661",
+  "baixado_em_utc": "2026-10-26T20:40:37.298506+00:00"
+ },
+ "rn\\rn16004-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16004-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "23b89d983deed741f47c768647f3d2debbc05c0c8098ffa820bff158e91a4e6c",
+  "baixado_em_utc": "2026-10-26T20:40:37.323160+00:00"
+ },
+ "rn\\rn18856-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18856-c0003-e006260-u.json",
+  "bytes": 3309,
+  "sha256": "b386c10aa62514749a77142b2d1e7af261e92861a397de0423a25887e9abf128",
+  "baixado_em_utc": "2026-10-26T20:40:37.352287+00:00"
+ },
+ "rn\\rn18830-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18830-c0003-e006260-u.json",
+  "bytes": 3277,
+  "sha256": "011ad2e275faad38ab601f5dc5fe2395122833b4ccc6bbaf74b6be4c3ebc55dc",
+  "baixado_em_utc": "2026-10-26T20:40:37.354138+00:00"
+ },
+ "rn\\rn18813-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18813-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "cea1d0bd3e356dee2f2fedced248e86ff3cc053fbf325f887bdf0a1976515b03",
+  "baixado_em_utc": "2026-10-26T20:40:37.355641+00:00"
+ },
+ "rn\\rn18872-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18872-c0003-e006260-u.json",
+  "bytes": 3289,
+  "sha256": "6f67841ed78bc169c2c66c004bb5fa0dad4d799bb04213da2b5eb0d6dc775862",
+  "baixado_em_utc": "2026-10-26T20:40:37.387977+00:00"
+ },
+ "rn\\rn16225-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16225-c0003-e006260-u.json",
+  "bytes": 3290,
+  "sha256": "a3aeca2ff2341dc00b2698fdac1793c4707c6957ebac71f97f0e61351cd35a62",
+  "baixado_em_utc": "2026-10-26T20:40:37.401384+00:00"
+ },
+ "rn\\rn16128-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16128-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "898738fece94e7eaec7405f33df3e1d65e85bc375da6d5d2a1d7ad4ddcb78d9e",
+  "baixado_em_utc": "2026-10-26T20:40:37.403083+00:00"
+ },
+ "rn\\rn18899-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18899-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "026dc48063eb2031a5ffd924e72724a3ef54743a2f35859caebeeb3a68641458",
+  "baixado_em_utc": "2026-10-26T20:40:37.405089+00:00"
+ },
+ "rn\\rn16187-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16187-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "145fea66f6887642ba89bd8c9e1e93e6951e6a5d202b543a49d1b1a71942aa47",
+  "baixado_em_utc": "2026-10-26T20:40:37.458377+00:00"
+ },
+ "rn\\rn18953-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18953-c0003-e006260-u.json",
+  "bytes": 3294,
+  "sha256": "23b4b290a5d57ca9e4ee009bbaa8056795aa316857313fc2adde784b015760d2",
+  "baixado_em_utc": "2026-10-26T20:40:37.460421+00:00"
+ },
+ "rn\\rn18996-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18996-c0003-e006260-u.json",
+  "bytes": 3281,
+  "sha256": "7f1de3e9e7d4f355f6cc34171a8b8bc561a33c4a350ba4eb34c23894931fcd1f",
+  "baixado_em_utc": "2026-10-26T20:40:37.462489+00:00"
+ },
+ "rn\\rn18970-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18970-c0003-e006260-u.json",
+  "bytes": 3272,
+  "sha256": "41dc7805360f56ae77a5f291f4e3f98b61ebc9e701c80deb30a986552ed0b437",
+  "baixado_em_utc": "2026-10-26T20:40:37.464746+00:00"
+ },
+ "to\\to73008-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73008-c0003-e006260-u.json",
+  "bytes": 3304,
+  "sha256": "d204b2649bb1ec52bd3cdce1beed5b8687788a5520c95ac236087d3eed901888",
+  "baixado_em_utc": "2026-10-26T20:40:37.516457+00:00"
+ },
+ "rn\\rn18910-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn18910-c0003-e006260-u.json",
+  "bytes": 3288,
+  "sha256": "1f3962ea2d747fac92ae04d3bee13d0cf2d047a35db1415ab5ffee738cf59886",
+  "baixado_em_utc": "2026-10-26T20:40:37.523485+00:00"
+ },
+ "to\\to73512-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73512-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "892d6a7cdf663ae3ee1dab0fa3f4b6b78f043742eb8a162e8a27072b2944a8ba",
+  "baixado_em_utc": "2026-10-26T20:40:37.534639+00:00"
+ },
+ "rn\\rn16071-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/rn/rn16071-c0003-e006260-u.json",
+  "bytes": 3286,
+  "sha256": "e12802d8cbc1010e2eb9488eb3345f2d2bacb079b4e51bca913363e2463b8468",
+  "baixado_em_utc": "2026-10-26T20:40:37.538462+00:00"
+ },
+ "to\\to92134-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92134-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "77e43185fc6da65e08dc472a9e44db1bbe9a251585c40d48b40e126d75a4be80",
+  "baixado_em_utc": "2026-10-26T20:40:37.576189+00:00"
+ },
+ "to\\to92193-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92193-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "4f1b22f09bfd38fa90661d209322735ab1781832b19faa887c411bae3bca9ad8",
+  "baixado_em_utc": "2026-10-26T20:40:37.578009+00:00"
+ },
+ "to\\to96954-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96954-c0003-e006260-u.json",
+  "bytes": 3312,
+  "sha256": "8019dea3ea3018fcdbca7df7e89dc1c90205d50f6c53b76665ec54c2f65fa7c3",
+  "baixado_em_utc": "2026-10-26T20:40:37.585251+00:00"
+ },
+ "to\\to92070-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92070-c0003-e006260-u.json",
+  "bytes": 3312,
+  "sha256": "a58cf75c22050ef581d633af54e328ff8b6d26b26955379540a5552c34230780",
+  "baixado_em_utc": "2026-10-26T20:40:37.606648+00:00"
+ },
+ "to\\to73075-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73075-c0003-e006260-u.json",
+  "bytes": 3309,
+  "sha256": "cb5c0970b25368aeb90839c03f5e8a71cc6932b98ed7e73a7bb1373559251659",
+  "baixado_em_utc": "2026-10-26T20:40:37.623119+00:00"
+ },
+ "to\\to96970-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96970-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "575b68115ffa71fed74995d3b95965dcb268be12eb07385708b5b60be7ef455d",
+  "baixado_em_utc": "2026-10-26T20:40:37.635341+00:00"
+ },
+ "to\\to92371-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92371-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "fbedd10b42d1ced6bc616053a3833dcad3b75e866db2e4781524c7a95c63c648",
+  "baixado_em_utc": "2026-10-26T20:40:37.646172+00:00"
+ },
+ "to\\to73334-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73334-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "63a53840e251038087b1ed93b5932d34ad2b35ebdb8e4a878d8d771c9aaf2f4a",
+  "baixado_em_utc": "2026-10-26T20:40:37.647739+00:00"
+ },
+ "to\\to73318-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73318-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "facc6dc7c663a0a3c150b8ec4be532d60e6de22124bddceef83f984989ab4d4e",
+  "baixado_em_utc": "2026-10-26T20:40:37.692534+00:00"
+ },
+ "to\\to92436-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92436-c0003-e006260-u.json",
+  "bytes": 3334,
+  "sha256": "081efd2e6f7b2d75b68e2da559644afcb6701e03e841ccd7a5429c13ae9ed960",
+  "baixado_em_utc": "2026-10-26T20:40:37.701348+00:00"
+ },
+ "to\\to92398-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92398-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "d4cca8cc8f7622bf7a8d41077f503f27a3ee607767de0bb5f412d3b415fd6639",
+  "baixado_em_utc": "2026-10-26T20:40:37.711716+00:00"
+ },
+ "to\\to92452-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92452-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "8ae029101f58879268514f7b85503f61081a95cf473e5dca2621995396ae4fd4",
+  "baixado_em_utc": "2026-10-26T20:40:37.732286+00:00"
+ },
+ "to\\to92410-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92410-c0003-e006260-u.json",
+  "bytes": 3351,
+  "sha256": "82f24c395c1d0bc7b860aa8650e26510325ecff0dcc0916050a82422c6265283",
+  "baixado_em_utc": "2026-10-26T20:40:37.734193+00:00"
+ },
+ "to\\to92533-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92533-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "5e11aca6c2478aa80597708b47b6acbd7babc91785eff42de8e822b4b8d14945",
+  "baixado_em_utc": "2026-10-26T20:40:37.745143+00:00"
+ },
+ "to\\to92479-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92479-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "b55816fc5020cbaa5b741c2fe1e66ac0d9d3f9e2f3a01201a20d0cb6506f88ba",
+  "baixado_em_utc": "2026-10-26T20:40:37.767218+00:00"
+ },
+ "to\\to96857-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96857-c0003-e006260-u.json",
+  "bytes": 3327,
+  "sha256": "d1cca65be2a0bdddea1e2c21c52654562483b459531eb10cd70eb29f1d54d225",
+  "baixado_em_utc": "2026-10-26T20:40:37.773983+00:00"
+ },
+ "to\\to92576-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92576-c0003-e006260-u.json",
+  "bytes": 3318,
+  "sha256": "14978ed57414d450553dd0c4e29ce755fe2be850ba7a953899d262b8af9fbaeb",
+  "baixado_em_utc": "2026-10-26T20:40:37.818088+00:00"
+ },
+ "to\\to96997-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96997-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "e417630c457b73b354fff517ce665383c94d5aaf77790b63def4f32efa4c5f6d",
+  "baixado_em_utc": "2026-10-26T20:40:37.851855+00:00"
+ },
+ "to\\to92002-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92002-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "3d9593c236425459dd2b5474086539e092d7a68e17ce8678d528e9ce61c187a5",
+  "baixado_em_utc": "2026-10-26T20:40:37.853927+00:00"
+ },
+ "to\\to73610-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73610-c0003-e006260-u.json",
+  "bytes": 3309,
+  "sha256": "b4ee367495de07699d7d74cf5f6ae897c2d8fb54a80fbb0b044c4c3d0a69e0e5",
+  "baixado_em_utc": "2026-10-26T20:40:37.855543+00:00"
+ },
+ "to\\to73580-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73580-c0003-e006260-u.json",
+  "bytes": 3309,
+  "sha256": "1bf29ab047711dfac3a493e2e61f7743d7249a773fad47be805b684888871e48",
+  "baixado_em_utc": "2026-10-26T20:40:37.857184+00:00"
+ },
+ "to\\to92592-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92592-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "1d7c1560ede12aeb81209438af2d4f9f143c1496828d56e486ef85e54428c92a",
+  "baixado_em_utc": "2026-10-26T20:40:37.871905+00:00"
+ },
+ "to\\to73121-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73121-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "66d1d2416c947f1b043909abde2fb34d34b424160c2b0e9dc06ca338d9ab4831",
+  "baixado_em_utc": "2026-10-26T20:40:37.888253+00:00"
+ },
+ "to\\to73245-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73245-c0003-e006260-u.json",
+  "bytes": 3304,
+  "sha256": "5afd2d23c9c31910ce54d502be903b9d13df6dc14a62993c4af3666c421f361d",
+  "baixado_em_utc": "2026-10-26T20:40:37.929123+00:00"
+ },
+ "to\\to92738-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92738-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "dd5eb05c854f4c2cc418ee8f9dcd74b5d2d06348d61861e5c3dd4cbddeccac95",
+  "baixado_em_utc": "2026-10-26T20:40:37.957398+00:00"
+ },
+ "to\\to73067-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73067-c0003-e006260-u.json",
+  "bytes": 3300,
+  "sha256": "6f79c402db4accbcfa0e6bb1d088040427d7456618d5c1fc7018e964f2f789e0",
+  "baixado_em_utc": "2026-10-26T20:40:37.974938+00:00"
+ },
+ "to\\to73326-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73326-c0003-e006260-u.json",
+  "bytes": 3307,
+  "sha256": "5d08b1c1d2dbd8170693532d6ce42766f39bd05c06d00849e51581d95b3a1cb7",
+  "baixado_em_utc": "2026-10-26T20:40:37.994269+00:00"
+ },
+ "to\\to73300-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73300-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "9197b0619e3139c9940f2a30b76f0976cb9631290ca02184d8776abaf993cbf4",
+  "baixado_em_utc": "2026-10-26T20:40:37.996135+00:00"
+ },
+ "to\\to92045-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92045-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "467bec6cc3f690424ef5d05db25ba44f98f6b69e620170e7bb3773106daf0112",
+  "baixado_em_utc": "2026-10-26T20:40:37.997832+00:00"
+ },
+ "to\\to73423-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73423-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "69364e2a325657d83a7d8d41ee607d0a46bb545234a89e1117d8be6737ada309",
+  "baixado_em_utc": "2026-10-26T20:40:38.003548+00:00"
+ },
+ "to\\to73091-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73091-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "5a2ff2f670460db5d08dd82568ffcf67b8f67ae64145f5fed5f26b4022b33d19",
+  "baixado_em_utc": "2026-10-26T20:40:38.020056+00:00"
+ },
+ "to\\to92088-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92088-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "b974584bf7a483afc6a39b65a741f9e68b379f0dabc49fff7f316bc3e642c76f",
+  "baixado_em_utc": "2026-10-26T20:40:38.045997+00:00"
+ },
+ "to\\to73210-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73210-c0003-e006260-u.json",
+  "bytes": 3300,
+  "sha256": "3f46974c7bac6daf9b13a97bbe582bec20c96a5bc669cb2c9f0264c0c7aaf0dc",
+  "baixado_em_utc": "2026-10-26T20:40:38.074376+00:00"
+ },
+ "to\\to95290-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to95290-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "bd1de78c74d39ec111444e39909b61ff47cdde4128003b547b6ee40a454a920c",
+  "baixado_em_utc": "2026-10-26T20:40:38.106803+00:00"
+ },
+ "to\\to73482-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73482-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "e707d6729fb8e5db028c3c50593d2152d881003779f763bae55416f61368b2f2",
+  "baixado_em_utc": "2026-10-26T20:40:38.108614+00:00"
+ },
+ "to\\to93114-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to93114-c0003-e006260-u.json",
+  "bytes": 3334,
+  "sha256": "85bcd7f57649523628bc8b455c81001fb4f2a15b9ce24a5e340733b1b95313cc",
+  "baixado_em_utc": "2026-10-26T20:40:38.127072+00:00"
+ },
+ "to\\to92142-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92142-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "a24b99e2c295ddd9f317a9fad6a9ebe2d1cddebc996db7c965a0f522e1ca4b93",
+  "baixado_em_utc": "2026-10-26T20:40:38.130425+00:00"
+ },
+ "to\\to93130-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to93130-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "9725a99c8e5dafeb7d29a7910372929d536242bb8fb3b19b0726247473b46e3a",
+  "baixado_em_utc": "2026-10-26T20:40:38.152557+00:00"
+ },
+ "to\\to73474-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73474-c0003-e006260-u.json",
+  "bytes": 3307,
+  "sha256": "0a34aac8c1516c9f862fad7cfacdb18d0b725df3e0a23cb817375d36f9f66d07",
+  "baixado_em_utc": "2026-10-26T20:40:38.160490+00:00"
+ },
+ "to\\to93211-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to93211-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "6fa3c7001f823955fdde8cc5471112ec2efb07478abc8bec4e40aa98387249d4",
+  "baixado_em_utc": "2026-10-26T20:40:38.180250+00:00"
+ },
+ "to\\to93238-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to93238-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "41d5fe590031e5aafc08eba277731cafb3cd0c513accbbc36395c1270d66c910",
+  "baixado_em_utc": "2026-10-26T20:40:38.210050+00:00"
+ },
+ "to\\to73032-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73032-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "e27460da89ef510f15020754cb628de024fe3d830f5e467539c195c014b014f5",
+  "baixado_em_utc": "2026-10-26T20:40:38.219039+00:00"
+ },
+ "to\\to73555-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73555-c0003-e006260-u.json",
+  "bytes": 3300,
+  "sha256": "3c0fc01a5a006c6616e82cce56ec461745b63e0118f2f87d8a6415c5bf4e84cc",
+  "baixado_em_utc": "2026-10-26T20:40:38.229378+00:00"
+ },
+ "to\\to92185-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92185-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "e331c6585d0c8b06f12555a1b0b27aab5a9bfd374f7ab9f67bab6053c972d6b4",
+  "baixado_em_utc": "2026-10-26T20:40:38.245698+00:00"
+ },
+ "to\\to93416-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to93416-c0003-e006260-u.json",
+  "bytes": 3324,
+  "sha256": "37a21376800cc69124c93eb692869a7570550a1eaaddac6bd754024b88c9df45",
+  "baixado_em_utc": "2026-10-26T20:40:38.247143+00:00"
+ },
+ "to\\to93475-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to93475-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "0375a3b292d11bec9caaf107e772b338d70326080a148d80e888b44c730a2a7b",
+  "baixado_em_utc": "2026-10-26T20:40:38.261530+00:00"
+ },
+ "to\\to73296-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73296-c0003-e006260-u.json",
+  "bytes": 3318,
+  "sha256": "a8c70aacc39f11e8fd80a3dd54ab129574a1af4b46740b9d7f1a8aaaa135a199",
+  "baixado_em_utc": "2026-10-26T20:40:38.327050+00:00"
+ },
+ "to\\to93556-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to93556-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "ff4e33968dbd6cac8a4166d180d47bcf9dd62564b96668c07a1fcfc5be5d9d57",
+  "baixado_em_utc": "2026-10-26T20:40:38.329213+00:00"
+ },
+ "to\\to93653-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to93653-c0003-e006260-u.json",
+  "bytes": 3327,
+  "sha256": "9bf4258d82abc9702fb61e2cdfcecec6c169cf0394bae370c0e0eec20598ce06",
+  "baixado_em_utc": "2026-10-26T20:40:38.345880+00:00"
+ },
+ "to\\to96679-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96679-c0003-e006260-u.json",
+  "bytes": 3312,
+  "sha256": "9f87502e0f16429da4dd204a75a644d344f5ecabd99e7955ffbbf78344a0c278",
+  "baixado_em_utc": "2026-10-26T20:40:38.354671+00:00"
+ },
+ "to\\to96830-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96830-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "291e4a100fff99fd64b8041f61c0c15a83ac770cf664a372e01c357a5e53d430",
+  "baixado_em_utc": "2026-10-26T20:40:38.375033+00:00"
+ },
+ "to\\to92240-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92240-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "6a7630cddcfd343d5e7f2dd87f99c0ff9cbd577194519f2f262f9341a5e269c6",
+  "baixado_em_utc": "2026-10-26T20:40:38.395120+00:00"
+ },
+ "to\\to93459-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to93459-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "8e5962b78c825e1cc36d0335db4b0a20cc6c92083c5fd8fb6ee7df162ffcf794",
+  "baixado_em_utc": "2026-10-26T20:40:38.413177+00:00"
+ },
+ "to\\to95338-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to95338-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "b9298f5c8cadf1aaf61a82bca2fc876bbf917111607f2c1678579c7f6fbe0381",
+  "baixado_em_utc": "2026-10-26T20:40:38.420115+00:00"
+ },
+ "to\\to94056-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to94056-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "719f0a5dc60c1c64bcb6a54fa2ab6cc8a9e522b4fd2ef02a65142aa8de401697",
+  "baixado_em_utc": "2026-10-26T20:40:38.457884+00:00"
+ },
+ "to\\to73598-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73598-c0003-e006260-u.json",
+  "bytes": 3305,
+  "sha256": "99adb7a51108827c261dd38cfd0dd6b72a21a4a9ac10e8df8d4dea46a89c93c1",
+  "baixado_em_utc": "2026-10-26T20:40:38.478714+00:00"
+ },
+ "to\\to96270-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96270-c0003-e006260-u.json",
+  "bytes": 3327,
+  "sha256": "7e2f5361b7e732da4def250c69d84232df87535e8902cf226939208c9ed60d70",
+  "baixado_em_utc": "2026-10-26T20:40:38.484131+00:00"
+ },
+ "to\\to93858-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to93858-c0003-e006260-u.json",
+  "bytes": 3345,
+  "sha256": "b83f8933b1031347e035c56933aa5f67487a3d664199610eb2211f15e27fb417",
+  "baixado_em_utc": "2026-10-26T20:40:38.492241+00:00"
+ },
+ "to\\to94099-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to94099-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "a9d697d31f0a22fa7bd6531ac04384f43e86bba30401c669c722a0b304ec908b",
+  "baixado_em_utc": "2026-10-26T20:40:38.502972+00:00"
+ },
+ "to\\to94170-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to94170-c0003-e006260-u.json",
+  "bytes": 3309,
+  "sha256": "c414223ac2d1c78b84e0d224c079e6b0fc3213f200a573b21059b8be118b88ae",
+  "baixado_em_utc": "2026-10-26T20:40:38.516841+00:00"
+ },
+ "to\\to73202-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73202-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "86544aa7fed965781b68d62c540eeb833635f4d507f8dbb11868728931edf151",
+  "baixado_em_utc": "2026-10-26T20:40:38.527696+00:00"
+ },
+ "to\\to73369-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73369-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "bda188dc1c04a716ea693eb53b6cb63f9e5ce73ac09488bd81b1671ddc7703de",
+  "baixado_em_utc": "2026-10-26T20:40:38.542138+00:00"
+ },
+ "to\\to73253-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73253-c0003-e006260-u.json",
+  "bytes": 3304,
+  "sha256": "198c9d36198a95f549c63b964d236694f3cebc4cd730d61a65d86b3690738b1b",
+  "baixado_em_utc": "2026-10-26T20:40:38.581047+00:00"
+ },
+ "to\\to73385-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73385-c0003-e006260-u.json",
+  "bytes": 3321,
+  "sha256": "06e736d2c6355739a09fea9915389befab16b70f1207c5cceae484875fc9d6d9",
+  "baixado_em_utc": "2026-10-26T20:40:38.582902+00:00"
+ },
+ "to\\to73407-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73407-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "b24a44f1a8a49399a9f5f876bfe4edf8a94703fe5531aaa1c9c14875f39a2840",
+  "baixado_em_utc": "2026-10-26T20:40:38.592703+00:00"
+ },
+ "to\\to73113-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73113-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "54d3d6a56138dc3309f982a524c511b365f84b1ac72c898de54bb06bb9ca0d68",
+  "baixado_em_utc": "2026-10-26T20:40:38.594824+00:00"
+ },
+ "to\\to95699-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to95699-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "2a202b213c3649543c07a9ea27cb3d6c6d6ab3f7ad46be9c883c01eff3dc3363",
+  "baixado_em_utc": "2026-10-26T20:40:38.626543+00:00"
+ },
+ "to\\to73601-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73601-c0003-e006260-u.json",
+  "bytes": 3300,
+  "sha256": "deff6d657bd7ff3076993f0e515cb682f96f65aeb31a6beceb5b91e6140bf8f0",
+  "baixado_em_utc": "2026-10-26T20:40:38.633989+00:00"
+ },
+ "to\\to92304-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92304-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "7f541d3775c3c29df3808437d4d994abb9ee5027d8457e68f231ad125d0b0b34",
+  "baixado_em_utc": "2026-10-26T20:40:38.643572+00:00"
+ },
+ "to\\to73520-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73520-c0003-e006260-u.json",
+  "bytes": 3309,
+  "sha256": "d11e1d27ee942763eddec914a7199f3526cdc2dd3aa391d194cf81a7427f25c0",
+  "baixado_em_utc": "2026-10-26T20:40:38.669884+00:00"
+ },
+ "to\\to73059-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73059-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "b04e2c6129491e79b5504f1e08d7148d27bc3d7a75701af652aeec3f54d5c269",
+  "baixado_em_utc": "2026-10-26T20:40:38.691062+00:00"
+ },
+ "to\\to94617-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to94617-c0003-e006260-u.json",
+  "bytes": 3327,
+  "sha256": "e27aedf60739eba21ad80b689d81305908567646076701f858cd1fa0e001c5e2",
+  "baixado_em_utc": "2026-10-26T20:40:38.714400+00:00"
+ },
+ "to\\to73270-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73270-c0003-e006260-u.json",
+  "bytes": 3304,
+  "sha256": "874e52b2ebdccce5a207e29851895d32473b15f1e12fdd43457f14cdab73dd9d",
+  "baixado_em_utc": "2026-10-26T20:40:38.725335+00:00"
+ },
+ "to\\to94633-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to94633-c0003-e006260-u.json",
+  "bytes": 3322,
+  "sha256": "0c498a60d50b8b94fe628f6193bfcb6100e9ff586b1ab8bb218595a964057fd8",
+  "baixado_em_utc": "2026-10-26T20:40:38.744922+00:00"
+ },
+ "to\\to94692-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to94692-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "5d0c9935e2197ec8d888187e59d0b11397383882f9424cc3e9c4725ebaa3beeb",
+  "baixado_em_utc": "2026-10-26T20:40:38.747084+00:00"
+ },
+ "to\\to73563-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73563-c0003-e006260-u.json",
+  "bytes": 3309,
+  "sha256": "46fb6536281cf5e5e8da8f8080b49d2ddc34cf00c2b9c859618580fe4a895587",
+  "baixado_em_utc": "2026-10-26T20:40:38.751228+00:00"
+ },
+ "to\\to73342-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73342-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "2d45808378db4940170d729ef8957f8355d69c372b27140aabcd08238fb2fff2",
+  "baixado_em_utc": "2026-10-26T20:40:38.766543+00:00"
+ },
+ "to\\to94811-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to94811-c0003-e006260-u.json",
+  "bytes": 3312,
+  "sha256": "01915813ab741cd423c4283b1231cc850734934bfb37344f7e6f8903caa6f410",
+  "baixado_em_utc": "2026-10-26T20:40:38.781243+00:00"
+ },
+ "to\\to94838-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to94838-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "0c6439590bba0fdaa55eabc677b73c4007787c165e9d69055f2188a4e2fadecf",
+  "baixado_em_utc": "2026-10-26T20:40:38.791868+00:00"
+ },
+ "to\\to94994-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to94994-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "e256f153cc0f882987b6dcd1aa63869975183c20a618ebed5144075b3900cd9b",
+  "baixado_em_utc": "2026-10-26T20:40:38.844242+00:00"
+ },
+ "to\\to73148-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73148-c0003-e006260-u.json",
+  "bytes": 3300,
+  "sha256": "563e352970d3b427a4fb08009a7f584be9684ad68b7477b170a389393406c594",
+  "baixado_em_utc": "2026-10-26T20:40:38.852618+00:00"
+ },
+ "to\\to73172-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73172-c0003-e006260-u.json",
+  "bytes": 3306,
+  "sha256": "073e4f80ac518f780b7ffebaf256fafbc33ca22aff52a606377a700773cbe4d1",
+  "baixado_em_utc": "2026-10-26T20:40:38.867963+00:00"
+ },
+ "to\\to92401-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92401-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "c92eb71e142e7a1604b2cae8e16f41ba593a646a0ca8e5af9aa57dc29f03c83a",
+  "baixado_em_utc": "2026-10-26T20:40:38.877525+00:00"
+ },
+ "to\\to96636-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96636-c0003-e006260-u.json",
+  "bytes": 3318,
+  "sha256": "5108b0300ec0578146ed42e9029d1d2775830f0ea7c5ce9d2075f1a687d0e515",
+  "baixado_em_utc": "2026-10-26T20:40:38.889060+00:00"
+ },
+ "to\\to73466-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73466-c0003-e006260-u.json",
+  "bytes": 3305,
+  "sha256": "2e43e3ebd61ae13ad3a60bcd9b8b4b1016e158bbd173846338abc0d9325d4d89",
+  "baixado_em_utc": "2026-10-26T20:40:38.904778+00:00"
+ },
+ "to\\to73440-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73440-c0003-e006260-u.json",
+  "bytes": 3361,
+  "sha256": "4c185497ab152b22efc79c45ecc7be51b12237452a070857b03e6fa1423293dd",
+  "baixado_em_utc": "2026-10-26T20:40:38.907685+00:00"
+ },
+ "to\\to73083-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73083-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "2ff86b1a437fc327bccd492c17f7388590f624c41c8f368bae810fd379de6907",
+  "baixado_em_utc": "2026-10-26T20:40:38.913216+00:00"
+ },
+ "to\\to73040-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73040-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "fe4d898bf4f2a45a58c2e074081d21b7594d10d323259ac3b6a07610f993762d",
+  "baixado_em_utc": "2026-10-26T20:40:38.969739+00:00"
+ },
+ "to\\to96490-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96490-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "5159dc8290b8ac51d1592d072f6d4eab0c5f048295249e4e8f41191d5be2cd0b",
+  "baixado_em_utc": "2026-10-26T20:40:38.971174+00:00"
+ },
+ "to\\to95214-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to95214-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "702120854cea147934ffa3465f431af52fafb65bde47a365f39b279ad084b45c",
+  "baixado_em_utc": "2026-10-26T20:40:38.997455+00:00"
+ },
+ "to\\to95192-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to95192-c0003-e006260-u.json",
+  "bytes": 3338,
+  "sha256": "c855aa89ccd2c7de5d60aeb0d238c16b1fc2c7fb0dc29a8bd4be12941c58c94d",
+  "baixado_em_utc": "2026-10-26T20:40:39.002924+00:00"
+ },
+ "to\\to73261-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73261-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "4186acc5380077751f0d14a5f31b177a2cdf3d0d1629da2e20f26c04e783edb8",
+  "baixado_em_utc": "2026-10-26T20:40:39.028813+00:00"
+ },
+ "to\\to92487-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92487-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "40a1e668902fe08f3ac2cf886a13892159d4646ffd97219bf8bef7c35e08b5b2",
+  "baixado_em_utc": "2026-10-26T20:40:39.035735+00:00"
+ },
+ "to\\to95273-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to95273-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "c99ca05804c089d91de93189d4ac246d8b7a5b681cb0c05947a9119953c54855",
+  "baixado_em_utc": "2026-10-26T20:40:39.041165+00:00"
+ },
+ "to\\to95370-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to95370-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "e0f73d9ea10c8411d6c1e36b9b5eae237f83bd7a77dcf30f63dcec39d3c9ce18",
+  "baixado_em_utc": "2026-10-26T20:40:39.070580+00:00"
+ },
+ "to\\to73016-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73016-c0003-e006260-u.json",
+  "bytes": 3303,
+  "sha256": "26ccdee5e7927ebb23ba9d9ba8128ee8ddbb69ab6b29fb33fd6c242a62b67fee",
+  "baixado_em_utc": "2026-10-26T20:40:39.078013+00:00"
+ },
+ "to\\to95257-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to95257-c0003-e006260-u.json",
+  "bytes": 3322,
+  "sha256": "ccde78feed333613abe26e0642b8de710bb5fe0edf1f87e39287d2f22c181f4c",
+  "baixado_em_utc": "2026-10-26T20:40:39.079956+00:00"
+ },
+ "to\\to95478-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to95478-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "97d5e8c4de33d6769c0f8ca246d32c323fefb9dd2a4359f39d9fae0d3597bfc2",
+  "baixado_em_utc": "2026-10-26T20:40:39.104298+00:00"
+ },
+ "to\\to92509-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92509-c0003-e006260-u.json",
+  "bytes": 3306,
+  "sha256": "b865cc47f4a2d204dbb3726420f31e205d05f1c06f691c30755483081a78d63a",
+  "baixado_em_utc": "2026-10-26T20:40:39.145559+00:00"
+ },
+ "to\\to95532-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to95532-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "21d0441e1668a925144e30cd30832f59d4f9df033003c54b70d3e8052aa61709",
+  "baixado_em_utc": "2026-10-26T20:40:39.166508+00:00"
+ },
+ "to\\to95591-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to95591-c0003-e006260-u.json",
+  "bytes": 3338,
+  "sha256": "6df578cf3aa31dee7567ac438727c639e00c2ca19e703988c4ddc4c770a1d3b5",
+  "baixado_em_utc": "2026-10-26T20:40:39.172398+00:00"
+ },
+ "to\\to95516-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to95516-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "a55e8ee5375d67b311bd9daa21aa9b8806bc2f317d928436e81631327b55c92a",
+  "baixado_em_utc": "2026-10-26T20:40:39.184420+00:00"
+ },
+ "to\\to92525-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92525-c0003-e006260-u.json",
+  "bytes": 3318,
+  "sha256": "624cbbf6b0826e05157be237680e21efad0cfcf2908f7ccbca814404233af984",
+  "baixado_em_utc": "2026-10-26T20:40:39.194128+00:00"
+ },
+ "to\\to73571-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73571-c0003-e006260-u.json",
+  "bytes": 3305,
+  "sha256": "bb6942b0e3f888fbbb1171303b0d67d3f69b420816695a62581b6c95dae03ffb",
+  "baixado_em_utc": "2026-10-26T20:40:39.195910+00:00"
+ },
+ "to\\to96296-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96296-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "f0e3499eb4bb2765b3da44c4e4acfcb7fd51215a085a2c8182ee7c8ecec5ddc5",
+  "baixado_em_utc": "2026-10-26T20:40:39.216626+00:00"
+ },
+ "to\\to73229-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73229-c0003-e006260-u.json",
+  "bytes": 3310,
+  "sha256": "dffed6360ae486536ffc81c342778a74808426c4773adb81615f80bfe5cecef4",
+  "baixado_em_utc": "2026-10-26T20:40:39.262395+00:00"
+ },
+ "to\\to73024-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73024-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "48cdb38c66e548ba8465e28fce7af7954bb0dd2daf3d4e319fafb9dffdbbcca7",
+  "baixado_em_utc": "2026-10-26T20:40:39.275316+00:00"
+ },
+ "to\\to96792-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96792-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "17922dfaf2b8ebf9801a969c95323244cb484fcc8bd4c91dce27d0c264c104b9",
+  "baixado_em_utc": "2026-10-26T20:40:39.290294+00:00"
+ },
+ "to\\to73431-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73431-c0003-e006260-u.json",
+  "bytes": 3300,
+  "sha256": "d9bb75ccb11f2af8bd92ef98cafe4415593a9999ff577708f66305d0deabe857",
+  "baixado_em_utc": "2026-10-26T20:40:39.297620+00:00"
+ },
+ "to\\to73415-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73415-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "54461c682cc4bc0c0a637a5f169043e328c6a4f4bf4e97f0ac574846508a7198",
+  "baixado_em_utc": "2026-10-26T20:40:39.299252+00:00"
+ },
+ "to\\to92541-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92541-c0003-e006260-u.json",
+  "bytes": 3312,
+  "sha256": "fa16609de34f00bbe10be1ccd7afecfbe814c10e9f27eba8676b626ab5f2b8b8",
+  "baixado_em_utc": "2026-10-26T20:40:39.302952+00:00"
+ },
+ "to\\to73156-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73156-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "1973ca399d2709bb4c09f1d5afc65ae4058364f973ef0ea15bae7443be05ab3d",
+  "baixado_em_utc": "2026-10-26T20:40:39.320968+00:00"
+ },
+ "to\\to73350-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73350-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "90cee715233bf10ba1895416718c41e61eeb5908fa538911f0d691a11c577bdc",
+  "baixado_em_utc": "2026-10-26T20:40:39.361026+00:00"
+ },
+ "to\\to73130-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73130-c0003-e006260-u.json",
+  "bytes": 3309,
+  "sha256": "28e901b94c89e3c39e7a5f877ae925b31fa83afd771184f4a78364dd25aa9447",
+  "baixado_em_utc": "2026-10-26T20:40:39.372240+00:00"
+ },
+ "to\\to92584-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92584-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "2d07a02879d700744184cdf8d35f03d7400682d14cec0bfcd8f7a0d420602229",
+  "baixado_em_utc": "2026-10-26T20:40:39.420879+00:00"
+ },
+ "to\\to92606-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92606-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "b7af8f94d85b18b1f078b814cc5e55b74fa2853a6d755a2eb987be3588619461",
+  "baixado_em_utc": "2026-10-26T20:40:39.425611+00:00"
+ },
+ "to\\to73547-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73547-c0003-e006260-u.json",
+  "bytes": 3305,
+  "sha256": "6a90f32fd9fd4d1501dac14018c4ce90ee0ce496e60241287d193aeac0fa6b49",
+  "baixado_em_utc": "2026-10-26T20:40:39.433890+00:00"
+ },
+ "to\\to96598-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96598-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "bab5b584aae95c198a0bed71e2c8e4edbc19534da48bc31deef11e3d43cdf00d",
+  "baixado_em_utc": "2026-10-26T20:40:39.435695+00:00"
+ },
+ "to\\to73539-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73539-c0003-e006260-u.json",
+  "bytes": 3305,
+  "sha256": "8c68ab38b0930f1f1ac83e2c595e3f71a5ec46c87bce1865e20acdec4b8f6eb7",
+  "baixado_em_utc": "2026-10-26T20:40:39.437383+00:00"
+ },
+ "to\\to73377-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73377-c0003-e006260-u.json",
+  "bytes": 3300,
+  "sha256": "ea63500ea610d100a0ccfc181f98a310d8e2d9aabc4600b98f69b67e6af43ce1",
+  "baixado_em_utc": "2026-10-26T20:40:39.439038+00:00"
+ },
+ "to\\to73288-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73288-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "46d4fbef65a66f8e778194d29226c6e6827d1d255d2fba4b3f7737684db62869",
+  "baixado_em_utc": "2026-10-26T20:40:39.475540+00:00"
+ },
+ "to\\to73105-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73105-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "c7c736bc8c2728f8a3ff2635aa3f930375e1b7546fbf18238990e684174e2a49",
+  "baixado_em_utc": "2026-10-26T20:40:39.530810+00:00"
+ },
+ "to\\to73393-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73393-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "b2ba95b7b331ba303ae252ace9fd4e185fd6ca0fa486ed565c7d517c2efbd715",
+  "baixado_em_utc": "2026-10-26T20:40:39.542912+00:00"
+ },
+ "to\\to73199-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73199-c0003-e006260-u.json",
+  "bytes": 3311,
+  "sha256": "a92e0e2a53e26ba569262648eaecb699768acdda98801cabbb64e89965ffd6bb",
+  "baixado_em_utc": "2026-10-26T20:40:39.544562+00:00"
+ },
+ "to\\to73180-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73180-c0003-e006260-u.json",
+  "bytes": 3318,
+  "sha256": "8f35cade5d636531786469476cb240c6e8c64dc9b43f9eeb915e07b270de5c48",
+  "baixado_em_utc": "2026-10-26T20:40:39.547012+00:00"
+ },
+ "to\\to96032-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96032-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "e39f804a8871a70963275e4839f43cb043f31954ebe91628fb4a2be879266fb4",
+  "baixado_em_utc": "2026-10-26T20:40:39.560105+00:00"
+ },
+ "to\\to96130-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96130-c0003-e006260-u.json",
+  "bytes": 3318,
+  "sha256": "8e8664f7a35f67274505fa2598249572197e26775dc81d49ebbc575d916327b0",
+  "baixado_em_utc": "2026-10-26T20:40:39.571551+00:00"
+ },
+ "to\\to92681-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to92681-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "fb910ba06fc35f932fdc9acef0fbe8631d597601f3a70308cdf4203d7ce596b5",
+  "baixado_em_utc": "2026-10-26T20:40:39.573090+00:00"
+ },
+ "to\\to73164-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73164-c0003-e006260-u.json",
+  "bytes": 3300,
+  "sha256": "aa474fd566cd8c3b3d4dc954fda3017eac568864f482c1a8f174ba4d5b765c2d",
+  "baixado_em_utc": "2026-10-26T20:40:39.637079+00:00"
+ },
+ "to\\to96156-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96156-c0003-e006260-u.json",
+  "bytes": 3321,
+  "sha256": "327de02cbadd2bdb62b038b63c7e9011df7d21f7795b9b4849121a6e3455853e",
+  "baixado_em_utc": "2026-10-26T20:40:39.645651+00:00"
+ },
+ "to\\to73504-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73504-c0003-e006260-u.json",
+  "bytes": 3306,
+  "sha256": "25505531ccd89d9b3c9ca8c2e35a0b579c02e32bcc341e212f8616d227083211",
+  "baixado_em_utc": "2026-10-26T20:40:39.655087+00:00"
+ },
+ "to\\to96210-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96210-c0003-e006260-u.json",
+  "bytes": 3329,
+  "sha256": "8bab5ba9ac128bd54f180e226072dbda2d62e6c687bca5622b41a953eff999e6",
+  "baixado_em_utc": "2026-10-26T20:40:39.680991+00:00"
+ },
+ "to\\to73237-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73237-c0003-e006260-u.json",
+  "bytes": 3299,
+  "sha256": "e0753281a67f62fa9e253242a7f7dd914a429aa4059eb37fcf87c170611bd0ae",
+  "baixado_em_utc": "2026-10-26T20:40:39.682559+00:00"
+ },
+ "to\\to73458-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to73458-c0003-e006260-u.json",
+  "bytes": 3305,
+  "sha256": "9a3cda1a9821d2659c063649f574951a2516d57bc8e05ab888bb5ee16f88003a",
+  "baixado_em_utc": "2026-10-26T20:40:39.685483+00:00"
+ },
+ "to\\to96652-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96652-c0003-e006260-u.json",
+  "bytes": 3317,
+  "sha256": "a1e965c46037a9e69348cce08f137bfc5c3ffd8847c65efbc370efc3b2800ca4",
+  "baixado_em_utc": "2026-10-26T20:40:39.688407+00:00"
+ },
+ "to\\to96199-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96199-c0003-e006260-u.json",
+  "bytes": 3316,
+  "sha256": "498606e799e484fcd42e8a0b49eccb13e9b8350219b05ebb5e92b1004cd5ca6c",
+  "baixado_em_utc": "2026-10-26T20:40:39.710901+00:00"
+ },
+ "to\\to96431-c0003-e006260-u.json": {
+  "url": "https://resultados.tse.jus.br/oficial/ele2026/6260/dados/to/to96431-c0003-e006260-u.json",
+  "bytes": 3318,
+  "sha256": "6917f28831b2f48f81ab3049bfd9e32fb1777301bc9df08648824f65dc7d3345",
+  "baixado_em_utc": "2026-10-26T20:40:39.790512+00:00"
+ }
+}

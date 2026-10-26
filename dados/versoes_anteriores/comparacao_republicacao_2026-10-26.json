@@ -1,0 +1,130 @@
+{
+ "AL": {
+  "linhas_antes": 634483,
+  "linhas_depois": 634483,
+  "secoes_antes": 7101,
+  "secoes_depois": 7101,
+  "colunas_mudaram": false,
+  "mudancas": []
+ },
+ "AP": {
+  "linhas_antes": 253478,
+  "linhas_depois": 253478,
+  "secoes_antes": 1914,
+  "secoes_depois": 1914,
+  "colunas_mudaram": false,
+  "mudancas": []
+ },
+ "BA": {
+  "linhas_antes": 3973766,
+  "linhas_depois": 3973766,
+  "secoes_antes": 35476,
+  "secoes_depois": 35476,
+  "colunas_mudaram": false,
+  "mudancas": []
+ },
+ "CE": {
+  "linhas_antes": 2584325,
+  "linhas_depois": 2584325,
+  "secoes_antes": 23765,
+  "secoes_depois": 23765,
+  "colunas_mudaram": false,
+  "mudancas": []
+ },
+ "DF": {
+  "linhas_antes": 1132450,
+  "linhas_depois": 1132450,
+  "secoes_antes": 6969,
+  "secoes_depois": 6969,
+  "colunas_mudaram": false,
+  "mudancas": []
+ },
+ "GO": {
+  "linhas_antes": 2021127,
+  "linhas_depois": 2021127,
+  "secoes_antes": 15686,
+  "secoes_depois": 15686,
+  "colunas_mudaram": false,
+  "mudancas": []
+ },
+ "MA": {
+  "linhas_antes": 1799355,
+  "linhas_depois": 1799355,
+  "secoes_antes": 18093,
+  "secoes_depois": 18093,
+  "colunas_mudaram": false,
+  "mudancas": []
+ },
+ "MG": {
+  "linhas_antes": 5923656,
+  "linhas_depois": 5923656,
+  "secoes_antes": 52062,
+  "secoes_depois": 52062,
+  "colunas_mudaram": false,
+  "mudancas": []
+ },
+ "MS": {
+  "linhas_antes": 696826,
+  "linhas_depois": 696826,
+  "secoes_antes": 7106,
+  "secoes_depois": 7106,
+  "colunas_mudaram": false,
+  "mudancas": []
+ },
+ "MT": {
+  "linhas_antes": 831247,
+  "linhas_depois": 831247,
+  "secoes_antes": 8287,
+  "secoes_depois": 8287,
+  "colunas_mudaram": false,
+  "mudancas": []
+ },
+ "PA": {
+  "linhas_antes": 2241315,
+  "linhas_depois": 2241315,
+  "secoes_antes": 20827,
+  "secoes_depois": 20827,
+  "colunas_mudaram": false,
+  "mudancas": []
+ },
+ "PI": {
+  "linhas_antes": 853605,
+  "linhas_depois": 853605,
+  "secoes_antes": 10225,
+  "secoes_depois": 10225,
+  "colunas_mudaram": false,
+  "mudancas": []
+ },
+ "PR": {
+  "linhas_antes": 3429027,
+  "linhas_depois": 3429027,
+  "secoes_antes": 27142,
+  "secoes_depois": 27142,
+  "colunas_mudaram": false,
+  "mudancas": []
+ },
+ "RO": {
+  "linhas_antes": 503982,
+  "linhas_depois": 503982,
+  "secoes_antes": 4698,
+  "secoes_depois": 4698,
+  "colunas_mudaram": false,
+  "mudancas": []
+ },
+ "RR": {
+  "linhas_antes": 182283,
+  "linhas_depois": 182283,
+  "secoes_antes": 1519,
+  "secoes_depois": 1519,
+  "colunas_mudaram": false,
+  "mudancas": []
+ },
+ "RS": {
+  "linhas_antes": 3435949,
+  "linhas_depois": 3435949,
+  "secoes_antes": 27547,
+  "secoes_depois": 27547,
+  "colunas_mudaram": false,
+  "mudancas": []
+ }
+}

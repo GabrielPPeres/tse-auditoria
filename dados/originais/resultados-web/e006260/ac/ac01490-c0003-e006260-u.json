@@ -1,0 +1,15 @@
+
+{ "ele" : "6260", "t" : "2", "f" : "o", "sup" : "n", "tpabr" : "mu", "cdabr" : "01490", "dg" : "25/10/2026", "hg" : "21:26:51", "idg" : "4189897", "dt" : "25/10/2026", "ht" : "19:26:09", "dv" : "s", "tf" : "s", "and" : "f", "esae" : "n", "mnae" : [  ], "carg" : [ 
+{ "cd" : "3", "nmn" : "Governador", "nmm" : "Governador", "nmf" : "Governadora", "nv" : "1", "fed" : [ 
+{ "n" : "104", "sg" : "44-UNIÃO/11-PP", "nm" : "FEDERAÇÃO UNIÃO PROGRESSISTA", "com" : "44-UNIÃO/11-PP", "npar" : [ "11", "44" ] } ], "agr" : [ 
+{ "n" : "10001800654", "nm" : "AVANÇA ACRE", "tp" : "c", "com" : "PDT / MDB / PL / DEMOCRATA / PP / UNIÃO", "tvtn" : "6164", "tvan" : "6164", "par" : [ 
+{ "n" : "11", "sg" : "PP", "nm" : "PROGRESSISTAS", "nfed" : "104", "tvtn" : "6164", "tvan" : "6164", "cand" : [ 
+{ "n" : "11", "sqcand" : "10002544107", "nm" : "MAILZA ASSIS CAMELI", "nmu" : "MAILZA ASSIS", "dt" : "10/12/1976", "dvt" : "Válido", "seq" : "1", "e" : "s", "st" : "Eleito", "vap" : "6164", "pvap" : "70,89", "pvapn" : "70,891316849", "vs" : [ 
+{ "tp" : "v", "sqcand" : "10002544108", "nm" : "JESSICA ROJAS SALES", "nmu" : "JESSICA SALES", "sgp" : "MDB" } ] } ] } ] }, 
+{ "n" : "10001800116", "nm" : "TRABALHO DA ESPERANÇA", "tp" : "c", "com" : "REPUBLICANOS / NOVO / PSD / AVANTE", "tvtn" : "2531", "tvan" : "2531", "par" : [ 
+{ "n" : "10", "sg" : "REPUBLICANOS", "nm" : "REPUBLICANOS", "nfed" : "", "tvtn" : "2531", "tvan" : "2531", "cand" : [ 
+{ "n" : "10", "sqcand" : "10002532492", "nm" : "ALAN RICK MIRANDA", "nmu" : "ALAN RICK", "dt" : "23/10/1976", "dvt" : "Válido", "seq" : "2", "e" : "n", "st" : "Não eleito", "vap" : "2531", "pvap" : "29,11", "pvapn" : "29,108683151", "vs" : [ 
+{ "tp" : "v", "sqcand" : "10002532493", "nm" : "FABIO RICARDO LEITE", "nmu" : "RICARDO LEITE", "sgp" : "REPUBLICANOS" } ] } ] } ] } ] } ], "s" : 
+{ "ts" : "53", "st" : "53", "pst" : "100,00", "pstn" : "100", "snt" : "0", "psnt" : "0,00", "psntn" : "0", "si" : "53", "psi" : "100,00", "psin" : "100", "sni" : "0", "psni" : "0,00", "psnin" : "0", "sa" : "53", "psa" : "100,00", "psan" : "100", "sna" : "0", "psna" : "0,00", "psnan" : "0" }, "e" : 
+{ "te" : "12774", "est" : "12774", "pest" : "100,00", "pestn" : "100", "esnt" : "0", "pesnt" : "0,00", "pesntn" : "0", "esi" : "12774", "pesi" : "100,00", "pesin" : "100", "esni" : "0", "pesni" : "0,00", "pesnin" : "0", "esa" : "12774", "pesa" : "100,00", "pesan" : "100", "esna" : "0", "pesna" : "0,00", "pesnan" : "0", "c" : "9703", "pc" : "75,96", "pcn" : "75,958979176", "a" : "3071", "pa" : "24,04", "pan" : "24,041020824" }, "v" : 
+{ "tv" : "9703", "vvc" : "8695", "pvvc" : "89,61", "pvvcn" : "89,611460373", "vv" : "8695", "pvv" : "100,00", "pvvn" : "100", "vnom" : "8695", "pvnom" : "100,00", "pvnomn" : "100", "van" : "0", "pvan" : "0,00", "pvann" : "0", "vansj" : "0", "pvansj" : "0,00", "pvansjn" : "0", "vb" : "231", "pvb" : "2,38", "pvbn" : "2,380706998", "tvn" : "777", "ptvn" : "8,01", "ptvnn" : "8,007832629", "vn" : "777", "pvn" : "100,00", "pvnn" : "100", "vnt" : "0", "pvnt" : "0,00", "pvntn" : "0", "vsan" : "0", "vscv" : "0" } }
