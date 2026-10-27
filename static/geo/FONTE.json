@@ -1,0 +1,15 @@
+{
+ "fonte": "IBGE - API de malhas territoriais v3",
+ "br_uf.json": {
+  "url": "https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?formato=application/vnd.geo%2Bjson&qualidade=minima&intrarregiao=UF",
+  "sha256_original": "07c671aa87aa1ab296c446de6294df9827112782537b996c0a160284907e7c0f",
+  "bytes_original": 98502,
+  "feicoes": 27
+ },
+ "br_municipios.json": {
+  "url": "https://servicodados.ibge.gov.br/api/v3/malhas/paises/BR?formato=application/vnd.geo%2Bjson&qualidade=minima&intrarregiao=municipio",
+  "sha256_original": "5efffedf8772dc8654322affafac4e3e8b001839e7c2af5cab4eb1094dcd6240",
+  "bytes_original": 3605638,
+  "feicoes": 5570
+ }
+}

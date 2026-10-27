@@ -52,7 +52,15 @@ nav.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: 
 .filters { display: flex; flex-wrap: wrap; gap: 12px; padding: 14px 24px; align-items: end; }
 .filters label { display: flex; flex-direction: column; gap: 4px; font-size: 12px; color: var(--ink2); }
 .filters select { background: var(--surface); border: 1px solid var(--border); border-radius: 6px; padding: 6px 8px; min-width: 120px; max-width: 280px; }
-.filters .hint { font-size: 12px; color: var(--muted); align-self: center; }
+.filters .hint { font-size: 12px; color: var(--muted); align-self: center; max-width: 520px; }
+.seg-wrap { display: flex; flex-direction: column; gap: 4px; }
+.seg-l { font-size: 12px; color: var(--ink2); }
+.seg { display: inline-flex; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; background: var(--surface); }
+.seg button { border: 0; background: none; padding: 7px 16px; cursor: pointer; font-weight: 600; color: var(--ink2); }
+.seg button + button { border-left: 1px solid var(--border); }
+.seg button[aria-checked="true"] { background: var(--accent); color: #fff; }
+.seg button:disabled { opacity: .45; cursor: not-allowed; }
+.mapnote { font-size: 12px; color: var(--muted); margin-top: 6px; }
 main { padding: 0 24px 40px; }
 section.tab { display: none; transition: opacity .15s; }
 section.tab.active { display: block; }
@@ -104,7 +112,7 @@ textarea { width: 100%; min-height: 110px; background: var(--surface); border: 1
 </header>
 <nav class="tabs" role="tablist" id="tabs"></nav>
 <div class="filters" id="filtros">
-  <label>Turno <select id="f-turno"></select></label>
+  <div class="seg-wrap"><span class="seg-l">Turno</span><div class="seg" id="f-turno" role="radiogroup" aria-label="Turno"></div></div>
   <label>Cargo <select id="f-cargo"></select></label>
   <label>UF <select id="f-uf"></select></label>
   <label><span id="lbl-a">Candidato A</span> <select id="f-a"></select></label>
@@ -250,6 +258,42 @@ function eixo(t, o = {}) {
     nameTextStyle: { color: t.muted, fontSize: 11 },
   }, o);
 }
+// ---------------------------------------------------------------- mapas reais (malhas oficiais do IBGE)
+const UF_IBGE = { RO: '11', AC: '12', AM: '13', RR: '14', PA: '15', AP: '16', TO: '17', MA: '21', PI: '22', CE: '23', RN: '24', PB: '25', PE: '26', AL: '27', SE: '28', BA: '29', MG: '31', ES: '32', RJ: '33', SP: '35', PR: '41', SC: '42', RS: '43', MS: '50', MT: '51', GO: '52', DF: '53' };
+let GEO = null;
+async function geo() {
+  if (GEO) return GEO;
+  const [uf, mun, cod] = await Promise.all(['/static/geo/br_uf.json', '/static/geo/br_municipios.json', '/static/geo/tse_ibge.json'].map(u => fetch(u).then(r => r.json())));
+  echarts.registerMap('uf', uf);
+  echarts.registerMap('mun', mun);
+  GEO = { uf, mun, cod, regs: new Set(['uf', 'mun']) };
+  return GEO;
+}
+function mapaMun(uf) {   // mapa só com os municípios da UF filtrada (registrado uma vez)
+  if (!uf || uf === 'ZZ') return 'mun';
+  const nome = 'mun-' + uf;
+  if (!GEO.regs.has(nome)) {
+    const p = UF_IBGE[uf];
+    echarts.registerMap(nome, { type: 'FeatureCollection', features: GEO.mun.features.filter(f => f.properties.name.startsWith(p)) });
+    GEO.regs.add(nome);
+  }
+  return nome;
+}
+const ibge = (uf, mun) => GEO.cod[uf + '|' + mun];
+// Mapa coroplético. tipo 'div' = divergente (B ← cinza → A); 'seq' = sequencial (uma cor, mais forte = maior).
+function optMapa(t, { mapa, dados, tipo, max, min = 0, txtMin, txtMax, tip, borda = .4 }) {
+  const vm = tipo === 'div'
+    ? { min: -max, max, inRange: { color: [t.B, t.mid, t.A] }, text: [txtMax, txtMin] }
+    : { min, max, inRange: { color: t.seq }, text: [txtMax, txtMin] };
+  return base(t, {
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => p.data ? tip(p.data) : `<div>${esc(p.name)}</div>sem dados` },
+    visualMap: { type: 'continuous', calculable: false, orient: 'horizontal', left: 'center', bottom: 0, itemWidth: 12, itemHeight: 200, textStyle: { color: t.ink2, fontSize: 11 }, ...vm },
+    series: [{ type: 'map', map: mapa, roam: true, scaleLimit: { min: 1, max: 40 }, top: 10, bottom: 50, data: dados, selectedMode: false,
+      itemStyle: { areaColor: t.grid, borderColor: t.surface, borderWidth: borda },
+      emphasis: { disabled: true } }],   // sem pintar de amarelo ao passar o mouse; o tooltip mostra os números
+  });
+}
+
 const linhaTip = (c, valor, rotulo) =>
   `<div style="display:flex;gap:8px;align-items:center"><span style="display:inline-block;width:12px;height:2px;background:${c}"></span><b>${valor}</b><span style="opacity:.75">${esc(rotulo)}</span></div>`;
 
@@ -257,6 +301,7 @@ const linhaTip = (c, valor, rotulo) =>
 const ABAS = [
   { id: 'geral', nome: 'Visão geral' },
   { id: 'turnos', nome: '1º × 2º turno' },
+  { id: 'urnas', nome: 'Biometria e horário' },
   { id: 'estados', nome: 'Estados' },
   { id: 'municipios', nome: 'Municípios' },
   { id: 'secoes', nome: 'Seções' },
@@ -334,16 +379,23 @@ async function iniciar() {
     $('#main').append(el('section', { class: 'tab', id: 'aba-' + a.id, role: 'tabpanel' }));
   });
   const ft = $('#f-turno');
-  m.turnos.forEach(t => ft.append(el('option', { value: t, text: t + 'º turno' })));
-  ft.disabled = m.turnos.length < 2;
   S.turno = String(m.turnos[m.turnos.length - 1]);   // abre no turno mais recente
-  ft.value = S.turno;
+  [1, 2].forEach(t => {
+    const b = el('button', { type: 'button', role: 'radio', 'aria-checked': String(String(t) === S.turno), text: t + 'º turno' });
+    if (!m.turnos.includes(t)) { b.disabled = true; b.title = 'Ainda não carregado'; }
+    b.addEventListener('click', async () => {
+      if (S.turno === String(t)) return;
+      S.turno = String(t);
+      ft.querySelectorAll('button').forEach(x => x.setAttribute('aria-checked', String(x === b)));
+      preencherCargos(); await trocarCargo(); render();
+    });
+    ft.append(b);
+  });
   preencherCargos();
   const fc = $('#f-cargo');
   const fu = $('#f-uf');
   fu.append(el('option', { value: '', text: 'Brasil' }));
   m.ufs.forEach(u => fu.append(el('option', { value: u, text: NOME_UF(u) })));
-  ft.addEventListener('change', async () => { S.turno = ft.value; preencherCargos(); await trocarCargo(); render(); });
   fc.addEventListener('change', async () => { S.cargo = fc.value; avisoFonte(); await trocarCargo(); render(); });
   fu.addEventListener('change', () => { S.uf = fu.value; render(); });
   $('#f-a').addEventListener('change', e => { S.a = e.target.value; render(); });
@@ -396,7 +448,7 @@ async function render() {
   const g = ++geracao, aba = S.aba, sec = $('#aba-' + aba);
   sec.classList.add('loading');
   try {
-    await ({ geral: rGeral, turnos: rTurnos, estados: rEstados, municipios: rMunicipios, secoes: rSecoes, partidos: rPartidos, cargos: rCargos, sql: rSql }[aba])(sec, () => g === geracao);
+    await ({ geral: rGeral, turnos: rTurnos, urnas: rUrnas, estados: rEstados, municipios: rMunicipios, secoes: rSecoes, partidos: rPartidos, cargos: rCargos, sql: rSql }[aba])(sec, () => g === geracao);
   } catch (e) {
     sec.replaceChildren(el('div', { class: 'banner err', text: 'Erro ao carregar: ' + e.message }));
   } finally { sec.classList.remove('loading'); }
@@ -526,14 +578,9 @@ async function rGeral(sec, vivo) {
 }
 
 // ================================================================= Estados
-const TILES = {
-  RR: [2, 0], AP: [4, 0], AM: [1, 1], PA: [3, 1], MA: [4, 1], CE: [5, 1], RN: [6, 1],
-  AC: [0, 2], RO: [1, 2], MT: [2, 2], TO: [3, 2], PI: [4, 2], PE: [5, 2], PB: [6, 2],
-  MS: [1, 3], GO: [2, 3], DF: [3, 3], BA: [4, 3], SE: [5, 3], AL: [6, 3],
-  SP: [2, 4], MG: [3, 4], ES: [4, 4], PR: [2, 5], RJ: [3, 5], SC: [2, 6], RS: [2, 7], ZZ: [6, 7],
-};
+let mapaQuem = 'a';   // no mapa de calor municipal: mostrar A ou B
 async function rEstados(sec, vivo) {
-  const d = await api('/api/uf', { turno: S.turno, cargo: S.cargo });
+  const [d, mun] = await Promise.all([api('/api/uf', { turno: S.turno, cargo: S.cargo }), api('/api/municipios', { turno: S.turno, cargo: S.cargo, a: S.a, b: S.b }), geo()]);
   if (!vivo()) return;
   const t = tokens();
   const val = Object.fromEntries(d.totais.map(x => [x.uf, x]));
@@ -545,34 +592,35 @@ async function rEstados(sec, vivo) {
   const ra = rotulo(S.a), rb = rotulo(S.b);
 
   montar(sec, 'estados', () => [el('div', { class: 'grid' },
-    (() => { const c = el('div', { class: 'card w6', id: 'card-tile' }, el('h2', { id: 'tile-h' }), el('p', { class: 'q', id: 'tile-q' }),
-      el('div', { class: 'tilemap', id: 'tilemap' }), el('div', { class: 'scale', id: 'tile-scale' }),
-      el('details', { class: 'tbl' }, el('summary', { text: 'Ver tabela' }), el('div', { class: 'tablewrap', id: 'tb-tile' })));
-      return c; })(),
+    card('mapauf', '', '', { w: 6, cls: 'tall', nota: 'Arraste para mover e use a roda do mouse para aproximar. Fronteiras: IBGE.' }),
     card('diverg', 'Margem por UF', '', { w: 6, cls: 'tall' }),
+    (() => { const c = card('mapamun', '', '', { w: 12, cls: 'xtall', nota: 'Cada área é um município (malha do IBGE). Arraste para mover e use a roda do mouse para aproximar. Escolha uma UF no filtro para ver só ela.' });
+      const seg = el('div', { class: 'seg', id: 'seg-quem', role: 'radiogroup', style: 'margin:0 0 8px' });
+      ['a', 'b'].forEach(k => { const b = el('button', { type: 'button', role: 'radio', 'data-k': k }); b.addEventListener('click', () => { mapaQuem = k; render(); }); seg.append(b); });
+      c.insertBefore(seg, c.querySelector('.chart')); return c; })(),
     card('dumbbell', 'A e B lado a lado em cada UF', '', { w: 6, cls: 'xtall' }),
     card('stack', 'Composição dos votos válidos por UF', 'Como os votos válidos de cada UF se dividem entre os principais nomes?', { w: 6, cls: 'xtall' }),
-    card('heat', 'Mapa de calor: UF × candidato', '% dos votos válidos de cada UF. Quanto mais forte o azul, maior a fatia (veja a escala à direita).', { w: 12, cls: 'xtall' }),
   )]);
 
-  $('#tile-h').textContent = 'Quem vence em cada UF · ' + nomeCargo(S.cargo);
-  $('#tile-q').textContent = `Margem de ${ra} sobre ${rb}, em pontos percentuais dos votos válidos.`;
-  const max = Math.max(10, Math.ceil(Math.max(...linhas.map(l => Math.abs(l.m))) / 10) * 10);
-  const tm = $('#tilemap'); tm.replaceChildren();
-  const tip = $('#tip');
-  for (const l of linhas) {
-    const pos = TILES[l.uf]; if (!pos) continue;
-    const bg = divergente(l.m, max, t);
-    const tile = el('div', { class: 'tile', tabindex: '0', style: `grid-column:${pos[0] + 1};grid-row:${pos[1] + 1};background:${bg};color:${tinta(bg)}`, 'aria-label': `${NOME_UF(l.uf)}: margem ${nf1.format(l.m)} pontos` },
-      document.createTextNode(l.uf === 'ZZ' ? 'EXT' : l.uf), el('small', { text: (l.m > 0 ? '+' : '') + nf1.format(l.m) }));
-    const show = e => { tip.replaceChildren(el('b', { text: NOME_UF(l.uf) }), el('br'), document.createTextNode(`${ra}: ${pct(l.pa)}`), el('br'), document.createTextNode(`${rb}: ${pct(l.pb)}`)); tip.style.display = 'block';
-      const r = e.target.getBoundingClientRect ? e.target.getBoundingClientRect() : { left: e.clientX, top: e.clientY }; tip.style.left = (e.clientX || r.left) + 12 + 'px'; tip.style.top = (e.clientY || r.top) + 12 + 'px'; };
-    tile.addEventListener('pointermove', show); tile.addEventListener('focus', show);
-    tile.addEventListener('pointerleave', () => tip.style.display = 'none'); tile.addEventListener('blur', () => tip.style.display = 'none');
-    tm.append(tile);
-  }
-  $('#tile-scale').replaceChildren(el('span', { text: rb + ' +' + max }), el('span', { class: 'bar', style: `background:linear-gradient(90deg,${t.B},${t.mid},${t.A})` }), el('span', { text: ra + ' +' + max }));
-  tabela('tile', [{ h: 'UF', f: l => NOME_UF(l.uf) }, { h: ra, n: 1, f: l => pct(l.pa) }, { h: rb, n: 1, f: l => pct(l.pb) }, { h: 'Margem (p.p.)', n: 1, f: l => nf1.format(l.m) }], linhas);
+  // Mapa real por UF: margem A − B
+  $('#card-mapauf h2').textContent = 'Quem vence em cada UF · ' + nomeCargo(S.cargo) + ' · ' + S.turno + 'º turno';
+  $('#card-mapauf .q').textContent = `Margem de ${ra} sobre ${rb}, em pontos percentuais dos votos válidos. Azul: ${ra} à frente. Vermelho: ${rb} à frente.`;
+  const max = Math.max(10, Math.ceil(Math.max(...linhas.filter(l => l.uf !== 'ZZ').map(l => Math.abs(l.m))) / 10) * 10);
+  chart('ch-mapauf').setOption(optMapa(t, { mapa: 'uf', tipo: 'div', max, borda: 1, txtMax: ra + ' +' + max, txtMin: rb + ' +' + max,
+    dados: linhas.filter(l => l.uf !== 'ZZ').map(l => ({ name: l.uf, value: +l.m.toFixed(2), l })),
+    tip: x => `<div>${esc(NOME_UF(x.l.uf))}</div>` + linhaTip(t.A, pct(x.l.pa), ra) + linhaTip(t.B, pct(x.l.pb), rb) + `<div>Margem: <b>${nf1.format(x.l.m)} p.p.</b></div>` }), true);
+  tabela('mapauf', [{ h: 'UF', f: l => NOME_UF(l.uf) }, { h: ra, n: 1, f: l => pct(l.pa) }, { h: rb, n: 1, f: l => pct(l.pb) }, { h: 'Margem (p.p.)', n: 1, f: l => nf1.format(l.m) }], linhas);
+
+  // Mapa de calor real por município: % de A (ou B)
+  const quem = mapaQuem === 'b' ? { k: 'b', p: S.b, r: rb } : { k: 'a', p: S.a, r: ra };
+  $('#seg-quem').querySelectorAll('button').forEach(b => { b.textContent = b.dataset.k === 'a' ? ra : rb; b.setAttribute('aria-checked', String(b.dataset.k === quem.k)); });
+  $('#card-mapamun h2').textContent = `Mapa de calor por município · ${quem.r} · ${S.turno}º turno`;
+  $('#card-mapamun .q').textContent = `% dos votos válidos de ${quem.r} em cada município${S.uf ? ' de ' + NOME_UF(S.uf) : ''}. Quanto mais forte a cor, maior a fatia (escala abaixo do mapa).`;
+  const MM = mun.filter(r => r.uf !== 'ZZ' && (!S.uf || r.uf === S.uf)).map(r => ({ ...r, p: 100 * r[quem.k] / r.validos, cd: ibge(r.uf, r.mun) })).filter(r => r.cd);
+  chart('ch-mapamun').setOption(optMapa(t, { mapa: mapaMun(S.uf), tipo: 'seq', min: 0, max: 100, txtMax: '100%', txtMin: '0%', borda: S.uf ? .5 : .1,
+    dados: MM.map(r => ({ name: r.cd, value: +r.p.toFixed(2), r })),
+    tip: x => `<div>${esc(x.r.municipio)} (${esc(x.r.uf)})</div><b>${pct(x.r.p)}</b> para ${esc(quem.r)}<div style="opacity:.75">${nf.format(x.r[quem.k])} de ${nf.format(x.r.validos)} votos válidos</div>` }), true);
+  tabela('mapamun', [{ h: 'Município', k: 'municipio' }, { h: 'UF', k: 'uf' }, { h: quem.r, n: 1, f: l => pct(l.p) }, { h: 'Válidos', n: 1, f: l => nf.format(l.validos) }], MM.slice().sort((x, y) => y.p - x.p).slice(0, 1000));
 
   // Barras divergentes
   const ord = linhas.slice().sort((x, y) => x.m - y.m);
@@ -624,36 +672,31 @@ async function rEstados(sec, vivo) {
   }), true);
   tabela('stack', [{ h: 'UF', f: l => NOME_UF(l.uf) }, ...top.map(p => ({ h: rotulo(p), n: 1, f: l => pct(P(l.uf)(p)) }))], ords.slice().reverse());
 
-  // Heatmap
-  const cols = ENT_ORD.slice(), ordh = linhas.slice().sort((x, y) => x.uf.localeCompare(y.uf));
-  const dados = []; let mx = 0;
-  ordh.forEach((l, yi) => cols.forEach((p, xi) => { const v = P(l.uf)(p); mx = Math.max(mx, v); dados.push([xi, yi, +v.toFixed(2)]); }));
-  chart('ch-heat').setOption(base(t, {
-    grid: { left: 70, right: 90, top: 10, bottom: 70 },
-    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${esc(NOME_UF(ordh[p.value[1]].uf))} · ${esc(rotulo(cols[p.value[0]]))}</div><b>${pct(p.value[2])}</b> dos válidos` },
-    xAxis: eixo(t, { type: 'category', data: cols.map(rotulo), splitLine: { show: false }, axisLabel: { color: t.ink2, interval: 0, rotate: 20, fontSize: 11 } }),
-    yAxis: eixo(t, { type: 'category', data: ordh.map(l => NOME_UF(l.uf)), inverse: true, splitLine: { show: false }, axisLabel: { color: t.ink2 } }),
-    visualMap: { min: 0, max: Math.ceil(mx / 10) * 10, calculable: false, orient: 'vertical', right: 0, top: 'middle', itemHeight: 200,
-      inRange: { color: t.seq }, textStyle: { color: t.muted }, formatter: v => Math.round(v) + '%' },
-    series: [{ type: 'heatmap', data: dados, itemStyle: { borderColor: t.surface, borderWidth: 2 }, emphasis: { itemStyle: { borderColor: t.ink, borderWidth: 1 } } }],
-  }), true);
-  tabela('heat', [{ h: 'UF', f: l => NOME_UF(l.uf) }, ...cols.map(p => ({ h: rotulo(p), n: 1, f: l => pct(P(l.uf)(p)) }))], ordh);
 }
 
 // ================================================================= Municípios
 async function rMunicipios(sec, vivo) {
-  const rows = await api('/api/municipios', { turno: S.turno, cargo: S.cargo, a: S.a, b: S.b });
+  const [rows] = await Promise.all([api('/api/municipios', { turno: S.turno, cargo: S.cargo, a: S.a, b: S.b }), geo()]);
   if (!vivo()) return;
   const t = tokens(), ra = rotulo(S.a), rb = rotulo(S.b);
   const L = rows.map(r => ({ ...r, pa: 100 * r.a / r.validos, pb: 100 * r.b / r.validos }));
   const foco = S.uf ? L.filter(r => r.uf === S.uf) : L;
   montar(sec, 'municipios', () => [el('div', { class: 'grid' },
+    card('mapmarg', '', '', { w: 12, cls: 'xtall', nota: 'Cada área é um município (malha do IBGE). Arraste para mover e use a roda do mouse para aproximar.' }),
     card('bolhas', 'Cada município em um ponto', '', { w: 6, cls: 'tall' }),
     card('multi', 'Distribuição por região', '', { w: 6, cls: 'tall' }),
     card('box', 'Variação dentro de cada UF', '', { w: 12, cls: 'tall' }),
     card('jitter', 'Todos os municípios, por região', '', { w: 6, cls: 'tall' }),
     (() => { const c = el('div', { class: 'card w6' }, el('h2', { id: 'rank-h' }), el('p', { class: 'q', id: 'rank-q' }), el('div', { class: 'tablewrap', id: 'tb-rank', style: 'max-height:560px' })); return c; })(),
   )]);
+  // Mapa real: margem A − B por município
+  const MG = foco.filter(r => r.uf !== 'ZZ').map(r => ({ ...r, m: r.pa - r.pb, cd: ibge(r.uf, r.mun) })).filter(r => r.cd);
+  $('#card-mapmarg h2').textContent = `Margem por município · ${nomeCargo(S.cargo)} · ${S.turno}º turno`;
+  $('#card-mapmarg .q').textContent = `Diferença entre ${ra} e ${rb} em pontos percentuais dos válidos. Azul: ${ra} à frente. Vermelho: ${rb} à frente.`;
+  chart('ch-mapmarg').setOption(optMapa(t, { mapa: mapaMun(S.uf), tipo: 'div', max: 60, txtMax: ra + ' +60', txtMin: rb + ' +60', borda: S.uf ? .5 : .1,
+    dados: MG.map(r => ({ name: r.cd, value: +Math.max(-60, Math.min(60, r.m)).toFixed(2), r })),
+    tip: x => `<div>${esc(x.r.municipio)} (${esc(x.r.uf)})</div>` + linhaTip(t.A, pct(x.r.pa), ra) + linhaTip(t.B, pct(x.r.pb), rb) + `<div>Margem: <b>${nf1.format(x.r.m)} p.p.</b></div>` }), true);
+  tabela('mapmarg', [{ h: 'Município', k: 'municipio' }, { h: 'UF', k: 'uf' }, { h: ra, n: 1, f: l => pct(l.pa) }, { h: rb, n: 1, f: l => pct(l.pb) }, { h: 'Margem (p.p.)', n: 1, f: l => nf1.format(l.m) }], MG.slice().sort((x, y) => y.m - x.m).slice(0, 1000));
   const regiao = r => r.regiao;
   // Bolhas: x=%A, y=%B, tamanho=votos. Ênfase na UF filtrada.
   $('#card-bolhas .q').textContent = `% dos válidos de ${ra} (horizontal) e de ${rb} (vertical). O tamanho é o total de votos. ${S.uf ? 'Em destaque: ' + NOME_UF(S.uf) + '.' : ''}`;
@@ -942,7 +985,7 @@ async function rTurnos(sec, vivo) {
   const r2 = await api('/api/resumo', { turno: '2', cargo });
   const fin = [...new Set(r2.itens.map(i => i.partido))];
   const pa = fin.includes(S.a) ? S.a : fin[0], pb = fin.includes(S.b) && S.b !== pa ? S.b : fin.find(p => p !== pa);
-  const [rows, conf, r1] = await Promise.all([api('/api/turnos', { cargo, a: pa, b: pb }), cargo === '1' ? api('/api/conferencia') : null, api('/api/resumo', { turno: '1', cargo })]);
+  const [rows, conf, r1] = await Promise.all([api('/api/turnos', { cargo, a: pa, b: pb }), cargo === '1' ? api('/api/conferencia') : null, api('/api/resumo', { turno: '1', cargo }), geo()]);
   if (!vivo()) return;
   const t = tokens();
   const nomeDe = (r, p) => { const it = r.itens.find(i => i.partido === p); return it && it.nome ? curto(it.nome) + ' (' + sigla(p) + ')' : sigla(p); };
@@ -957,6 +1000,7 @@ async function rTurnos(sec, vivo) {
   montar(sec, 'turnos', () => [el('div', { class: 'grid' },
     el('div', { class: 'banner', id: 'tr-nota', style: 'grid-column:span 12;margin:0' }),
     el('div', { class: 'kpis', id: 'kpis-t' }),
+    card('mapvar', '', '', { w: 12, cls: 'xtall', nota: 'Cada área é um município (malha do IBGE). Arraste para mover e use a roda do mouse para aproximar.' }),
     card('wfa', '', '', { w: 6 }), card('wfb', '', '', { w: 6 }),
     card('slopeuf', 'Margem em cada UF, do 1º para o 2º turno', '', { w: 6, cls: 'xtall' }),
     card('dumbt', '', '', { w: 6, cls: 'xtall' }),
@@ -982,6 +1026,16 @@ async function rTurnos(sec, vivo) {
     E1 && E2 ? kpi('Comparecimento', pct(100 * C2 / E2), `1º turno ${pct(100 * C1 / E1)} · ${sinal(C2 - C1)} eleitores`) : null,
     kpi('Municípios que trocaram de líder', nf.format(vir.length), `de ${nf.format(foco.length)} · ${nf.format(vir.filter(r => r.lider2 === 'B').length)} para ${rb}, ${nf.format(vir.filter(r => r.lider2 === 'A').length)} para ${ra}`),
   );
+
+  // Mapa real: variação de A entre os turnos, por município
+  const MV = foco.filter(r => r.uf !== 'ZZ').map(r => ({ ...r, d: r.pa2 - r.pa1, cd: ibge(r.uf, r.mun) })).filter(r => r.cd);
+  const mvMax = Math.max(5, Math.ceil(Math.max(...MV.map(r => Math.abs(r.d))) / 5) * 5);
+  $('#card-mapvar h2').textContent = `Onde ${ra} ganhou e perdeu entre os turnos`;
+  $('#card-mapvar .q').textContent = `Variação do % dos votos válidos de ${ra} do 1º para o 2º turno, em pontos percentuais. Azul: ${ra} cresceu. Vermelho: ${ra} caiu.`;
+  chart('ch-mapvar').setOption(optMapa(t, { mapa: mapaMun(S.uf), tipo: 'div', max: mvMax, txtMax: '+' + mvMax + ' p.p.', txtMin: '−' + mvMax + ' p.p.', borda: S.uf ? .5 : .1,
+    dados: MV.map(r => ({ name: r.cd, value: +r.d.toFixed(2), r })),
+    tip: x => `<div>${esc(x.r.municipio)} (${esc(x.r.uf)})${x.r.virou ? ' · trocou de líder' : ''}</div><div>${esc(ra)}: <b>${pct(x.r.pa1)}</b> → <b>${pct(x.r.pa2)}</b></div><div>Variação: <b>${nf1.format(x.r.d)} p.p.</b></div>` }), true);
+  tabela('mapvar', [{ h: 'Município', k: 'municipio' }, { h: 'UF', k: 'uf' }, { h: '1º turno', n: 1, f: l => pct(l.pa1) }, { h: '2º turno', n: 1, f: l => pct(l.pa2) }, { h: 'Variação (p.p.)', n: 1, f: l => nf1.format(l.d) }], MV.slice().sort((x, y) => y.d - x.d).slice(0, 1000));
 
   // Cascata (waterfall): votos 1º turno + variação por região = votos 2º turno
   const REG = ['Norte', 'Nordeste', 'Centro-Oeste', 'Sudeste', 'Sul', ...(cargo === '1' ? ['Exterior'] : [])];
@@ -1141,6 +1195,163 @@ async function rTurnos(sec, vivo) {
     nota.textContent = expl.join(' ');
     tabela('conf', [{ h: 'UF', k: 'uf' }, { h: 'Município', k: 'municipio' }, { h: 'Nº votável', k: 'votavel' }, { h: 'Totalização', n: 1, f: l => nf.format(l.totalizacao) }, { h: 'CSV por seção', n: 1, f: l => nf.format(l.csv_secao) }, { h: 'Diferença', n: 1, f: l => nf.format(l.diferenca) }], conf.lista);
   }
+}
+
+// ================================================================= Biometria e horário (logs das urnas)
+async function rUrnas(sec, vivo) {
+  cache.delete('/api/logs/meta');
+  const meta = await api('/api/logs/meta');
+  const prontos = t => (meta.fontes || []).filter(f => String(f.turno) === t);
+  const pT = prontos(S.turno), outro = S.turno === '1' ? '2' : '1', pO = prontos(outro);
+  if (!pT.length) {
+    sec.dataset.chave = '';
+    sec.replaceChildren(el('div', { class: 'banner' }, el('b', { text: `Os logs das urnas do ${S.turno}º turno ainda não foram lidos.` }), el('br'),
+      document.createTextNode(S.turno === '2' ? 'A leitura do 2º turno está em andamento (cerca de 500 mil urnas). Volte em alguns minutos; as UFs aparecem à medida que ficam prontas.'
+        : 'O 1º turno exige baixar cerca de 95 GB do TSE (processados e apagados UF por UF). Rode "py -3 main.py logs --turno 1".'),
+      pO.length ? el('br') : null, pO.length ? document.createTextNode(`Já existem logs do ${outro}º turno: troque o turno no botão acima.`) : null));
+    return;
+  }
+  const uf = S.uf && S.uf !== 'ZZ' ? S.uf : '';
+  const pres = await api('/api/resumo', { turno: S.turno, cargo: '1' });
+  const pa = S.cargo === '1' ? S.a : pres.itens[0].partido;
+  const v = pT.length, vO = pO.length;   // muda quando novas UFs ficam prontas (evita resposta antiga do cache)
+  const [r, rO, mi, miO, secs, mun] = await Promise.all([
+    api('/api/logs/resumo', { turno: S.turno, uf, v }), pO.length ? api('/api/logs/resumo', { turno: outro, uf, v: vO }) : null,
+    api('/api/logs/minuto', { turno: S.turno, uf, v }), pO.length ? api('/api/logs/minuto', { turno: outro, uf, v: vO }) : null,
+    api('/api/logs/secoes', { turno: S.turno, uf, v }), api('/api/municipios', { turno: S.turno, cargo: '1', a: pa, b: pa }), geo()]);
+  if (!vivo()) return;
+  const t = tokens(), T = r.totais, ra = (() => { const it = pres.itens.find(i => i.partido === pa); return it ? curto(it.nome) + ' (' + sigla(pa) + ')' : sigla(pa); })();
+  const parcial = pT.length < 28 ? ` Leitura em andamento: ${pT.length} de 28 UFs (incluindo exterior) prontas.` : '';
+
+  montar(sec, 'urnas', () => [el('div', { class: 'grid' },
+    el('div', { class: 'banner', id: 'ur-nota', style: 'grid-column:span 12;margin:0' }),
+    el('div', { class: 'kpis', id: 'kpis-u' }),
+    card('umin', 'Votos por minuto', '', { w: 12 }),
+    card('ubio', 'Com e sem biometria, hora a hora', '', { w: 6 }),
+    card('uufb', 'Votos sem biometria em cada UF', '', { w: 6, cls: 'xtall' }),
+    card('umap', '', '', { w: 12, cls: 'xtall', nota: 'Cada área é um município (malha do IBGE). Arraste para mover e use a roda do mouse para aproximar.' }),
+    card('udur', 'Tempo na cabine', 'Tempo entre o eleitor ser habilitado e o voto ser computado, em faixas de 10 segundos.', { w: 6 }),
+    card('utent', 'Tentativas até a digital ser reconhecida', 'Eleitores habilitados por biometria, pelo número da tentativa em que a digital foi aceita.', { w: 6 }),
+    card('ucorr', '', '', { w: 12, cls: 'tall' }),
+    (() => el('div', { class: 'card w12' }, el('h2', { text: 'Seções com maior % de eleitores sem biometria' }), el('p', { class: 'q', text: 'Seções com pelo menos 30 votos. Habilitação sem biometria é prevista em lei (por exemplo, digital não reconhecida ou eleitor sem digital cadastrada); a lista serve para conferência.' }), el('div', { class: 'tablewrap', id: 'tb-usb', style: 'max-height:420px' })))(),
+    (() => el('div', { class: 'card w12' }, el('h2', { id: 'uap-h', text: 'Seções com votos depois das 17h (horário de Brasília)' }), el('p', { class: 'q', id: 'uap-q' }), el('div', { class: 'tablewrap', id: 'tb-uap', style: 'max-height:420px' })))(),
+    (() => el('div', { class: 'card w12' }, el('h2', { text: 'Conferência: votos nos logs × total oficial, por município' }), el('p', { class: 'q', id: 'udf-q' }), el('div', { class: 'tablewrap', id: 'tb-udf', style: 'max-height:420px' })))(),
+  )]);
+  $('#ur-nota').textContent = `Fonte: log de cada urna eletrônica (${S.turno === '2' ? 'arquivos por urna em resultados.tse.jus.br' : 'arquivos transmitidos para totalização, portal de dados abertos do TSE'}). Horários convertidos para o horário de Brasília. O log registra quando cada eleitor votou e como foi habilitado, mas não registra em quem votou.${parcial}${uf ? ' UF: ' + NOME_UF(uf) + '.' : ''}`;
+
+  const conf = r.conferencia, dif = conf.votos_log - conf.votos_oficial;
+  $('#kpis-u').replaceChildren(
+    kpi('Votos registrados nos logs', nf.format(T.votos), `${nf.format(T.urnas)} urnas · ${S.turno}º turno`, true),
+    kpi('Com biometria', pct(100 * T.bio / T.votos), nf.format(T.bio) + ' eleitores'),
+    kpi('Sem biometria', pct(100 * T.sem_bio / T.votos), nf.format(T.sem_bio) + ' eleitores'),
+    kpi('Votos depois das 17h', nf.format(T.apos_fechamento), `${nf.format(secs.secoes_com_voto_apos)} seções · eleitores que estavam na fila`),
+    kpi('Tempo médio na cabine', T.dur_n ? nf.format(Math.round(T.dur_soma / T.dur_n)) + ' s' : '–', pct(100 * T.tent_mais1 / Math.max(T.bio, 1)) + ' precisaram de mais de 1 tentativa de digital'),
+    kpi('Log × total oficial', (dif === 0 ? 'igual' : (dif > 0 ? '+' : '') + nf.format(dif)), `${nf.format(conf.votos_log)} no log · ${nf.format(conf.votos_oficial)} no total oficial de Presidente · ${nf.format(conf.municipios_diferentes)} municípios com diferença`),
+  );
+
+  // Votos por minuto, os dois turnos
+  const serieMin = (d, nome, c, w) => ({ name: nome, type: 'line', showSymbol: false, data: d.minutos.filter(m => m.min >= '07:30' && m.min <= '18:30').map(m => [m.min, m.votos]), lineStyle: { width: w, color: c }, itemStyle: { color: c }, areaStyle: w > 1.5 ? { color: c, opacity: .08 } : undefined });
+  const minutos = [...new Set([...mi.minutos.map(m => m.min), ...(miO ? miO.minutos.map(m => m.min) : [])])].filter(m => m >= '07:30' && m <= '18:30').sort();
+  $('#card-umin .q').textContent = `Quantos votos foram computados em cada minuto, somando todas as urnas${uf ? ' de ' + NOME_UF(uf) : ' do país'} (horário de Brasília). A votação vai das 8h às 17h; depois das 17h votam só os eleitores que já estavam na fila.`;
+  chart('ch-umin').setOption(base(t, {
+    grid: { left: 60, right: 20, top: 36, bottom: 40 },
+    legend: { top: 0, left: 0, textStyle: { color: t.ink2 } },
+    tooltip: { ...base(t).tooltip, trigger: 'axis', axisPointer: { type: 'line', lineStyle: { color: t.axis } }, formatter: ps => `<div>${esc(ps[0].axisValue)}</div>` + ps.map(p => linhaTip(p.color, nf.format(p.value[1]), p.seriesName)).join('') },
+    xAxis: eixo(t, { type: 'category', data: minutos, boundaryGap: false, splitLine: { show: false }, axisLabel: { color: t.muted, interval: 59 } }),
+    yAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: v => nfc.format(v) } }),
+    series: [serieMin(mi, S.turno + 'º turno', t.series[0], 2), ...(miO ? [serieMin(miO, outro + 'º turno', t.other, 1.5)] : [])],
+  }), true);
+  tabela('umin', [{ h: 'Minuto', k: 'min' }, { h: 'Votos', n: 1, f: l => nf.format(l.votos) }, { h: 'Com biometria', n: 1, f: l => nf.format(l.bio) }], mi.minutos);
+
+  // Por hora: com e sem biometria (empilhado)
+  const horas = {};
+  mi.minutos.forEach(m => { const h = m.min.slice(0, 2); const x = horas[h] = horas[h] || { bio: 0, sem: 0 }; x.bio += m.bio; x.sem += m.votos - m.bio; });
+  const H = Object.keys(horas).filter(h => h >= '08' && h <= '18').sort();
+  $('#card-ubio .q').textContent = 'Votos computados em cada hora (Brasília), separando eleitores habilitados pela digital e sem biometria.';
+  chart('ch-ubio').setOption(base(t, {
+    grid: { left: 60, right: 20, top: 36, bottom: 40 },
+    legend: { top: 0, left: 0, textStyle: { color: t.ink2 }, itemWidth: 10, itemHeight: 10 },
+    tooltip: { ...base(t).tooltip, trigger: 'axis', axisPointer: { type: 'shadow' }, formatter: ps => `<div>${esc(ps[0].axisValue)}h</div>` + ps.map(p => linhaTip(p.color, nf.format(p.value), p.seriesName)).join('') + `<div>Sem biometria: <b>${pct(100 * horas[ps[0].axisValue].sem / (horas[ps[0].axisValue].sem + horas[ps[0].axisValue].bio))}</b></div>` },
+    xAxis: eixo(t, { type: 'category', data: H, splitLine: { show: false }, axisLabel: { color: t.muted, formatter: '{value}h' } }),
+    yAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: v => nfc.format(v) } }),
+    series: [{ name: 'Com biometria', type: 'bar', stack: 'h', barMaxWidth: 24, data: H.map(h => horas[h].bio), itemStyle: { color: t.series[0], borderColor: t.surface, borderWidth: 1 } },
+      { name: 'Sem biometria', type: 'bar', stack: 'h', barMaxWidth: 24, data: H.map(h => horas[h].sem), itemStyle: { color: t.series[1], borderRadius: [4, 4, 0, 0], borderColor: t.surface, borderWidth: 1 } }],
+  }), true);
+  tabela('ubio', [{ h: 'Hora', f: l => l + 'h' }, { h: 'Com biometria', n: 1, f: l => nf.format(horas[l].bio) }, { h: 'Sem biometria', n: 1, f: l => nf.format(horas[l].sem) }, { h: '% sem', n: 1, f: l => pct(100 * horas[l].sem / (horas[l].sem + horas[l].bio)) }], H);
+
+  // Por UF: % sem biometria, nos dois turnos
+  const porUF = res => { const o = {}; (res ? res.municipios : []).forEach(m => { const x = o[m.uf] = o[m.uf] || { v: 0, s: 0 }; x.v += m.votos; x.s += m.sem_bio; }); return o; };
+  const uA = porUF(r), uB = porUF(rO);
+  const ufsU = Object.keys(uA).filter(u => u !== 'ZZ').sort((x, y) => uA[x].s / uA[x].v - uA[y].s / uA[y].v);
+  $('#card-uufb .q').textContent = `% dos eleitores habilitados sem biometria em cada UF${rO ? ', no ' + S.turno + 'º e no ' + outro + 'º turno' : ''}.`;
+  chart('ch-uufb').setOption(base(t, {
+    grid: { left: 50, right: 30, top: 34, bottom: 30 },
+    legend: { top: 0, left: 0, textStyle: { color: t.ink2 }, itemWidth: 10, itemHeight: 10 },
+    tooltip: { ...base(t).tooltip, trigger: 'axis', axisPointer: { type: 'shadow' }, formatter: ps => `<div>${esc(ps[0].axisValue)}</div>` + ps.map(p => linhaTip(p.color, pct(p.value), p.seriesName)).join('') },
+    xAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    yAxis: eixo(t, { type: 'category', data: ufsU, splitLine: { show: false }, axisLabel: { color: t.ink2 } }),
+    series: [{ name: S.turno + 'º turno', type: 'bar', barMaxWidth: 10, data: ufsU.map(u => +(100 * uA[u].s / uA[u].v).toFixed(2)), itemStyle: { color: t.series[0], borderRadius: [0, 4, 4, 0] } },
+      ...(rO ? [{ name: outro + 'º turno', type: 'bar', barMaxWidth: 10, data: ufsU.map(u => uB[u] ? +(100 * uB[u].s / uB[u].v).toFixed(2) : null), itemStyle: { color: t.other, borderRadius: [0, 4, 4, 0] } }] : [])],
+  }), true);
+  tabela('uufb', [{ h: 'UF', f: l => l }, { h: S.turno + 'º turno', n: 1, f: l => pct(100 * uA[l].s / uA[l].v) }, ...(rO ? [{ h: outro + 'º turno', n: 1, f: l => uB[l] ? pct(100 * uB[l].s / uB[l].v) : '–' }] : [])], ufsU.slice().reverse());
+
+  // Mapa real: % sem biometria por município
+  const nomesMun = Object.fromEntries(mun.map(m => [m.uf + '|' + m.mun, m.municipio]));
+  const UM = r.municipios.filter(m => m.uf !== 'ZZ' && m.votos > 0).map(m => ({ ...m, p: 100 * m.sem_bio / m.votos, cd: ibge(m.uf, m.mun), nome: nomesMun[m.uf + '|' + m.mun] || m.mun })).filter(m => m.cd);
+  const umMax = Math.ceil(quantis(UM.map(m => m.p))[3] * 2 / 5) * 5 || 10;
+  $('#card-umap h2').textContent = `Eleitores sem biometria por município · ${S.turno}º turno`;
+  $('#card-umap .q').textContent = `% dos eleitores de cada município habilitados sem a digital. A escala vai até ${umMax}%; municípios acima disso aparecem com a cor mais forte.`;
+  chart('ch-umap').setOption(optMapa(t, { mapa: mapaMun(uf), tipo: 'seq', min: 0, max: umMax, txtMax: umMax + '% ou mais', txtMin: '0%', borda: uf ? .5 : .1,
+    dados: UM.map(m => ({ name: m.cd, value: +Math.min(m.p, umMax).toFixed(2), m })),
+    tip: x => `<div>${esc(x.m.nome)} (${esc(x.m.uf)})</div><b>${pct(x.m.p)}</b> sem biometria<div style="opacity:.75">${nf.format(x.m.sem_bio)} de ${nf.format(x.m.votos)} eleitores · ${nf.format(x.m.urnas)} urnas</div>` }), true);
+  tabela('umap', [{ h: 'Município', k: 'nome' }, { h: 'UF', k: 'uf' }, { h: '% sem biometria', n: 1, f: l => pct(l.p) }, { h: 'Sem biometria', n: 1, f: l => nf.format(l.sem_bio) }, { h: 'Eleitores', n: 1, f: l => nf.format(l.votos) }], UM.slice().sort((x, y) => y.p - x.p).slice(0, 1000));
+
+  // Tempo na cabine (histograma)
+  const dur = Array.from({ length: 61 }, (_, i) => r.duracao[i] || 0);
+  chart('ch-udur').setOption(base(t, {
+    grid: { left: 60, right: 20, top: 20, bottom: 40 },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${p.dataIndex === 60 ? '10 min ou mais' : p.dataIndex * 10 + '–' + (p.dataIndex * 10 + 10) + ' s'}</div><b>${nf.format(p.value)}</b> eleitores` },
+    xAxis: eixo(t, { type: 'category', data: dur.map((_, i) => i === 60 ? '600+' : String(i * 10)), splitLine: { show: false }, axisLabel: { color: t.muted, interval: 5, formatter: v => v + ' s' } }),
+    yAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: v => nfc.format(v) } }),
+    series: [{ type: 'bar', barCategoryGap: '8%', data: dur, itemStyle: { color: t.series[0], borderRadius: [3, 3, 0, 0] } }],
+  }), true);
+  tabela('udur', [{ h: 'Faixa', f: l => l.i === 60 ? '600 s ou mais' : l.i * 10 + '–' + (l.i * 10 + 10) + ' s' }, { h: 'Eleitores', n: 1, f: l => nf.format(l.v) }], dur.map((v, i) => ({ i, v })));
+
+  // Tentativas de digital
+  const tent = [1, 2, 3, 4].map(k => r.tentativas[k] || 0), tt = tent.reduce((a, b) => a + b, 0) || 1;
+  chart('ch-utent').setOption(base(t, {
+    grid: { left: 60, right: 20, top: 20, bottom: 40 },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${p.name}</div><b>${nf.format(p.value)}</b> eleitores (${pct(100 * p.value / tt)})` },
+    xAxis: eixo(t, { type: 'category', data: ['1ª tentativa', '2ª', '3ª', '4ª'], splitLine: { show: false }, axisLabel: { color: t.ink2 } }),
+    yAxis: eixo(t, { type: 'value', axisLabel: { color: t.muted, formatter: v => nfc.format(v) } }),
+    series: [{ type: 'bar', barMaxWidth: 48, data: tent, itemStyle: { color: t.series[0], borderRadius: [4, 4, 0, 0] }, label: { show: true, position: 'top', color: t.ink2, fontSize: 11, formatter: p => pct(100 * p.value / tt) } }],
+  }), true);
+  tabela('utent', [{ h: 'Tentativa', f: l => l.k + 'ª' }, { h: 'Eleitores', n: 1, f: l => nf.format(l.v) }, { h: '%', n: 1, f: l => pct(100 * l.v / tt) }], tent.map((v, i) => ({ k: i + 1, v })));
+
+  // Relação: % sem biometria × % de A, por município
+  const pA = Object.fromEntries(mun.map(m => [m.uf + '|' + m.mun, 100 * m.a / m.validos]));
+  const CR = UM.filter(m => (m.uf + '|' + m.mun) in pA && m.votos >= 200).map(m => ({ ...m, a: pA[m.uf + '|' + m.mun] }));
+  $('#card-ucorr h2').textContent = `Sem biometria × votação de ${ra}, por município`;
+  $('#card-ucorr .q').textContent = `Cada ponto é um município com pelo menos 200 eleitores. Horizontal: % sem biometria. Vertical: % dos válidos de ${ra} para presidente no ${S.turno}º turno. Um padrão aqui mostra relação entre regiões, não prova sobre votos individuais (o log não registra em quem cada eleitor votou).`;
+  chart('ch-ucorr').setOption(base(t, {
+    grid: { left: 50, right: 20, top: 20, bottom: 40 },
+    tooltip: { ...base(t).tooltip, trigger: 'item', formatter: p => `<div>${esc(p.name)}</div><div>Sem biometria: <b>${pct(p.value[0])}</b></div><div>${esc(ra)}: <b>${pct(p.value[1])}</b></div>` },
+    xAxis: eixo(t, { type: 'value', min: 0, name: '% sem biometria', nameLocation: 'middle', nameGap: 26, axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    yAxis: eixo(t, { type: 'value', min: 0, max: 100, name: '% ' + ra, nameLocation: 'middle', nameGap: 36, axisLabel: { color: t.muted, formatter: '{value}%' } }),
+    series: [{ type: 'scatter', progressive: 0, symbolSize: 5, data: CR.map(m => ({ value: [+m.p.toFixed(2), +m.a.toFixed(2)], name: m.nome + ' (' + m.uf + ')', itemStyle: { color: t.series[0], opacity: .45 } })) }],
+  }), true);
+  tabela('ucorr', [{ h: 'Município', k: 'nome' }, { h: 'UF', k: 'uf' }, { h: '% sem biometria', n: 1, f: l => pct(l.p) }, { h: '% ' + ra, n: 1, f: l => pct(l.a) }], CR.slice().sort((x, y) => y.p - x.p).slice(0, 1000));
+
+  // Tabelas de seções
+  const colSec = [{ h: 'UF', k: 'uf' }, { h: 'Município', k: 'municipio' }, { h: 'Zona', k: 'zona' }, { h: 'Seção', k: 'secao' }, { h: 'Votos', n: 1, f: l => nf.format(l.votos) }];
+  tabela('usb', [...colSec, { h: 'Sem biometria', n: 1, f: l => nf.format(l.sem_bio) }, { h: '%', n: 1, f: l => pct(l.pct_sem_bio) }], secs.sem_biometria);
+  $('#uap-q').textContent = `${nf.format(secs.secoes_com_voto_apos)} seções tiveram votos depois das 17h (horário de Brasília). É permitido: quem está na fila às 17h vota. Lista das 100 com mais votos após o horário.`;
+  tabela('uap', [...colSec, { h: 'Depois das 17h', n: 1, f: l => nf.format(l.apos) }, { h: 'Último voto (Brasília)', f: l => l.ultimo_brasilia || '–' }], secs.apos_fechamento);
+
+  // Conferência por município
+  const DF = r.municipios.filter(m => m.oficial != null && m.oficial !== m.votos).map(m => ({ ...m, d: m.votos - m.oficial, nome: nomesMun[m.uf + '|' + m.mun] || m.mun })).sort((a, b) => Math.abs(b.d) - Math.abs(a.d));
+  $('#udf-q').textContent = `Total oficial de Presidente (comparecimento) comparado com os votos computados nos logs das urnas. ${nf.format(DF.length)} municípios diferem; no total, ${nf.format(Math.abs(dif))} votos (${pct(100 * Math.abs(dif) / Math.max(conf.votos_oficial, 1))}). Seções agregadas não têm log próprio (seus eleitores votam em outra urna) e não causam diferença. Causas possíveis para o restante: urna substituída durante o dia ou votação em cédula de papel, que não ficam no log eletrônico da seção. Confira os casos no boletim de urna.`;
+  tabela('udf', [{ h: 'UF', k: 'uf' }, { h: 'Município', k: 'nome' }, { h: 'Votos no log', n: 1, f: l => nf.format(l.votos) }, { h: 'Total oficial', n: 1, f: l => nf.format(l.oficial) }, { h: 'Diferença', n: 1, f: l => nf.format(l.d) }, { h: 'Urnas lidas', n: 1, f: l => nf.format(l.urnas) }], DF.slice(0, 500));
 }
 
 // ================================================================= SQL livre

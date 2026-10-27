@@ -27,6 +27,19 @@ py -3 main.py agregar
 py -3 main.py servir
 ```
 
+### Biometria e horário de cada voto (logs das urnas)
+
+```powershell
+py -3 main.py logs --turno 2     # ~500 mil urnas lidas direto de resultados.tse.jus.br (sem gravar arquivos)
+py -3 main.py logs --turno 1     # ~95 GB do portal de dados abertos, baixados, processados e apagados UF por UF
+```
+
+O log de cada urna registra, com data e hora, cada eleitor habilitado (por biometria ou não) e cada voto computado; não registra em quem o eleitor votou. O programa guarda apenas contagens: votos por minuto (convertidos para o horário de Brasília), habilitação com/sem biometria por seção, tentativas de digital, tempo na cabine e votos depois das 17h. Os logs também trazem votos de testes e do 1º turno (no log do 2º); só entram os votos da data de cada turno. A aba "Biometria e horário" compara os votos dos logs com o total oficial por município.
+
+### Mapas
+
+Os mapas usam as malhas oficiais do IBGE (`static/geo/`, fonte em `static/geo/FONTE.json`), ligadas aos dados pelo código IBGE que a própria configuração do TSE informa para cada município.
+
 ### 2º turno antes do CSV por seção
 
 O TSE publica a votação por seção alguns dias depois de cada turno. Até lá, `py -3 main.py resultados-web` baixa a totalização oficial por município de `resultados.tse.jus.br` (Presidente 1º e 2º turno; Governador 2º turno), guarda cada JSON com SHA256 em `originais/resultados-web/` e atualiza o painel em segundos. Quando o CSV por seção daquele turno for importado, `agregar` passa a usá-lo e a totalização fica só para conferência (aba "1º × 2º turno", quadro "Conferência").

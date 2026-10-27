@@ -49,6 +49,10 @@ ROTAS = {
                                                         a.get('limite', '300')),
     '/api/turnos': lambda db, a: analise.entre_turnos(db, a.get('cargo', '1'), a['a'], a['b']),
     '/api/conferencia': lambda db, a: analise.conferencia_1t(db),
+    '/api/logs/meta': lambda db, a: analise.logs_meta(db),
+    '/api/logs/resumo': lambda db, a: analise.logs_resumo(db, _turno(a), a.get('uf')),
+    '/api/logs/minuto': lambda db, a: analise.logs_minuto(db, _turno(a), a.get('uf')),
+    '/api/logs/secoes': lambda db, a: analise.logs_secoes(db, _turno(a), a.get('uf')),
     '/api/partido_cargos': lambda db, a: analise.partido_por_cargo(db, _turno(a),
                                                                    [p for p in a.get('partidos', '').split(',') if p]),
 }

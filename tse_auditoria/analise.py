@@ -371,6 +371,117 @@ def conferencia_1t(db):
             'divergencias': len(difs), 'lista': difs[:200]}
 
 
+# ----------------------------------------------------------------------------
+# Logs das urnas (horário dos votos e biometria). Horários convertidos para Brasília.
+
+_CACHE = {}
+
+
+def _tem_logs(conn):
+    return conn.execute("SELECT 1 FROM sqlite_master WHERE name='log_secao'").fetchone() is not None
+
+
+def _fusos(conn, turno):
+    """Diferença (horas) entre o horário local da urna e Brasília, por município, deduzida dos dados:
+    a votação abre às 8h de Brasília, então a hora mediana do 1º voto das seções indica o fuso."""
+    chave = ('fuso', turno, conn.execute('SELECT COUNT(*) FROM log_secao WHERE turno=?', [turno]).fetchone()[0])
+    if chave in _CACHE:
+        return _CACHE[chave]
+    horas = {}
+    for uf, mun, p in conn.execute('SELECT uf, mun, primeiro FROM log_secao WHERE turno=? AND primeiro IS NOT NULL', [turno]):
+        horas.setdefault((uf, mun), []).append(int(p[:2]))
+    fuso = {}
+    for k, hs in horas.items():
+        hs.sort()
+        fuso[k] = max(-1, min(3, 8 - hs[len(hs) // 2]))
+    _CACHE[chave] = fuso
+    return fuso
+
+
+def logs_meta(db):
+    with _ro(db) as conn:
+        if not _tem_logs(conn):
+            return {'disponivel': False}
+        fontes = _rows(conn, 'SELECT turno, uf, urnas, processado_em FROM log_fontes ORDER BY turno, uf')
+    return {'disponivel': bool(fontes), 'fontes': fontes}
+
+
+def logs_resumo(db, turno, uf=None):
+    w, a = _uf_clause(uf)
+    with _ro(db) as conn:
+        if not _tem_logs(conn):
+            return {'disponivel': False}
+        fuso = _fusos(conn, turno)
+        linhas = conn.execute(f'''SELECT uf, mun, SUM(votos), SUM(bio), SUM(sem_bio), SUM(tent_mais1), SUM(apos15), SUM(apos16),
+                                   SUM(apos17), SUM(fora_data), SUM(dur_soma), SUM(dur_n), COUNT(*)
+                                   FROM log_secao WHERE turno=?{w} GROUP BY uf, mun''', [turno] + a).fetchall()
+        tot_oficial = {(r[0], r[1]): r[2] for r in conn.execute(
+            f"SELECT uf, mun, total FROM ag_mun_tot WHERE turno=? AND cargo='1'{w}", [turno] + a)}
+        tent = dict(conn.execute(f'SELECT tentativas, SUM(eleitores) FROM log_tentativas WHERE turno=?{w} GROUP BY 1', [turno] + a).fetchall())
+        dur = dict(conn.execute(f'SELECT faixa, SUM(eleitores) FROM log_duracao WHERE turno=?{w} GROUP BY 1', [turno] + a).fetchall())
+    s = dict(votos=0, bio=0, sem_bio=0, tent_mais1=0, apos_fechamento=0, fora_data=0, dur_soma=0, dur_n=0, urnas=0)
+    muns = []
+    for uf_, mun, v, b, sb, t1, a15, a16, a17, fo, ds, dn, n in linhas:
+        f = fuso.get((uf_, mun), 0)
+        apos = {0: a17, 1: a16, 2: a15}.get(f, a17) if uf_ != 'ZZ' else 0
+        for k, x in (('votos', v), ('bio', b), ('sem_bio', sb), ('tent_mais1', t1), ('apos_fechamento', apos),
+                     ('fora_data', fo), ('dur_soma', ds), ('dur_n', dn), ('urnas', n)):
+            s[k] += x or 0
+        muns.append({'uf': uf_, 'mun': mun, 'votos': v, 'bio': b, 'sem_bio': sb, 'apos': apos, 'fuso': f, 'urnas': n,
+                     'dur_media': round(ds / dn, 1) if dn else None, 'oficial': tot_oficial.get((uf_, mun))})
+    com_oficial = [m for m in muns if m['oficial'] is not None]
+    return {'disponivel': True, 'turno': turno, 'totais': s, 'tentativas': tent, 'duracao': dur, 'municipios': muns,
+            'conferencia': {'municipios': len(com_oficial), 'votos_log': sum(m['votos'] for m in com_oficial),
+                            'votos_oficial': sum(m['oficial'] for m in com_oficial),
+                            'municipios_diferentes': sum(1 for m in com_oficial if m['votos'] != m['oficial'])}}
+
+
+def logs_minuto(db, turno, uf=None):
+    """Votos por minuto no horário de Brasília (soma das urnas), separando habilitação com/sem biometria."""
+    chave = ('min', turno, uf)
+    with _ro(db) as conn:
+        if not _tem_logs(conn):
+            return {'disponivel': False}
+        n = conn.execute('SELECT COUNT(*) FROM log_secao WHERE turno=?', [turno]).fetchone()[0]
+        if _CACHE.get(chave, (None,))[0] == n:
+            return _CACHE[chave][1]
+        fuso = _fusos(conn, turno)
+        w, a = _uf_clause(uf)
+        acc = {}
+        for uf_, mun, mi, v, b in conn.execute(f"SELECT uf, mun, minuto, votos, bio FROM log_minuto WHERE turno=? AND uf<>'ZZ'{w}",
+                                              [turno] + a):
+            f = fuso.get((uf_, mun), 0)
+            h, m = int(mi[:2]) + f, int(mi[3:5])
+            k = f'{h:02d}:{m:02d}'
+            x = acc.setdefault(k, [0, 0])
+            x[0] += v; x[1] += b
+    out = {'disponivel': True, 'minutos': [{'min': k, 'votos': v[0], 'bio': v[1]} for k, v in sorted(acc.items())]}
+    _CACHE[chave] = (n, out)
+    return out
+
+
+def logs_secoes(db, turno, uf=None, limite=100):
+    """Seções para conferência: maior % sem biometria e mais votos após o fechamento (horário de Brasília)."""
+    w, a = _uf_clause(uf)
+    with _ro(db) as conn:
+        if not _tem_logs(conn):
+            return {'disponivel': False}
+        fuso = _fusos(conn, turno)
+        nomes = {(r[0], r[1]): r[2] for r in conn.execute('SELECT DISTINCT uf, mun, municipio FROM ag_mun_tot WHERE turno=1')}
+        rows = _rows(conn, f'''SELECT uf, mun, zona, secao, votos, bio, sem_bio, primeiro, ultimo, apos15, apos16, apos17, fora_data
+                               FROM log_secao WHERE turno=?{w} AND votos >= 30''', [turno] + a)
+    for r in rows:
+        f = fuso.get((r['uf'], r['mun']), 0)
+        r['municipio'] = nomes.get((r['uf'], r['mun']), r['mun'])
+        r['apos'] = 0 if r['uf'] == 'ZZ' else {0: r['apos17'], 1: r['apos16'], 2: r['apos15']}.get(f, r['apos17'])
+        r['ultimo_brasilia'] = None if not r['ultimo'] else f"{int(r['ultimo'][:2]) + f:02d}{r['ultimo'][2:]}"
+        r['pct_sem_bio'] = round(100.0 * r['sem_bio'] / r['votos'], 1)
+    sem_bio = sorted([r for r in rows if r['uf'] != 'ZZ'], key=lambda r: -r['pct_sem_bio'])[:int(limite)]
+    tarde = sorted([r for r in rows if r['apos']], key=lambda r: -r['apos'])[:int(limite)]
+    return {'disponivel': True, 'sem_biometria': sem_bio, 'apos_fechamento': tarde,
+            'secoes_com_voto_apos': sum(1 for r in rows if r['apos'])}
+
+
 def partido_por_cargo(db, turno, partidos):
     """% dos válidos de cada partido, por UF e por cargo (para dumbbell/slope/coordenadas paralelas)."""
     marcadores = ','.join('?' * len(partidos))

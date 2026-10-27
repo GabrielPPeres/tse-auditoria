@@ -9,7 +9,7 @@ from tse_auditoria import banco
 from tse_auditoria.banco import importar_votos, importar_generico, criar_indices
 from tse_auditoria.servidor import servir
 from tse_auditoria.analise import agregar
-from tse_auditoria import resultados_web
+from tse_auditoria import resultados_web, urnas
 
 HERE=Path(__file__).resolve().parent
 DATA=HERE/'dados'
@@ -51,6 +51,10 @@ def parser():
     g.add_argument('--forcar',action='store_true')
     sub.add_parser('indices',help='Otimiza consultas SQLite')
     sub.add_parser('agregar',help='Gera as tabelas resumidas usadas pelos gráficos do painel')
+    lg=sub.add_parser('logs',help='Lê os logs das urnas: horário de cada voto e biometria (1º turno ~95 GB de download, 2º turno via site de resultados)')
+    lg.add_argument('--turno',type=int,choices=[1,2],required=True)
+    lg.add_argument('--uf',help='UFs separadas por vírgula (padrão: todas)')
+    lg.add_argument('--refazer',action='store_true',help='Processa de novo UFs já processadas')
     w=sub.add_parser('resultados-web',help='Baixa a totalização oficial por município (resultados.tse.jus.br) e atualiza o painel')
     w.add_argument('--atualizar',action='store_true',help='Baixa de novo os arquivos já salvos')
     s=sub.add_parser('servir',help='Painel web local')
@@ -100,6 +104,12 @@ def main():
             print(f'Importadas {imported:,} linhas RAW (todas as colunas como TEXTO).')
         elif args.cmd=='indices': criar_indices(db)
         elif args.cmd=='agregar': agregar(db)
+        elif args.cmd=='logs':
+            ufs=[u.strip().upper() for u in (args.uf or '').split(',') if u.strip()] or None
+            if args.turno==1:
+                urnas.processar_1t(db,root,json.loads(catalog.read_text(encoding='utf-8')),ufs,args.refazer)
+            else:
+                urnas.processar_2t(db,[u.lower() for u in ufs] if ufs else None,args.refazer)
         elif args.cmd=='resultados-web':
             resultados_web.coletar(root,orig,args.atualizar)
             resultados_web.importar(db,orig)
